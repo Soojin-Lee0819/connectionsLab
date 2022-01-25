@@ -1,11 +1,13 @@
 # Application Critique
 25, Jan 2022
 
-App: Song Maker https://musiclab.chromeexperiments.com/Song-Maker/
+App: Chrome Music Lab: Song Maker https://musiclab.chromeexperiments.com/Song-Maker/
 
-Song Maker by Chrome Experiments is. 
+Song Maker by Chrome Music Lab is a web-based . 
 
 I chose this connected application to critique because of its accessibility, minimalistic design, intuitive use, and entertaining aspect. 
+
+Targeted users are children learning music. Colorful visuals attract users 
 
 
 
@@ -13,3 +15,4 @@ I chose this connected application to critique because of its accessibility, min
 2) Intuitive to use. Without an instruction, users are immediately in a playful mode to play around with the application.
 3) Ability to archive for later and share with others. 
 
+Recommendations:
