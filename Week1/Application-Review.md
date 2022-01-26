@@ -3,7 +3,7 @@
 
 App: Chrome Music Lab: Song Maker https://musiclab.chromeexperiments.com/Song-Maker/
 
-Song Maker by Chrome Music Lab is a web-based . 
+Song Maker by Chrome Music Lab is a web-based music creation application designed to make learning music more accissible through fun and hands-on experiments. 
 
 I chose this connected application to critique because of its accessibility, minimalistic design, intuitive use, and entertaining aspect. 
 
