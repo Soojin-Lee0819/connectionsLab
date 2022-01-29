@@ -1,0 +1,216 @@
+/*Connections Lab Week 1
+One page project portfolio
+28 Jan 2022
+Soojin Lee*/
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*header*/
+
+.header {
+    width: 100%;
+  margin:0;
+  overflow: hidden;
+  background-color: #d9d7f0;
+}
+
+/*header-logo*/
+
+.header-left {
+    float: left;
+  }
+
+  .header-left img{
+    width:5vw;
+    margin: 4vw;
+  }
+
+
+/*header-navbar*/
+
+.header-right {
+    margin-top:4vw;
+    margin-bottom: 4vw;
+    float: right;
+    margin-right:4vw;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 2vw;
+  text-decoration: none;
+  font-size: 1.2vw; 
+}
+
+
+.header .header-left img:hover {
+    opacity:60%;
+  }
+  
+
+.header a:hover {
+  color:  #E75C40;
+}
+
+
+/*section1 - introduction */
+
+.introduction{
+    width: 100%;
+    text-align: center;
+    margin:0;
+    background-color: #d9d7f0;
+}
+.introduction h1{
+    margin:0;
+    font-size: 3vw;
+}
+
+.introduction p{
+    margin:0;
+    font-size: 1.2vw;
+    line-height: 4;
+
+}
+
+.introduction img{
+    width:50vw;
+    margin-top:10%;
+    margin-bottom:5%;
+  }
+
+
+  /*section2 - Overview */
+
+  .overview {
+    width: 100%;
+      padding-left:10vw;
+      padding-right:10vw;
+      padding-top:5vw;
+      padding-bottom:5vw;
+      display:flex;
+      float:left;
+  }
+
+/*Overview - Left */
+
+  .overview .left{
+      width:50%;
+  
+  }
+
+  .overview .left h1{
+    font-size: 1.2vw;
+
+  }
+
+  .overview .left p{
+    width:100%;
+    font-size: 1.5vw;
+    line-height:1.5;
+
+  }
+
+  /*Overview - Right */
+
+  .overview .right{
+    width:40%;
+    margin-left:10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4vw;
+
+    grid-template-rows: auto auto;
+}
+
+.overview .right h1{
+    font-size: 1.5vw;
+    line-height:1.5;
+
+  }
+
+  .overview .right p{
+    width:100%;
+    font-size: 1.5vw;
+    line-height:0.4;
+
+  }
+
+
+   /*section3 - Contents */
+
+   .contents {
+    width: 100%;
+       background-color: white;
+       float:left;
+   }
+
+   .contents img{
+       width:100%;
+   }
+
+
+   /*section4 - Trailer */
+
+.trailer {
+  float:left;
+  width:100%;
+  padding:5vw 10vw;
+  background-color: black;
+}
+.trailer video{
+width:100%
+}
+
+
+
+   /*Footer */
+
+   footer{
+    width:100%;
+
+   }
+
+   .footer-wrap {
+       padding:5vw 4vw;
+       background-color: #f2f2f2;
+       display:flex;
+   }
+
+   .footer-wrap p{
+       width:100%;
+       text-align: center;
+       font-size: 1vw;
+       color:#1a1b1f;
+
+   }
+
+
+
+@media screen and (max-width: 500px) {
+    .header-left {
+        width:100%;
+      }
+
+    .header-right {
+        width:100%;
+        float: left;
+        text-align: center;
+      }
+
+  .header a {
+    float: none;
+    display: block;
+    width:100%;
+  }
+  
+
+}
