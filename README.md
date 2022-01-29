@@ -4,3 +4,4 @@
 [Application Critique](https://github.com/Soojin-Lee0819/connectionsLab/blob/main/Week1/Application-Review.md)
 
 
+[Assignment: Citation Portfolio Website](https://github.com/Soojin-Lee0819/connectionsLab/blob/main/Week1/Application-Review.md)
