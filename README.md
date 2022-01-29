@@ -1,9 +1,11 @@
 # connectionsLab
+___
 
-### Week 1
+# Week 1
+
 [Application Critique](https://github.com/Soojin-Lee0819/connectionsLab/blob/main/Week1/Application-Review.md)
 
-Assignment: Citation Portfolio
+### Assignment: Citation Portfolio
 
 [Github Repository](https://github.com/Soojin-Lee0819/Connections-Lab-Week-1-Portfolio-Page)
 
