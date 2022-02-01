@@ -11,3 +11,6 @@ ___
 
 
 [Citation Page](https://soojin-lee0819.github.io/Connections-Lab-Week-1-Portfolio-Page/)
+___
+
+# Week 2
