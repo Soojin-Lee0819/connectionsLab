@@ -1,5 +1,4 @@
 # connectionsLab
-___
 
 # Week 1
 
