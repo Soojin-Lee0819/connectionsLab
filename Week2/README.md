@@ -36,12 +36,13 @@ Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a
 7. Deleting a task <br>
 8. Crossing out a completed task <br>
 9. Clearing input field after each entry <br>
-10. Duplicate To-Do list for 7 days <br>
-11. Positioning to-do list in grid-based <br>
-12. Enable enter to add list <br>
-13. Add Checkbox to cross out completed task <br>
-14. Add clear all button <br>
-15. Enable Enter key to add a new task
+10. Add focus() method for input element ready for entering <br>
+11. Duplicate To-Do list for 7 days <br>
+12. Positioning to-do list in grid-based <br>
+13. Enable enter to add list <br>
+14. Add Checkbox to cross out completed task <br>
+15. Add clear all button <br>
+16. Enable Enter key to add a new task
 
 <img src="images/challenge.png" width="700">
 
