@@ -10,4 +10,4 @@ For week 2, I learnt how to make interactions using Javascript. I depend on Noti
 
 ### Wireframe
 
-<img src="images/Citation-Wireframe.jpg" width="600">
+<img src="images/wireframe.jpg" width="600">
