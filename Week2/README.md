@@ -25,23 +25,23 @@ Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a
 
 **Workflow**
 
-**Quote Slide show **<br>
+**Quote Slideshow** <br>
 1. Create slides for the quote <br>
-//2. DONE || Add Prev/Next button for the slideshow <br>
+2. Add Prev/Next button for the slideshow <br>
 
-// To-do List
-//3. DONE || Validate Input field for To-do list
-//4. DONE || Add a new task function 
-//5. DONE || At empty input, pop-up error message
-//6. DONE || Deleting a task 
-//7. DONE || Crossing out a completed task
-//8. DONE || Clearing input field after each entry
-//DONE || Duplicate To-Do list for 7 days
-// DONE || Positioning to-do list in grid-based
-//9.  Enter to add list
-//10. Add Checkbox to cross out completed task
-//11. Add clear all button
-//12. Enable Enter key to add a new task
+**To-do List**
+3. Validate Input field for To-do list <br>
+5. Add a new task function <br>
+6. At empty input, pop-up error message <br>
+7. Deleting a task <br>
+8. Crossing out a completed task <br>
+9. Clearing input field after each entry <br>
+10. Duplicate To-Do list for 7 days <br>
+11. Positioning to-do list in grid-based <br>
+12. Enable enter to add list <br>
+13. Add Checkbox to cross out completed task <br>
+14. Add clear all button <br>
+15. Enable Enter key to add a new task
 
 <img src="images/challenge.png" width="700">
 
