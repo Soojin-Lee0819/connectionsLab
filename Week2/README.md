@@ -1,7 +1,7 @@
 # Weekly To-do List
 
 **Title**: Weekly To-do List <br>
-**Date**: 5 Feb 2022 <br>
+**Date**: 3 Feb - 6 Feb 2022 <br>
 **Deliverable**: CSS/HTML/Javascript Webpage <br>
 
 [Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Week2)
@@ -15,7 +15,9 @@ For week 2, I learned how to make interactions using Javascript. Inspired by my 
 
 ### Wireframe
 
-On top, there is a motivational quote 
+Section 1 - Motivational quote slideshow with prev & next button
+
+Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a user input section, and a section where new tasks appear. Users can add, delete, and cross completed tasks. 
 
 <img src="images/wireframe.jpg" width="600">
 
