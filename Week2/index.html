@@ -1,0 +1,144 @@
+<!-- 
+Connections Lab Week 2
+javaScript interactivity Todo-list
+3 Feb 2022
+Soojin Lee
+ -->
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link href="style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+<!-- Quote container -->
+<div class="slideshow-container">
+  <a class="prev" onclick="plusSlides(-1)">&#60;</a>
+
+  <!-- Full-width slides/quotes -->
+  <div class="mySlides">
+    <q>Be regular and orderly in your life, so that you may be violent and original in your work.</q>
+  </div>
+
+  <div class="mySlides">
+    <q>Focus on goals not the obstacles </q>
+  </div>
+
+  <div class="mySlides">
+    <q>Dare to live the life you've always wanted</q>
+  </div>
+
+  <!-- next/prev buttons -->
+  <a class="next" onclick="plusSlides(1)">&#62;</a>
+</div>
+
+  <!-- To-Do Section -->
+  <div class="todo">
+
+    <h1>To-Do List</h1>
+
+    <!-- todo column1 -->
+    <div class="todo-column">
+      <div class="todo-row">
+    <!-- Monday -->
+  <div class="container">
+    <h1>Monday</h1>
+    <div class="newtask">
+        <input type="text" placeholder="Enter your to do List">
+        <button class="push">Add</button>
+    </div>
+    <div class="tasks">
+    </div>
+</div>
+</div>
+    <!-- Tuesday -->
+    <div class="todo-row">
+    <div class="container">
+      <h1>Tuesday</h1>
+      <div class="newtask2">
+          <input type="text" placeholder="Enter your to do List">
+          <button class="push2">Add</button>
+      </div>
+      <div class="tasks2"></div>
+  </div>
+</div>
+    <!-- Wednesday -->
+    <div class="todo-row">
+    <div class="container">
+      <h1>Wednesday</h1>
+      <div class="newtask3">
+          <input type="text" placeholder="Enter your to do List">
+          <button class="push3">Add</button>
+      </div>
+      <div class="tasks3"></div>
+  </div>
+  </div>
+  </div>
+
+   <!-- todo column2 -->
+  <div class="todo-column">
+      <!-- Thursday -->
+      <div class="todo-row">
+      <div class="container">
+        <h1>Thursday</h1>
+        <div class="newtask4">
+            <input type="text" placeholder="Enter your to do List">
+            <button class="push4">Add</button>
+        </div>
+        <div class="tasks4"></div>
+    </div>
+</div>
+        <!-- Friday -->
+        <div class="todo-row">
+        <div class="container">
+          <h1>Friday</h1>
+          <div class="newtask5">
+              <input type="text" placeholder="Enter your to do List">
+              <button class="push5">Add</button>
+          </div>
+          <div class="tasks5"></div>
+      </div>
+      </div>
+
+
+    <!-- Saturday -->
+
+      <div class="todo-row">
+      <div class="container">
+        <h1>Saturday</h1>
+        <div class="newtask6">
+            <input type="text" placeholder="Enter your to do List">
+            <button class="push6">Add</button>
+        </div>
+        <div class="tasks6"></div>
+    </div>
+    </div>
+  </div>
+
+
+   <!-- todo column2 -->
+   <div class="todo-column">
+      <!-- Sunday -->
+      <div class="todo-row">
+      <div class="container">
+        <h1>Sunday</h1>
+        <div class="newtask7">
+            <input type="text" placeholder="Enter your to do List">
+            <button class="push7">Add</button>
+        </div>
+        <div class="tasks7"></div>
+    </div>
+    </div>
+  </div>
+</div>
+  <script src="app.js"></script>
+</body>
+</html>

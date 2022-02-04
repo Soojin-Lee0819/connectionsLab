@@ -1,0 +1,212 @@
+/*https://www.youtube.com/watch?v=cOUNOi297Mw*/
+
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100%;
+    margin:0;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    width:100%;
+    display:flex;
+    align-items:center;
+    height: 20vw;
+    background: #d5cdff;
+  }
+  
+  /* Slides */
+  .mySlides {
+    width:60%;
+   margin-left:auto;
+   margin-right:auto;
+    text-align: center;
+    font-size: 2.2vw;
+    color:black;
+
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    width: auto;
+    padding: 1.5vw;
+    color: black;
+    font-weight: bold;
+    font-size: 2vw;
+    border-radius: 10%;
+    user-select: none;
+  }
+  
+  .prev {
+      margin-left: 2vw;
+  }
+  
+  .next {
+    margin-right: 2vw;
+}
+
+  /* On hover, the background of prev, next button change */
+  .prev:hover, .next:hover {
+    background-color: #8052ec;
+    color: white;
+  }
+  
+/* To do list */
+
+.todo{
+    position:relative;
+    background-color: #6B56DB;
+    display:block;
+    padding-bottom:5vw;
+
+}
+
+.todo h1{
+    width:100%;
+    padding:2vw;
+    padding-top:5vw;
+    text-align: center;
+    font-size:5vw;
+    color:white;
+}
+
+.todo-column{
+   position:relative;
+   display: flex;
+   margin-top: 5vw;
+   width: 100%;
+   justify-content: center;
+
+}
+
+
+
+.todo-row{
+    width: 28%;
+    margin-right:auto;
+    margin-left:auto;
+    display:inline-block;
+ 
+ }
+
+/* To do list Container */
+
+.container{
+    margin-top:5%;
+    padding: 1vw 1vw;
+    width: 100%;
+    border: 2px solid #d1d3d4;
+    text-align: center;
+  
+}
+
+.todo .container h1{
+color:white;
+font-size: 2.5vw;
+margin-bottom: 5%;
+padding:0;
+margin-top: 5%;
+
+}
+
+
+.newtask , .newtask2 , .newtask3, .newtask4,  .newtask5 , .newtask6, .newtask7{
+    position: static;
+    background-color: #ffffff;
+    padding: 2vw 1vw;
+    border-radius: 5px;
+    box-shadow: 0 1vw 2vw rgba(0,0,0,0.3);
+}
+.newtask input, .newtask2 input, .newtask3 input, .newtask4 input , .newtask5 input, .newtask6 input, .newtask7 input{
+    width: 70%;
+    width: 70%;
+    height: 4vw;
+    font-family: 'Poppins',sans-serif;
+    font-size: 1vw;
+    border: 2px solid #d1d3d4;
+    padding: 1vw;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+}
+.newtask input:focus, .newtask2 input:focus, .newtask3 input:focus, .newtask4 input:focus,.newtask5 input:focus, .newtask6 input:focus, .newtask7 input:focus{
+    outline: none;
+    border-color: #8052ec;
+}
+
+.newtask button, .newtask2 button, .newtask3 button, .newtask4 button, .newtask5 button, .newtask6 button, .newtask7 button  {
+    position: relative;
+    float: right;
+    width: 20%;
+    height: 4vw;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: 1.3vw;
+    background-color: #8052ec;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+.tasks, .tasks2, .tasks3 , .tasks4,.tasks5 , .tasks6, .tasks7{
+    background-color: #ffffff;
+    padding: 2vw 1vw;
+    margin-top: 3vw;
+    border-radius: 5px;
+    box-shadow: 0 1vw 2vw rgba(0,0,0,0.3);
+    width: 100%;
+    position: relative;
+}
+.task{
+    background-color: #ffffff;
+    height: 5vw;
+    padding: 1vw 2vw;
+    margin-top: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #d1d3d4;
+    cursor: pointer;
+}
+.task span{
+    font-family: 'Poppins',sans-serif;
+    font-size: 1.3vw;
+    font-weight: 400;
+}
+.task button{
+    background-color: #8052ec;
+    color: #ffffff;
+    height: 100%;
+    width: 20%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+input {
+    size:20%;
+}
+
+.completed{
+    text-decoration: line-through;
+    color:grey;
+}
+
+/* Mobile view */
+
+@media screen and (max-width: 500px) {
+
+}
