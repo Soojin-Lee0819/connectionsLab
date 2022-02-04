@@ -8,7 +8,7 @@
 
 ### Overview
 
-For week 2, I learnt how to make interactions using Javascript. Inspired by my Notion planner that I use everyday to stay productive, I created an interactive To-do-list for this week's assignment. I wanted to create a weekly To-do-list page with a motivational quotes on top. This project has two main user-interactivity. First is the slideshow click for the motivational quote, and the second is the user-input function for the to-do list. 
+For week 2, I learned how to make interactions using Javascript. Inspired by my Notion planner that I use everyday to stay productive, I created an interactive To-do List page for this week's assignment. I wanted to create a weekly To-do-list page, similar to the notion page I am using, with a motivational quote slideshow on top. This project has two main user-interactivity; the slideshow click, and the user-input . 
 
 <img src="images/soojinplanner.png" width="600">
 
