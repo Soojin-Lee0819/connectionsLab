@@ -1,14 +1,14 @@
-# Motivational Weekly To-do List
+# Weekly To-do List
 
-**Title**: To-do List <br>
-**Date**: 29 Jan 2022 <br>
+**Title**: Weekly To-do List <br>
+**Date**: 5 Feb 2022 <br>
 **Deliverable**: CSS/HTML/Javascript Webpage <br>
 
 [Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Week2)
 
 ### Overview
 
-For week 2, I learnt how to make interactions using Javascript. I depend on Notion Planner to stay on top of my schedule. I organize plans weekly and update to-do list in a daily basis. 
+For week 2, I learnt how to make interactions using Javascript. Inspired by my Notion planner that I use everyday to stay productive, I created an interactive To-do-list for this week's assignment. I wanted to create a weekly To-do-list page with a motivational quotes on top. This project has two main user-interactivity. First is the slideshow click for the motivational quote, and the second is the user-input function for the to-do list. 
 
 <img src="images/soojinplanner.png" width="600">
 
