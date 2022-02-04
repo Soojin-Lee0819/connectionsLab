@@ -6,7 +6,12 @@
 
 [Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Week2)
 
+### Overview
+
 For week 2, I learnt how to make interactions using Javascript. I depend on Notion Planner to stay on top of my schedule. I organize plans weekly and update to-do list in a daily basis. 
+
+<img src="images/soojinplanner.png" width="600">
+
 
 ### Wireframe
 
