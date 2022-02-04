@@ -15,9 +15,13 @@ For week 2, I learned how to make interactions using Javascript. Inspired by my 
 
 ### Wireframe
 
+On top, there is a motivational quote 
+
 <img src="images/wireframe.jpg" width="600">
 
 ### Process & Challenges
+
+<img src="images/challenge.png" width="700">
 
 
 1)I started with creating motivational 
@@ -25,6 +29,8 @@ For week 2, I learned how to make interactions using Javascript. Inspired by my 
 To prevent an error, I added a function where if user adds 
 
 3) Along with click 
+
+For the color, I used Pantone's Very Peri color, the color of the 2022.
 
 ### Project Image
 
