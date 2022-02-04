@@ -29,7 +29,7 @@ Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a
 1. Create slides for the quote <br>
 2. Add Prev/Next button for the slideshow <br>
 
-**To-do List**
+**To-do List** <br>
 3. Validate Input field for To-do list <br>
 5. Add a new task function <br>
 6. At empty input, pop-up error message <br>
