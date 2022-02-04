@@ -27,8 +27,8 @@ Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a
 The final workflow was modified from the initial workflow as new features were added. The quote
 
 //Quote Slide show
-//1. DONE || Create slides for the quote
-//2. DONE || Add Prev/Next button for the slideshow 
+//1. DONE || Create slides for the quote <br>
+//2. DONE || Add Prev/Next button for the slideshow <br>
 
 // To-do List
 //3. DONE || Validate Input field for To-do list
