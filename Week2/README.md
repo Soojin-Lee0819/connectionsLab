@@ -23,6 +23,27 @@ Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a
 
 ### Process & Challenges
 
+**Workflow**
+The final workflow was modified from the initial workflow as new features were added. The quote
+
+//Quote Slide show
+//1. DONE || Create slides for the quote
+//2. DONE || Add Prev/Next button for the slideshow 
+
+// To-do List
+//3. DONE || Validate Input field for To-do list
+//4. DONE || Add a new task function 
+//5. DONE || At empty input, pop-up error message
+//6. DONE || Deleting a task 
+//7. DONE || Crossing out a completed task
+//8. DONE || Clearing input field after each entry
+//DONE || Duplicate To-Do list for 7 days
+// DONE || Positioning to-do list in grid-based
+//9.  Enter to add list
+//10. Add Checkbox to cross out completed task
+//11. Add clear all button
+//12. Enable Enter key to add a new task
+
 <img src="images/challenge.png" width="700">
 
 
@@ -41,4 +62,4 @@ For the color, I used Pantone's Very Peri color, the color of the 2022.
 
 ### Reflections 
 
-Although it is simple and uncomplicated for the user, to develop the system, there were a lot more thought put into the process. For example, 
+Although it is simple and uncomplicated for the user, to develop the system, there were a lot more thought put into the process. For example, . I want to improve it by adding. One concern with this webpage is that , in order to achieve, there should be a log-in feature where the input data can be stored and can identify the user and once the log-in 
