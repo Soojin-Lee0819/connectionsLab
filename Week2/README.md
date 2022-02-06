@@ -41,7 +41,6 @@ Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a
 9. Duplicate To-Do list for 7 days
 10. Allow press Enter to add new task
 
-<img src="images/challenge.png" width="700">
 
 ### Motivational Quote Slideshow 
 I started with creating a motivational Quote slideshow. I found out that there is a <q></q> tag for quote. It wasn't too complicated but after learning how to use API, I want to replace this section with quote API to have a more varieties of quotes and to add an element of surprise. 
