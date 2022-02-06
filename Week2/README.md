@@ -56,7 +56,11 @@ To prevent an error, I added a function where if user adds
 
 For the color, I used Pantone's Very Peri color, the color of the 2022.
 
+### Adding Checkbox
 At first, to mark completed tasks, I created a class "completed" and added a line-strike when the text is clicked. Without any icon, the process of clicking the completed task to mark it complete wasn't very intuitive. Therefore, I added a checkbox, that visually signals users to clcik on the checkbox at completion. 
+
+<img src="images/checkbox.png" width="600">
+
 
 ### Project Image
 
