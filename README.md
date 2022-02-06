@@ -13,4 +13,4 @@
 ___
 
 # Week 2
-[Weekly To-Do List](https://github.com/Soojin-Lee0819/Connections-Lab-Week-1-Portfolio-Page)
+[Weekly To-Do List](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Week2)
