@@ -67,9 +67,6 @@ Developing a grid system for 7 days of to-do list was challenging. When the task
 
 <img src="images/challenge.png" width="600">
 
-### Color 
-I used Pantone's Veri Peri, the color of the year for this project. 
-
 ### Final Project Demonstration
 
 <img src="images/todolistimg.png" width="700">
