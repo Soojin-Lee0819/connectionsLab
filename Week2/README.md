@@ -67,12 +67,15 @@ Developing a grid system for 7 days of to-do list was challenging. When the task
 
 <img src="images/challenge.png" width="600">
 
+### Color 
+I used Pantone's Veri Peri, the color of the year for this project. 
+
 ### Final Project Demonstration
 
 <img src="images/todolistimg.png" width="700">
 
 
-### Reflection & Evaluation
+## Reflection & Evaluation
 
 One takeaway from this exercise is that seemingly simple user-interaction can take many steps and considerations to develop the interaction. For example, for users, to use the to-do list function, they just need to type in task and press add. However, from the developer's perspective, I need to consider how the input tasks are stacked to one another, how to prevent errors of user adding an empty task, and much more. I have edited/added more features along the way - such as check-box system that allows users to click to mark completed task. 
 
