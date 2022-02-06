@@ -44,31 +44,36 @@ Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a
 <img src="images/challenge.png" width="700">
 
 ### Motivational Quote Slideshow 
-I started with creating a motivational Quote slideshow. I found out that there is a <q> tag for quote. It wasn't too complicated but after learning how to use API, I want to replace this section with quote API to have a more varieties of quotes and to add an element of surprise. 
+I started with creating a motivational Quote slideshow. I found out that there is a <q></q> tag for quote. It wasn't too complicated but after learning how to use API, I want to replace this section with quote API to have a more varieties of quotes and to add an element of surprise. 
 
 
-  
-To prevent an error, I added a function where if user adds 
+ ### To-do list system
+ 
+ Before start coding, I listed the steps for how users would add to-do list; from users clicking on user-input section -> type-in task -> click add -> task is added to the to do list -> when the task is completed, users can mark complete -> if needed, users can delete the task 
+ 
 
-3) Along with click 
+### Error prevention
+To prevent an error, I added an alert system where if the input section is empty(input value.length == 0), it gives a feedback for the users to enter a task.
+<img src="images/error.png" width="400">
 
-For the color, I used Pantone's Very Peri color, the color of the 2022.
 
 ### Adding Checkbox
-At first, to mark completed tasks, I created a class "completed" and added a line-strike when the text is clicked. Without any icon, the process of clicking the completed task to mark it complete wasn't very intuitive. Therefore, I added a checkbox, that visually signals users to clcik on the checkbox at completion. 
+Initially, to mark completed tasks, I created a class "completed" and added an eventlistener to strike the line when the text is clicked. However, without a checkbox icon, the process of clicking the completed task to mark it complete wasn't very intuitive. Therefore, I added a checkbox, that visually signals users to clcik on it when the task is completed.
 
 <img src="images/checkbox.png" width="600">
 
+### Grid system 
+Developing a grid system for 7 days of to-do list was challenging. When the task was added, the neighboring list on the same row were pushed down. To fix the issue, I used in-line block display with relative position to make sure the input bar is always stick to the top of the row. To see the position and orientation better, when coding, I added background colors to each to-do containers. 
 
-### Project Image
+<img src="images/challenge.png" width="600">
+
+### Final Project Demonstration
 
 <img src="images/todolistimg.png" width="700">
 
 
 ### Reflections 
 
-Although it is simple and uncomplicated for the user, to develop the working system, there were a lot more thought put into the process. For example, . I want to improve it by adding. 
+One takeaway from this exercise is that seemingly simple user-interaction can take many steps and considerations to develop the interaction. For example, for users, to use the to-do list function, they just need to type in task and press add. However, from the developer's perspective, I need to consider how the input tasks are stacked to one another, how to prevent errors of user adding an empty task, and much more. I have edited/added more features along the way - such as check-box system that allows users to click to mark completed task. 
 
-For my next project, I want to learn how to write more effecient code. I also want to add the function where users can drag and move tasks from one list to another.
-
-One concern with this web-based weekly to-do list is that without a log-in system, once the tab is closed, the input data is not stored. For example, if the user write, in order to achieve, there should be a log-in feature where the input data can be stored and can identify the user and once the log-in 
+For the following projects, I want to learn how to write more effecient code. I also want to add the function where users can drag and move tasks from one list to another.One concern with this web-based weekly to-do list is that without a log-in system, when tab is closed, the input data is lost. Therefore there should be a log-in feature where the input data can be stored with user ID and the stored data is displayed at log-in. 
