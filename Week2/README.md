@@ -17,7 +17,7 @@ For week 2, I learned how to make interactions using Javascript. Inspired by my 
 
 Section 1 - Motivational quote slideshow with prev & next button
 
-Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a user input section, and a section where new tasks appear. Users can add, delete, and cross completed tasks. 
+Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a user input section, and an output section where the inputted tasks appear.
 
 <img src="images/wireframe.jpg" width="600">
 
@@ -56,6 +56,8 @@ To prevent an error, I added a function where if user adds
 
 For the color, I used Pantone's Very Peri color, the color of the 2022.
 
+At first, to mark completed tasks, I created a class "completed" and added a line-strike when the text is clicked. Without any icon, the process of clicking the completed task to mark it complete wasn't very intuitive. Therefore, I added a checkbox, that visually signals users to clcik on the checkbox at completion. 
+
 ### Project Image
 
 <img src="images/todolist.png" width="700">
@@ -63,4 +65,4 @@ For the color, I used Pantone's Very Peri color, the color of the 2022.
 
 ### Reflections 
 
-Although it is simple and uncomplicated for the user, to develop the system, there were a lot more thought put into the process. For example, . I want to improve it by adding. One concern with this webpage is that , in order to achieve, there should be a log-in feature where the input data can be stored and can identify the user and once the log-in 
+Although it is simple and uncomplicated for the user, to develop the working system, there were a lot more thought put into the process. For example, . I want to improve it by adding. One concern with this webpage is that , in order to achieve, there should be a log-in feature where the input data can be stored and can identify the user and once the log-in 
