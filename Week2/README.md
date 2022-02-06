@@ -8,7 +8,7 @@
 
 ### Overview
 
-For week 2, I learned how to make interactions using Javascript. Inspired by my Notion planner that I use everyday to stay productive, I created an interactive To-do List page for this week's assignment. I wanted to create a weekly To-do-list page, similar to the notion page I am using, with a motivational quote slideshow on top. This project has two main user-interactivities; motivational quote slideshow that moves on click, and to-do list user-input interactivity that has user-input, add/delete button, checkbox functions.
+For week 2, I learned how to make interactions using Javascript. Inspired by my Notion planner that I use everyday to stay productive, I created an interactive To-do List page for this week's assignment. I wanted to create a weekly To-do-list page that has a motivational quote slideshow on top. This project has two main user-interactivities; motivational quote slideshow that moves on click, and to-do list user-input interactivity that has user-input, add/delete button and checkbox functions.
 
 <img src="images/soojinplanner.png" width="600">
 
@@ -40,10 +40,13 @@ Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a
 8. Add focus() method for input element ready for entering
 9. Duplicate To-Do list for 7 days
 10. Allow press Enter to add new task
+
 <img src="images/challenge.png" width="700">
 
+### Motivational Quote Slideshow
+1)I started with creating a motivational Quote slideshow
 
-1)I started with creating motivational 
+<Note> Later in the semester, after learning how to use API, I want to put quote API here instead of keeping it as a static quote slides.
 
 To prevent an error, I added a function where if user adds 
 
