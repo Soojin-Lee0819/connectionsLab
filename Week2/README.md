@@ -53,7 +53,8 @@ I started with creating a motivational Quote slideshow. I found out that there i
 
 ### Error prevention
 To prevent an error, I added an alert system where if the input section is empty(input value.length == 0), it gives a feedback for the users to enter a task.
-<img src="images/error.png" width="400">
+
+<img src="images/error.png" width="600">
 
 
 ### Adding Checkbox
