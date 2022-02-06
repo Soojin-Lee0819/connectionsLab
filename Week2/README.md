@@ -1,25 +1,49 @@
 # Weekly To-do List
 
 **Title**: Weekly To-do List <br>
-**Date**: 5 Feb 2022 <br>
+**Date**: 3 Feb - 6 Feb 2022 <br>
 **Deliverable**: CSS/HTML/Javascript Webpage <br>
 
 [Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Week2)
 
 ### Overview
 
-For week 2, I learned how to make interactions using Javascript. Inspired by my Notion planner that I use everyday to stay productive, I created an interactive To-do List page for this week's assignment. I wanted to create a weekly To-do-list page, similar to the notion page I am using, with a motivational quote slideshow on top. This project has two main user-interactivities; Motivational quote slideshow click, and to-do list user-input interactivity that was more complex to build. 
+For week 2, I learned how to make interactions using Javascript. Inspired by my Notion planner that I use everyday to stay productive, I created an interactive To-do List page for this week's assignment. I wanted to create a weekly To-do-list page, similar to the notion page I am using, with a motivational quote slideshow on top. This project has two main user-interactivities; motivational quote slideshow that moves on click, and to-do list user-input interactivity that has user-input, add/delete button, checkbox functions.
 
 <img src="images/soojinplanner.png" width="600">
 
 
 ### Wireframe
 
-On top, there is a motivational quote 
+Section 1 - Motivational quote slideshow with prev & next button
+
+Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a user input section, and an output section where the inputted tasks appear.
 
 <img src="images/wireframe.jpg" width="600">
 
 ### Process & Challenges
+
+**Workflow**
+
+**Quote Slideshow** <br>
+1. Create slides for the quote <br>
+2. Add Prev/Next button for the slideshow <br>
+
+**To-do List** <br>
+3. Validate Input field for To-do list <br>
+5. Add a new task function <br>
+6. At empty input, pop-up error message <br>
+7. Deleting a task <br>
+8. Crossing out a completed task <br>
+9. Clearing input field after each entry <br>
+10. Prevent Error (if the add button is pressed when the input field is empty, show error message)
+11. Add focus() method for input element ready for entering <br>
+12. Duplicate To-Do list for 7 days <br>
+13. Positioning to-do list in grid-based <br>
+14. Enable enter to add list <br>
+15. Add Checkbox to cross out completed task <br>
+16. Add clear all button <br>
+17. Enable Enter key to add a new task
 
 <img src="images/challenge.png" width="700">
 
@@ -32,6 +56,12 @@ To prevent an error, I added a function where if user adds
 
 For the color, I used Pantone's Very Peri color, the color of the 2022.
 
+### Adding Checkbox
+At first, to mark completed tasks, I created a class "completed" and added a line-strike when the text is clicked. Without any icon, the process of clicking the completed task to mark it complete wasn't very intuitive. Therefore, I added a checkbox, that visually signals users to clcik on the checkbox at completion. 
+
+<img src="images/checkbox.png" width="600">
+
+
 ### Project Image
 
 <img src="images/todolist.png" width="700">
@@ -39,4 +69,4 @@ For the color, I used Pantone's Very Peri color, the color of the 2022.
 
 ### Reflections 
 
-Although it is simple and uncomplicated for the user, to develop the system, there were a lot more thought put into the process. For example, 
+Although it is simple and uncomplicated for the user, to develop the working system, there were a lot more thought put into the process. For example, . I want to improve it by adding. One concern with this webpage is that , in order to achieve, there should be a log-in feature where the input data can be stored and can identify the user and once the log-in 
