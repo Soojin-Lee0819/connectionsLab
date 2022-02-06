@@ -6,14 +6,14 @@
 
 [Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Week2)
 
-### Overview
+## Overview
 
 For week 2, I learned how to make interactions using Javascript. Inspired by my Notion planner that I use everyday to stay productive, I created an interactive To-do List page for this week's assignment. I wanted to create a weekly To-do-list page that has a motivational quote slideshow on top. This project has two main user-interactivities; motivational quote slideshow that moves on click, and to-do list user-input interactivity that has user-input, add/delete button and checkbox functions.
 
 <img src="images/soojinplanner.png" width="600">
 
 
-### Wireframe
+## Wireframe
 
 Section 1 - Motivational quote slideshow with prev & next button
 
@@ -21,7 +21,7 @@ Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a
 
 <img src="images/wireframe.jpg" width="600">
 
-### Process & Challenges
+## Process & Challenges
 
 **Workflow**
 
@@ -43,11 +43,11 @@ Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a
 
 <img src="images/challenge.png" width="700">
 
-### Motivational Quote Slideshow
-1)I started with creating a motivational Quote slideshow
+### Motivational Quote Slideshow 
+I started with creating a motivational Quote slideshow. I found out that there is a <q> tag for quote. It wasn't too complicated but after learning how to use API, I want to replace this section with quote API to have a more varieties of quotes and to add an element of surprise. 
 
-<Note> Later in the semester, after learning how to use API, I want to put quote API here instead of keeping it as a static quote slides.
 
+  
 To prevent an error, I added a function where if user adds 
 
 3) Along with click 
