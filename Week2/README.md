@@ -53,7 +53,8 @@ I started with creating a motivational Quote slideshow. I found out that there i
 
 ### Error prevention
 To prevent an error, I added an alert system where if the input section is empty(input value.length == 0), it gives a feedback for the users to enter a task.
-<img src="images/error.png" width="400">
+
+<img src="images/error.png" width="600">
 
 
 ### Adding Checkbox
@@ -71,7 +72,7 @@ Developing a grid system for 7 days of to-do list was challenging. When the task
 <img src="images/todolistimg.png" width="700">
 
 
-### Reflections 
+## Reflection & Evaluation
 
 One takeaway from this exercise is that seemingly simple user-interaction can take many steps and considerations to develop the interaction. For example, for users, to use the to-do list function, they just need to type in task and press add. However, from the developer's perspective, I need to consider how the input tasks are stacked to one another, how to prevent errors of user adding an empty task, and much more. I have edited/added more features along the way - such as check-box system that allows users to click to mark completed task. 
 
