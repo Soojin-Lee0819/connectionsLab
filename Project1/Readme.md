@@ -50,14 +50,16 @@ This is an interactive game where players are given two name cards and they have
 
 <img src="images/simplewireframe.jpg" width="600">
 
+<br><br>
 
 
 On top, there is a title, description, and a data input section where users can type in the names. Below is a canvas where the datas are visuallized. The input names are visuallized according to the data.
-
+<br><br>
 
 <img src="images/process1.jpg" width="600">
 
 
+<br><br>
 
 For week one, I established the basic structure and successfully fetched data from three different APIs. For now the representation of the data is only based on the datas from Agify API - the size of the bubbles and the colors are determined by the data result - the predicted age of the name that user entered. 
 
