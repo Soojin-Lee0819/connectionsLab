@@ -12,13 +12,21 @@ A person's name tells a lot about one’s identity. Albeit subconsciously, once 
 
 ## Inspiration
 
-When starting this project, I wanted to put a focus on the dataset. Therefore, I started with finding interesting APIs. 
-I found this 
+When starting this project, I wanted to put a focus on the dataset. Therefore, I started with researching APIs with interesting datasets and I came across agify API](https://api.agify.io/?name=michael), a simple API for predicting the age of a person given their name. I found this API really cool becasue I am a socially inquisitive person, who finds the relationship between identity and bias really interesting. Furthermore, recently I read an article, about [The 50 best baby names of 2022] (https://www.today.com/parents/babies/most-popular-baby-names-2022-rcna14922) and thought that trends in names exists just like how fashion trends changes overtime. This API and the article got me to think about how we immediately start to profiling people once we are introduced with their names. As names are a huge part of our identity, a linguistic representation of ourselves, I decided to make a meaningful data-visualizations and interactions using dataset derived from names of the people
+
 
 ## Data & API
-For this project, I am using three APIs which are: [agify API](https://api.agify.io/?name=michael)[]()[]()
+For this project, I am using three APIs which are: 
+
+[agify API](https://api.agify.io/?name=michael) - An API for predicting the age of a person given their name.
+[nationalize API](https://nationalize.io) - An API for predicting nationality from a name.
+[gender API](https://genderize.io/?gclid=EAIaIQobChMIsfmD9dP_9QIVCcPVCh1d1gvhEAAYAiAAEgIeFfD_BwE) - A simple API to predict the gender of a person given their name
+
 
 ## Process and Challenges
+Originally, I was only using one API, the agify API. Therefore I started with brainstorming on ideas about how to use this data in a meaningful and fun manner. 
+
+
 
 
 
