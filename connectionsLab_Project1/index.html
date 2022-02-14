@@ -1,0 +1,42 @@
+<!-- 
+Connections Lab Project 1
+Diversity Game
+10- Feb 2022
+Soojin Lee
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/addons/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+
+    <body>
+      <!-- Container userInput  -->
+      <container id ="userInput">
+      <h1>Collect Business Cards Around the World</h1>
+      <p> Type in a name, then click submit.</p>
+      <p>Name: <input id = "name" value = ""> </input> 
+        <input type="submit" id="submit" value="Submit" onclick="displayData();" />
+      </p>
+      </container>
+      
+      <!-- Container "dataOutput"  -->
+      <container id="dataOutput">
+
+        <div id="canvas">
+
+        </div>
+      </container>
+    </body>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
