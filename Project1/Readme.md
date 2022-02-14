@@ -2,18 +2,17 @@
 
 **Title**:Identify Names Around the World <br>
 **Category**: Project 1 <br>
-**Date**: 9 Feb -  Feb 2022 <br>
+**Date**: 9 Feb - Continue Feb 2022 <br>
 **Deliverable**: CSS/HTML/Javascript/API WebGame & Data Visualization <br>
 
 [Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Project1)
 
 ## Project Brief
-A person's name tells a lot about one’s identity. Albeit subconsciously, once we hear the name, we immediately associate the name with the person’s gender, nationality, and even age - all associated with the name. For example, my name “Soojin” is a typical Korean female name in Korea that people who are familiar with Korean culture would immediately build a profile of myself upon introduction. For this project, using three APIs (agify API, genderize API, nationalize API), that predicts the age, gender, and nationality of the given name, I plan to create a data visualization game. There are two elements to this project. The first is data visualization and the second is gamification. For the data-visualization part, players simply need to type in the name and click the submit button to receive visual data about the name’s predicted age, gender, and nationality. For the game part, players need to be more proactively participating in the game by typing in as many diverse names as possible. The goal of this game is to type in as many names as possible that aren’t from the same country, age range (10s, 20s, 30s ...), and gender category. If the player type in two names that shares all three identities (gender, age, and nationality), the data visualization they made so far will disappear and the page will reset. This game is for people who are curious about the cultures, human diversity, or people who live in a diverse community like members of NYUAD. Through the process of playing, I hope players have fun finding different names from different backgrounds but also think critically about the biases and labels that exist in names and identities.
+A person's name tells a lot about one’s identity. Albeit subconsciously, once we hear names, we immediately associate the names with the naem owners' genders, nationalities, and even their ages. For example, my name “Soojin” is a typical Korean female name in Korea that people who are familiar with Korean culture would immediately build a profile of myself upon introduction. For this project, using three APIs (agify API, genderize API, nationalize API), that predicts the age, gender, and nationality of the given name, I plan to create a data visualization game. There are two elements to this project. The first is data visualization and the second is gamification. For the data-visualization part, players simply need to type in the name and click the submit button to receive visual data about the name’s predicted age, gender, and nationality. For the game part, players need to be more proactively participating in the game by typing in as many diverse names as possible. The goal of this game is to type in as many names as possible that aren’t from the same country, age range (10s, 20s, 30s ...), and gender category. If the player type in two names that shares all three identities (gender, age, and nationality), the data visualization they made so far will disappear and the page will reset. This game is for people who are curious about the cultures, human diversity, or people who live in a diverse community like members of NYUAD. Through the process of playing, I hope players have fun finding different names from different backgrounds but also think critically about the biases and labels that exist in names and identities.
 
 ## Inspiration
 
-When starting this project, I wanted to put a focus on the dataset. Therefore, I started with researching APIs with interesting datasets and I came across agify API](https://api.agify.io/?name=michael), a simple API for predicting the age of a person given their name. I found this API really cool becasue I am a socially inquisitive person, who finds the relationship between identity and bias really interesting. Furthermore, recently I read an article, about [The 50 best baby names of 2022] (https://www.today.com/parents/babies/most-popular-baby-names-2022-rcna14922) and thought that trends in names exists just like how fashion trends changes overtime. This API and the article got me to think about how we immediately start to profiling people once we are introduced with their names. As names are a huge part of our identity, a linguistic representation of ourselves, I decided to make a meaningful data-visualizations and interactions using dataset derived from names of the people
-
+When starting this project, I wanted this project to be focused on the dataset. Therefore, I started with researching APIs with interesting datasets and I came across [agify API](https://api.agify.io/?name=michael), a simple API for predicting the age of a person given their name. I found this API really cool becasue I recently read an article, about [The 50 best baby names of 2022](https://www.today.com/parents/babies/most-popular-baby-names-2022-rcna14922), and was surprised to find out how names also have trends just like how popular fashion styles change overtime. It also got me to think critically about how we immediately start to profile others' identities when we are introduced with names. Although we don't think about it often, names are a huge part of our identities - a linguistic label that is put on us. Therefore, names can provide a significant information or assuptions aobut us - whether it be the nationality, gender, or the age. Interested in this sociolinguistic aspects of names and the associated datas, I decided to create a website that makes a beautiful visualizations of the datas associated with names and allow users to interact with those data visualization with game mechanics. 
 
 ## Data & API
 For this project, I am using three APIs which are: 
@@ -22,17 +21,38 @@ For this project, I am using three APIs which are:
 
 [nationalize API](https://nationalize.io) - An API for predicting nationality from a name.
 
-[gender API](https://genderize.io/?gclid=EAIaIQobChMIsfmD9dP_9QIVCcPVCh1d1gvhEAAYAiAAEgIeFfD_BwE) - A simple API to predict the gender of a person given their name
+[gender API](https://genderize.io/?gclid=EAIaIQobChMIsfmD9dP_9QIVCcPVCh1d1gvhEAAYAiAAEgIeFfD_BwE) - An API to predict the gender of a person given their name
 
-I would like to note that the data set inherently involves biases and This is not to make a perfect desciption of the demographics or to classify people with such name into a category, but the point of this project is to engage players to explore about different names around the world and have fun while guessing the identity associated with the data. For example, for the age dataset, I found it not too accurate since the age is predicted based on the average of the entered data. I couldn't find the name that would yield the age that is teenager or younger. I decided to not use the genderize data since I found the dataset discriminatory - as it is binarilly dividing gender into female or male. 
+I would like to make a note that these datasets inherit biases and assumptions about people. Therefore, the use of data in this project is not to have a perfect understanding of the demographics or to classify people into cookie cutter categories. However, the focus is on making a meaningful visualization of data associated to names and provide a fun game that allows players to explore cultural, gender, and age identities associated with names.
 
 ## Process and Challenges
-Originally, I was only using one API, the agify API. Therefore I started with brainstorming on ideas about how to use this data in a meaningful and fun manner. 
+
+Originally, I was planning to use one API, the agify API. Therefore I started with brainstorming ideas about how to represent this data in a visually appealing manner, and how to engage players to interact with the data visualization.
 
 <img src="images/brainstorm.jpg" width="600">
 
+### Signature Generator
+When users type in the name, based on the data result, the website provides a unique signature. For example, the number of the age determines the color values, size of the font, font-family and etcetera. 
 
+**Find the Youngest Name**
+In this challenge-style interaction, users are invited to find the youngest name. It was difficult to find names with young ages. Most of the names were between 30-60, and I couldn't find any name that is predicted to be a teenagers' name. This maybe because of the nature of how the data is collected - finding the average age of all the ages associated to the name. 
+
+**Visualizing Name & Age**
+To make the visualization intuitive, I wanted to make the size of the bubble in proportion to the predicted age of the names. In this way, players can easily compare different names and ages. 
+
+**Family Tree**
+I thought it would be interesting to make a website where players type in the family members' names and it generates family tree based on the predicted name of the age. 
+
+**Who's Older?**
+This is an interactive game where players are given two names and havae to guess which name has a older predicted age.
+
+## Week1
+
+<img src="images/simplewireframe.jpg" width="600">
 <img src="images/process1.jpg" width="600">
+
+For week one, I established the basic structure. As of now, the visualizaiton of the name data is on the age dataset. 
+
 
 ## Next Steps
 
