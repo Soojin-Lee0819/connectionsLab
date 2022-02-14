@@ -19,7 +19,9 @@ When starting this project, I wanted to put a focus on the dataset. Therefore, I
 For this project, I am using three APIs which are: 
 
 [agify API](https://api.agify.io/?name=michael) - An API for predicting the age of a person given their name.
+
 [nationalize API](https://nationalize.io) - An API for predicting nationality from a name.
+
 [gender API](https://genderize.io/?gclid=EAIaIQobChMIsfmD9dP_9QIVCcPVCh1d1gvhEAAYAiAAEgIeFfD_BwE) - A simple API to predict the gender of a person given their name
 
 
