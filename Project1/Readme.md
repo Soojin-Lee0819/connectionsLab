@@ -21,17 +21,36 @@ For this project, I am using three APIs which are:
 
 [nationalize API](https://nationalize.io) - An API for predicting nationality from a name.
 
-[gender API](https://genderize.io/?gclid=EAIaIQobChMIsfmD9dP_9QIVCcPVCh1d1gvhEAAYAiAAEgIeFfD_BwE) - A simple API to predict the gender of a person given their name
+[gender API](https://genderize.io/?gclid=EAIaIQobChMIsfmD9dP_9QIVCcPVCh1d1gvhEAAYAiAAEgIeFfD_BwE) - An API to predict the gender of a person given their name
 
-I would like to note that the data set inherently involves biases and This is not to make a perfect desciption of the demographics or to classify people with such name into a category, but the point of this project is to engage players to explore about different names around the world and have fun while guessing the identity associated with the data. For example, for the age dataset, I found it not too accurate since the age is predicted based on the average of the entered data. I couldn't find the name that would yield the age that is teenager or younger. I decided to not use the genderize data since I found the dataset discriminatory - as it is binarilly dividing gender into female or male. 
+I would like to make a note that these datasets inherit biases and assumptions about people. Therefore, the use of data in this project is not to have a perfect understanding of the demographics or to classify people into cookie cutter categories. However, the focus is on making a meaningful visualization of data associated to names and provide a fun game that allows players to explore cultural, gender, and age identities associated with names.
 
 ## Process and Challenges
-Originally, I was only using one API, the agify API. Therefore I started with brainstorming on ideas about how to use this data in a meaningful and fun manner. 
+
+Originally, I was planning to use one API, the agify API. Therefore I started with brainstorming ideas about how to represent this data in a visually appealing manner, and how to engage players to interact with the data visualization.
 
 <img src="images/brainstorm.jpg" width="600">
 
+### Signature Generator
+When users type in the name, based on the data result, the website provides a unique signature. For example, the number of the age determines the color values, size of the font, font-family and etcetera. 
 
+**Find the Youngest Name**
+In this challenge-style interaction, users are invited to find the youngest name. It was difficult to find names with young ages. Most of the names were between 30-60, and I couldn't find any name that is predicted to be a teenagers' name. This maybe because of the nature of how the data is collected - finding the average age of all the ages associated to the name. 
+
+**Visualizing Name & Age**
+To make the visualization intuitive, I wanted to make the size of the bubble in proportion to the predicted age of the names. In this way, players can easily compare different names and ages. 
+
+**Family Tree**
+I thought it would be interesting to make a website where players type in the family members' names and it generates family tree based on the predicted name of the age. 
+
+**Who's Older?**
+This is an interactive game where players are given two names and havae to guess which name has a older predicted age.
+
+## Week1
 <img src="images/process1.jpg" width="600">
+
+For week one, I established the basic structure. As of now, the visualizaiton of the name data is on the age dataset. 
+
 
 ## Next Steps
 
