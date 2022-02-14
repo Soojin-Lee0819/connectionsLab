@@ -24,7 +24,7 @@ For this project, I am using three APIs which are:
 
 [gender API](https://genderize.io/?gclid=EAIaIQobChMIsfmD9dP_9QIVCcPVCh1d1gvhEAAYAiAAEgIeFfD_BwE) - A simple API to predict the gender of a person given their name
 
-I would like to note that the data set inherently involves biases and This is not to make a perfect desciption of the demographics or to classify people with such name into a category, but the point of this project is to engage players to explore about different names around the world and have fun while guessing the identity associated with the data. For example, for the age dataset, I found it not too accurate since the age is predicted based on the average of the entered data. I couldn't find the name that would yield the age that is teenager or younger. 
+I would like to note that the data set inherently involves biases and This is not to make a perfect desciption of the demographics or to classify people with such name into a category, but the point of this project is to engage players to explore about different names around the world and have fun while guessing the identity associated with the data. For example, for the age dataset, I found it not too accurate since the age is predicted based on the average of the entered data. I couldn't find the name that would yield the age that is teenager or younger. I decided to not use the genderize data since I found the dataset discriminatory - as it is binarilly dividing gender into female or male. 
 
 ## Process and Challenges
 Originally, I was only using one API, the agify API. Therefore I started with brainstorming on ideas about how to use this data in a meaningful and fun manner. 
