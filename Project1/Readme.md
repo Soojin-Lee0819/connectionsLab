@@ -29,9 +29,10 @@ I would like to note that the data set inherently involves biases and This is no
 ## Process and Challenges
 Originally, I was only using one API, the agify API. Therefore I started with brainstorming on ideas about how to use this data in a meaningful and fun manner. 
 
+<img src="images/brainstorm.jpg" width="600">
 
 
-
+<img src="images/process1.jpg" width="600">
 
 ## Next Steps
 
