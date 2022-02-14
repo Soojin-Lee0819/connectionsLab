@@ -25,9 +25,9 @@ For this project, I am using three APIs which are:
 
 I would like to mention that these datasets have biases and assumptions about people. Therefore, the use of data in this project is not to have a perfect understanding of the demographics or to classify people into cookie cutter categories. However, the focus is on making a meaningful visualization of data associated to names and provide a fun game that allows players to explore cultural, gender, and age identities associated with names.
 
-## Process and Challenges
+## Process
 
-Originally, I was planning to use one API, the agify API. Therefore I started with brainstorming ideas about how to represent this data in a visually appealing manner, and how to engage players to interact with the data visualization.
+Originally, I was planning to use one API, the agify API. I started with brainstorming ideas about how to represent this data in a visually appealing manner as well as the game mechanics that can engage users to interact with the datas in a meaningful way.
 
 <img src="images/brainstorm.jpg" width="600">
 
@@ -41,17 +41,21 @@ In this challenge-style interaction, users are invited to find the youngest name
 To make the visualization intuitive, I wanted to make the size of the bubble in proportion to the predicted age of the names. In this way, players can easily compare different names and ages. 
 
 **Family Tree**
-I thought it would be interesting to make a website where players type in the family members' names and it generates family tree based on the predicted name of the age. 
+I thought it would be interesting to make a website where the users type in their family members' names and receive a family tree based on the predicted age of the names. 
 
 **Who's Older?**
-This is an interactive game where players are given two names and havae to guess which name has a older predicted age.
+This is an interactive game where players are given two name cards and they have to guess which name has an older predicted age. 
 
 ## Week1
 
 <img src="images/simplewireframe.jpg" width="600">
+
+On top, there is a title, description, and a data input section where users can type in the names. Below is a canvas where the datas are visuallized. The input names are visuallized according to the data.
+
+
 <img src="images/process1.jpg" width="600">
 
-For week one, I established the basic structure. As of now, the visualizaiton of the name data is on the age dataset. 
+For week one, I established the basic structure and successfully fetched data from three different APIs. For now the representation of the data is only based on the datas from Agify API - the size of the bubbles and the colors are determined by the data result - the predicted age of the name that user entered. 
 
 
 ## Next Steps
