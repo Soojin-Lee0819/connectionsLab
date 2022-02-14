@@ -1,0 +1,23 @@
+html, body {
+    margin: 0;
+    text-align: center;
+    background-color: #D85F55;
+    padding: 0;
+  }
+
+#dataOutput {
+    min-height: 50vw; /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   }
+
+#canvas {
+ position: relative;
+ width:100%;
+ height:100%;
+}
+
+
