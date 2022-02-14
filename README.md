@@ -19,4 +19,5 @@ ___
 
 # Project 1
 [Identify Name Game Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project1)
+
 [Identify Name Game Page](https://soojin-lee0819.github.io/connectionsLab/Project1)
