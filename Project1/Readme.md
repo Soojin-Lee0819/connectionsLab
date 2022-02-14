@@ -47,6 +47,8 @@ I thought it would be interesting to make a website where players type in the fa
 This is an interactive game where players are given two names and havae to guess which name has a older predicted age.
 
 ## Week1
+
+<img src="images/simplewireframe.jpg" width="600">
 <img src="images/process1.jpg" width="600">
 
 For week one, I established the basic structure. As of now, the visualizaiton of the name data is on the age dataset. 
