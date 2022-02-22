@@ -1,110 +1,193 @@
+//api URL + userinput
+let ageurl;
+let nationalurl;
+
+
 //declare API data
 let resultName;
 let resultAge;
-let resultCount;
-let resultNational;
-let genderNational;
-let ageapi = 'https://api.agify.io?name=';
-let nationalapi = 'https://api.nationalize.io/?name=';
-let genderapi = 'https://api.genderize.io/?name=';
+let resultCountry;
+
+//change country code to full country name
+let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
+//declare country full name 
+let resultCountryFull;
 
 //declare Bubble 
 let Bubbles = [];
+let Countries = [];
+let Ages = [];
+
+//startscore at 0
+let score = 0;
+let notificaiton = false;
 
 //setup
 function setup() {
+
   //create Canvas and put it to HTML
-  let canvas = createCanvas(windowWidth, windowHeight);
+  let canvas = createCanvas(windowWidth*0.8, windowHeight*0.8);
   canvas.parent("canvas");
+
+  //startpage
+  Startpage = new startpage();
+
   //Button & Declare
   let button = select('#submit');
-  button.mousePressed(nameAsk);
+  button.mousePressed(nameSubmit);
+
+   //Button & Declare
+   let playButton = select('#start');
+   playButton.mousePressed(scrolltoGamePage);
+ 
+
   //Input select
   input = select('#name');
-  }
+}
 
+//resize canvas on windowsize resized
+function windowResized() {
+  resizeCanvas(windowWidth*0.8, windowHeight*0.6);
+}
+
+//when the user submit name, fetch api and load data
+function nameSubmit(){
+  let name = document.querySelector("#name").value;
+  ageurl = 'https://api.agify.io?name=' + name + '&apikey=275c8c5db6b62a979b8b4ac71ab76af0';
+  nationalurl = 'https://api.nationalize.io/?name=' + name + '&apikey=275c8c5db6b62a979b8b4ac71ab76af0';
+
+  //console.log age data
+  fetch(ageurl)
+  .then(response => response.json())
+  .then((ageData) => {
+    resultAge = ageData.age;
+    resultName = ageData.name;
+    console.log(resultName);
+    console.log(resultAge);
+  })
+  
+  //console.log national data
+  fetch(nationalurl)
+  .then(response => response.json())
+  .then((nationalData) => {
+    resultCountry = nationalData.country[0].country_id;
+    resultCountryFull = regionNamesInEnglish.of(resultCountry);
+    console.log(resultCountryFull);
+    loadJSON(nationalurl,pushBubble);
+  })
+
+  //If there is no entry for name show alert
+  if (document.querySelector('#name').value.length == 0) {
+    alert('Type in a name');
+   }
+
+ 
+
+  //After value is added, delete the 
+  document.querySelector("#name").value = "";
+  
+}
+
+
+function pushBubble () {
+
+  //Create Random Pastel Color
+  let hue = Math.floor(Math.floor(Math.random() * 360));
+  let randomColor = `hsl(${hue}, 70%, 80%)`;
+
+  Bubbles.push(new bubble(resultName, resultAge, resultCountryFull,randomColor, width/2,height/2,random(1,2)));
+  console.log(Bubbles);
+  Countries.push(resultCountryFull);
+  Ages.push(resultAge);
+  console.log(Countries);
+  console.log(Ages);
+  checkDuplicate();
+  checkAge();
+  scoreFunction();
+}
+
+//Check for Country Duplicate
+function checkDuplicate(){
+   let arrCountries = Countries;
+   let result = false;
+   // go through the Country array
+   for(let i = 0; i < arrCountries.length;i++) {
+      // compare the first and last index of an element
+      if(arrCountries.indexOf(arrCountries[i]) !== arrCountries.lastIndexOf(arrCountries[i])){
+         result = true;
+
+         // terminate the loop
+         break;
+      }
+   }
+   //if there is duplicate
+   if(result) {
+      console.log('Array contains duplicate elements');
+
+      //the game is over and restart the game
+      document.location.reload();
+
+   } else {
+      console.log('Array does not contain duplicate elements');
+   }
+}
+
+//Compare the most recently added data with the rest of the ages in the array
+
+function checkAge(){
+}
 
 //draw canvas
 function draw() {
-  background(216,95,85);
+
+  background(239,217,204);
+      //display bubbles
       for (let i = 0; i < Bubbles.length; i++) {
         let p = Bubbles[i];
         p.display();
+        p.move();
       }
-  }
 
-  //Bubble Class
-  class bubble {
+      //display score
+      scoreDisplay();
+      
+      //display notification
+      if(notificaiton == true){
+        notificationDisplay();
+        }
 
-    //Construct bubble object
-    constructor(age,name,count) {
-      //resultAge
-      this.a = age;
-      //resultname
-      this.n = name;
-      //resultcount
-      this.c = count/100+200;
-     this.xpos = random(0,windowWidth/2);
-     this.ypos = random(0,windowHeight/2);
+        Startpage.display();
+
     }
 
-    //diaplsy bubble
-    display() {
-      noStroke();
-       //Change color of the bubble according to age
-      fill((this.a-30)*7,(this.a-30)*7,(this.a-20)*7);
-      //Create ellipse at r
-      ellipse(this.xpos, this.ypos, (this.a-20)*10, (this.a-20)*10);
-      fill(255);
-      textSize(this.a-10);
-      text(this.n,this.xpos,this.ypos);
-    }
+
+//update score 
+function scoreFunction() {
+  score += resultAge;
+  console.log(score);
+
+  if (score >= 500) {
+    console.log('end');
+
   }
-
-
-  //responsive to the widow size
-  function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-  }
-
-
-//add input to url
-function nameAsk() {
-  let ageurl = ageapi + input.value();
-  let nationalurl = nationalapi + input.value();
-  let genderurl = genderapi + input.value();
-  loadJSON (ageurl, gotAgeData);
-  loadJSON (nationalurl, gotNationalData);
-  loadJSON (genderurl, gotGenderData);
 }
 
-//receive data and console.log
-function gotAgeData(agedata) {
-  console.log(agedata);
-  resultName = agedata.name;
-  resultAge = agedata.age;
-  resultCount = agedata.count;
-  Bubbles.push(new bubble(resultAge,resultName,resultCount));
-  console.log(Bubbles);
+//display score
+function scoreDisplay(){
+   textSize(width/40);
+   textAlign(CENTER);
+   fill(255);
+   text("Age Score: " + score, width/10, width/20);
 }
 
-//receive data and console.log
-
-function gotNationalData(nationaldata) {
-  console.log(nationaldata);
-  resultNational = nationaldata;
-}
-
-//receive data and console.log
-function gotGenderData(genderdata) {
-  console.log(genderdata);
-  resultGeder = genderdata;
-}
-
-//when keyPressed, start data receive
+//when Enterkey Pressed, start nameSubmit function
 function keyPressed() {
     if (keyCode === ENTER) {
-        nameAsk();
+        nameSubmit();
     }
   }
 
+//scroll to Game Page
+function scrolltoGamePage(){
+
+}

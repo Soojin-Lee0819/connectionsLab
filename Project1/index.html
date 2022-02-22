@@ -5,26 +5,49 @@ Diversity Game
 Soojin Lee
  -->
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
-    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
-    <script language="javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" href="country-flag.css">
+
+    <!-- importing font-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
 
     <body>
+      <!-- Container landingContainer -->
+      <container id ="landingContainer">
+        <div class="introduction">
+          <div class="circle">
+            <div id="circleCenter">
+          <h1>Names Around The World</h1>
+          <p> Name Tells a lot about a person. It’s our linguistic identity.
+
+            How to Win:
+            Collect Age Above 1000
+            Find the name
+            
+            How to Loose:
+            If you type in name from the same nationanlity</p>
+            <input type="submit" id="start" value="PLAY"/>
+
+          </div>
+          </div>
+          </div>
+      </container>
+      
       <!-- Container userInput  -->
-      <container id ="userInput">
-      <h1>Collect Names Around the World</h1>
-      <p> Type in a name, then click submit.</p>
-      <p>Name: <input id = "name" value = ""> </input> 
-        <input type="submit" id="submit" value="Submit" onclick="displayData();" />
+      <container id ="userInputContainer">
+        <p> Get 500 Age Score Without Repeating the Nationality!</p>
+        <div id="userInput">
+      <p><input id = "name" value = "" placeholder="name"> </input> 
+        <input type="submit" id="submit" value="Submit"/>
       </p>
+      </div>
       </container>
       
       <!-- Container "dataOutput"  -->
@@ -35,8 +58,10 @@ Soojin Lee
         </div>
       </container>
     </body>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
     <script src="app.js"></script>
+    <script src="bubble.js"></script>
+    <script src="startpage.js"></script>
   </body>
 </html>
 

@@ -1,13 +1,72 @@
 html, body {
-    margin: 0;
+    margin:0;
+    padding:0;
     text-align: center;
     background-color: #D85F55;
-    padding: 0;
   }
 
+.introduction {
+  background-color: #EFD9CC;
+  width: 100%;
+  height:100vh;
+  margin:0;
+  display: flex;
+justify-content: center;
+}
+
+.circle {
+  background-color: #B9D8D4;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 40vw;
+  height: 40vw;
+  display: flex;
+  border-radius: 50%;
+}
+
+#circleCenter {
+  margin-top: auto;
+  margin-bottom: auto;
+
+}
+
+#userInput {
+  margin:0;
+}
+
+.circle h1{
+  display: inline-block;
+  font-family: 'Inter', sans-serif, bold;
+  font-size: 2em;
+}
+
+.circle p{
+  font-family: 'Inter', sans-serif;
+  width:70%;
+  margin:auto;
+  font-size: 1.2vw;
+}
+
+#start {
+
+  /* remove default behavior */
+  appearance:none;
+  -webkit-appearance:none;
+
+  /* usual styles */
+  position:relative;
+  width:20%;
+  padding:1vw;
+  margin-top:3vw;
+  font-size: 0.8em;
+  border:none;
+  color:#fff;
+  font-weight:600;
+  border-radius:5px;
+  background-color: #5254ec;
+}
+
 #dataOutput {
-    min-height: 50vw; /* mobile viewport bug fix */
-    min-height: -webkit-fill-available;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,9 +74,57 @@ html, body {
    }
 
 #canvas {
+  font-family: 'Inter', sans-serif;
+ margin-top:5vw;
  position: relative;
- width:100%;
- height:100%;
+ margin-bottom:5vw;
+
+}
+
+#name{
+  appearance:none;
+  -webkit-appearance:none;
+  border:none;
+  padding:1vw;
+  font-size: 0.8em;
+  border-radius:5px;
+  width:30%;
+}
+
+#submit {
+
+  /* remove default behavior */
+  appearance:none;
+  -webkit-appearance:none;
+
+  /* usual styles */
+  position:relative;
+  width:10%;
+  padding:1vw;
+  font-size: 0.8em;
+  border:none;
+  color:#fff;
+  font-weight:600;
+  border-radius:5px;
+  background-color: #5254ec;
 }
 
 
+@media only screen and (max-width: 800px) {
+
+  .circle {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .circle h1{
+  font-size: 1.5em;
+}
+
+.circle p{
+  font-size: 1em;
+}
+#name #submit {
+  font-size: 0.6em;
+}
+}
