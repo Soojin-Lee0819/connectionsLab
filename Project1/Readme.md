@@ -74,3 +74,7 @@ For week one, I established the basic structure and successfully fetched data fr
 6) Consider storing classes to different js files to organize code.
 7) Describe project and write down instructions on how to play the game on the landing page using visual cues (minimize writing). 
 8) Prevent Errors such as error message pop up when the input is submitted without any entry.
+
+
+## Winning Example for Presentation
+Soojin -> David -> Francesca -> lily -> Ali -> Simon -> Joseph -> Keiko -> -> Sammy -> Milena 
