@@ -2,59 +2,123 @@ html, body {
     margin:0;
     padding:0;
     text-align: center;
-    background-color: #D85F55;
+    background-color: #DC836F;
+    font-family: 'Gamja Flower', cursive;
+    color:white;
   }
 
-.introduction {
+.instruction {
   background-color: #EFD9CC;
-  width: 100%;
+  width: 100vw;
   height:100vh;
   margin:0;
-  display: flex;
-justify-content: center;
 }
 
-.circle {
-  background-color: #B9D8D4;
-  margin-top: auto;
-  margin-bottom: auto;
+
+.soojinCircle {
+  background: radial-gradient(#F3D47E, #CB4B2F);
+  width: 15vw;
+  height: 15vw;
+  margin-left:10vw;
+  margin-top:10vw;
+  position: absolute;
+  border-radius: 50%;
+  color:white;
+  font-size: 2.5vw;
+  display: flex;
+  align-items: center;
+}
+
+.soojinCircle p , .fischerCircle p {
+  width:100%;
+}
+
+.soojinName:after{
+  content:'Soojin';
+}
+.soojinName:hover:after{
+  font-size: 1.8vw;
+  content:"Soojin \A South Korea \A 43 yrs";
+  white-space: pre-wrap;
+}
+
+.fischerName:after{
+  content:'Fischer';
+}
+
+.fischerName:hover:after{
+  font-size: 1.8vw;
+  content:"Fischer \A Switzerland \A 28 yrs";
+  white-space: pre-wrap;
+  margin:0;
+}
+
+.fischerCircle {
+  background: radial-gradient(#9BE8D5, #899979);
+  width: 15vw;
+  height: 15vw;
+  right:10vw;
+  bottom:10vw;
+  position: absolute;
+  border-radius: 50%;
+  color:white;
+  font-size: 2.5vw;
+  display: flex;
+  align-items: center;
+}
+
+
+.mainCircle {
+  background: radial-gradient(#C18FA7, #616093);
   width: 40vw;
   height: 40vw;
-  display: flex;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   border-radius: 50%;
+  margin-left: 30vw;
+  display: flex;
 }
 
-#circleCenter {
+#circleText{
   margin-top: auto;
   margin-bottom: auto;
+}
 
+#game {
+  position:relative;
+  padding-top:5vw;
 }
 
 #userInput {
   margin:0;
 }
-
-.circle h1{
+#game p{
+  margin:auto;
+  width:60%;
+}
+.mainCircle h1{
   display: inline-block;
-  font-family: 'Inter', sans-serif, bold;
-  font-size: 2em;
+  font-size: 3vw;
 }
 
-.circle p{
-  font-family: 'Inter', sans-serif;
+.mainCircle p{
   width:70%;
   margin:auto;
-  font-size: 1.2vw;
+  font-size: 1.8vw;
 }
 
-#start {
-
+#play {
+  
+  font-size: 1.8vw;
   /* remove default behavior */
   appearance:none;
   -webkit-appearance:none;
 
-  /* usual styles */
+  /* add styles */
   position:relative;
+  font-family: 'Gamja Flower', cursive;
   width:20%;
   padding:1vw;
   margin-top:3vw;
@@ -63,8 +127,23 @@ justify-content: center;
   color:#fff;
   font-weight:600;
   border-radius:5px;
-  background-color: #5254ec;
+  background-color: #2E1F59;
+  font-size: 1.8vw;
 }
+
+#game p{
+  padding:2vw;
+  border-width: 2px;
+  color:#ffffff;
+  font-size: 1.8vw;
+}
+
+#play:hover {
+  background-color: #3f2b75;
+
+}
+
+
 
 #dataOutput {
     display: flex;
@@ -74,7 +153,6 @@ justify-content: center;
    }
 
 #canvas {
-  font-family: 'Inter', sans-serif;
  margin-top:5vw;
  position: relative;
  margin-bottom:5vw;
@@ -86,45 +164,52 @@ justify-content: center;
   -webkit-appearance:none;
   border:none;
   padding:1vw;
-  font-size: 0.8em;
+  font-size: 1.5vw;
+  font-family: 'Gamja Flower', cursive;
   border-radius:5px;
   width:30%;
 }
 
 #submit {
 
-  /* remove default behavior */
-  appearance:none;
-  -webkit-appearance:none;
-
-  /* usual styles */
-  position:relative;
-  width:10%;
-  padding:1vw;
-  font-size: 0.8em;
-  border:none;
-  color:#fff;
-  font-weight:600;
-  border-radius:5px;
-  background-color: #5254ec;
+    /* remove default behavior */
+    appearance:none;
+    -webkit-appearance:none;
+  
+    /* usual styles */
+    position:relative;
+    font-family: 'Gamja Flower', cursive;
+    width:10vw;
+    padding:1vw;
+    margin-top:3vw;
+    border:none;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+    font-size: 1.5vw;
+    background-color: #2E1F59;
 }
-
 
 @media only screen and (max-width: 800px) {
 
-  .circle {
-    width: 80vw;
-    height: 80vw;
+  .mainCircle {
+    width: 60vw;
+    height: 60vw;
+    margin-left:20vw;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 
-  .circle h1{
-  font-size: 1.5em;
+  .mainCircle h1{
+  font-size: 3.5vw;
 }
 
-.circle p{
-  font-size: 1em;
+.mainCircle p{
+  font-size: 2vw;
 }
 #name #submit {
-  font-size: 0.6em;
+  font-size: 0.6vw;
 }
 }

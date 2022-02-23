@@ -1,5 +1,0 @@
-class startpage {
-    display(){
-    }
-
-}

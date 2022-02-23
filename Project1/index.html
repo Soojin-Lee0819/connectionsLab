@@ -9,59 +9,54 @@ Soojin Lee
 <html lang="en">
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="country-flag.css">
 
     <!-- importing font-->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   </head>
 
-  <body>
-
     <body>
-      <!-- Container landingContainer -->
-      <container id ="landingContainer">
-        <div class="introduction">
-          <div class="circle">
-            <div id="circleCenter">
-          <h1>Names Around The World</h1>
-          <p> Name Tells a lot about a person. It’s our linguistic identity.
+      <!-- Landing Instruction Section -->
+        <div class="instruction">
+          <div class="soojinCircle">
+            <p span class="soojinName"></p>
+            </div>
+            <div class="fischerCircle">
+              <p span class="fischerName"></p>
+            </div>
 
-            How to Win:
-            Collect Age Above 1000
-            Find the name
-            
-            How to Loose:
-            If you type in name from the same nationanlity</p>
-            <input type="submit" id="start" value="PLAY"/>
-
-          </div>
-          </div>
-          </div>
-      </container>
+          <div class="mainCircle">
+            <div id="circleText">
+          <h1>What's Your Name?</h1>
+          <p> There's a lot to a name. Where is Soojin from? How old is Fischer? Hover to find out what data says about these names and click PLAY to start the game.
       
-      <!-- Container userInput  -->
-      <container id ="userInputContainer">
-        <p> Get 500 Age Score Without Repeating the Nationality!</p>
-        <div id="userInput">
+          </p>
+            <input type="submit" id="play" value="PLAY"/>
+            </div>
+          </div>
+          </div>
+      
+      <!-- Game Section -->
+        <div id ="game">
+          <h1>Collect Names Around the World</h1>
+          <p>Type in a name and hit submit! The predicted age and country of each name will be displayed. The predicted age will be added to your total ‘Age Score’. When the collective Age Score is above 500, you win! But there’s a catch: if you enter two names from the same country, you lose!</p>
       <p><input id = "name" value = "" placeholder="name"> </input> 
         <input type="submit" id="submit" value="Submit"/>
       </p>
-      </div>
-      </container>
       
       <!-- Container "dataOutput"  -->
-      <container id="dataOutput">
 
         <div id="canvas">
+          </div>
 
-        </div>
-      </container>
+    </div>
     </body>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
     <script src="app.js"></script>
     <script src="bubble.js"></script>
-    <script src="startpage.js"></script>
+    <script src="endgame.js"></script>
   </body>
 </html>
 

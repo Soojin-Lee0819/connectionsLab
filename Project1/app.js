@@ -1,3 +1,15 @@
+//Landing Page Interaction
+
+document.getElementById('play').onclick = function scrollGame() {
+  let elmnt = document.getElementById("game");
+  elmnt.scrollIntoView({ behavior: 'smooth'});
+
+}
+
+
+
+
+//Game Page Interaction 
 //api URL + userinput
 let ageurl;
 let nationalurl;
@@ -20,7 +32,9 @@ let Ages = [];
 
 //startscore at 0
 let score = 0;
-let notificaiton = false;
+let gameDone = false;
+
+
 
 //setup
 function setup() {
@@ -29,17 +43,13 @@ function setup() {
   let canvas = createCanvas(windowWidth*0.8, windowHeight*0.8);
   canvas.parent("canvas");
 
-  //startpage
-  Startpage = new startpage();
+  //endpage
+ endGame = new endgame();
 
   //Button & Declare
   let button = select('#submit');
   button.mousePressed(nameSubmit);
 
-   //Button & Declare
-   let playButton = select('#start');
-   playButton.mousePressed(scrolltoGamePage);
- 
 
   //Input select
   input = select('#name');
@@ -70,22 +80,29 @@ function nameSubmit(){
   fetch(nationalurl)
   .then(response => response.json())
   .then((nationalData) => {
+    //if this name is undefined show alert
+    if(nationalData.country[0]==undefined) {
+      alert('This name is undefined.');
+    };
     resultCountry = nationalData.country[0].country_id;
     resultCountryFull = regionNamesInEnglish.of(resultCountry);
     console.log(resultCountryFull);
     loadJSON(nationalurl,pushBubble);
   })
 
+if (fetch(nationalurl)==0) {
+  alert('Type in a name');
+};
+
   //If there is no entry for name show alert
   if (document.querySelector('#name').value.length == 0) {
     alert('Type in a name');
    }
-
- 
-
-  //After value is added, delete the 
+   if(resultCountry == 0){
+    alert('Type in a name');
+  }
+  //empty the input section once submit button is pressed
   document.querySelector("#name").value = "";
-  
 }
 
 
@@ -139,8 +156,9 @@ function checkAge(){
 
 //draw canvas
 function draw() {
-
-  background(239,217,204);
+  noStroke();
+  fill(49,43,61);
+  rect(0,0,width,height,width/20);
       //display bubbles
       for (let i = 0; i < Bubbles.length; i++) {
         let p = Bubbles[i];
@@ -152,13 +170,11 @@ function draw() {
       scoreDisplay();
       
       //display notification
-      if(notificaiton == true){
-        notificationDisplay();
-        }
-
-        Startpage.display();
+      if( gameDone == true){
+        endGame.display();
 
     }
+  }
 
 
 //update score 
@@ -166,15 +182,14 @@ function scoreFunction() {
   score += resultAge;
   console.log(score);
 
-  if (score >= 500) {
-    console.log('end');
-
+  if (score >= 100) {
+   gameDone = true;
   }
 }
 
 //display score
 function scoreDisplay(){
-   textSize(width/40);
+   textSize(width/60);
    textAlign(CENTER);
    fill(255);
    text("Age Score: " + score, width/10, width/20);
@@ -186,8 +201,3 @@ function keyPressed() {
         nameSubmit();
     }
   }
-
-//scroll to Game Page
-function scrolltoGamePage(){
-
-}
