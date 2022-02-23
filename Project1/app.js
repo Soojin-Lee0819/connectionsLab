@@ -7,9 +7,11 @@ document.getElementById('play').onclick = function scrollGame() {
 }
 
 
+//GamePage Interaction
 
+//font gamja
+let gamjaFont;
 
-//Game Page Interaction 
 //api URL + userinput
 let ageurl;
 let nationalurl;
@@ -32,12 +34,21 @@ let Ages = [];
 
 //startscore at 0
 let score = 0;
+
+//GameDone Boolean
 let gameDone = false;
 
+
+//preload
+function preload() {
+  gamjaFont = loadFont('GamjaFlower-Regular.ttf');
+}
 
 
 //setup
 function setup() {
+
+  textFont(gamjaFont);
 
   //create Canvas and put it to HTML
   let canvas = createCanvas(windowWidth*0.8, windowHeight*0.8);
@@ -142,6 +153,7 @@ function checkDuplicate(){
       console.log('Array contains duplicate elements');
 
       //the game is over and restart the game
+      alert('Game Over');
       document.location.reload();
 
    } else {
@@ -182,22 +194,36 @@ function scoreFunction() {
   score += resultAge;
   console.log(score);
 
-  if (score >= 100) {
+  if (score >= 500) {
    gameDone = true;
   }
 }
 
 //display score
 function scoreDisplay(){
-   textSize(width/60);
+   textSize(width/40);
    textAlign(CENTER);
    fill(255);
    text("Age Score: " + score, width/10, width/20);
 }
 
-//when Enterkey Pressed, start nameSubmit function
+
 function keyPressed() {
-    if (keyCode === ENTER) {
+  //when Enterkey Pressed, start nameSubmit function
+    if (gameDone == false && keyCode === ENTER) {
         nameSubmit();
     }
+      //any key is pressed after gameDone, restart
+    if (gameDone == true) {
+      document.location.reload();
+    }
+  }
+
+
+  function mousePressed() {
+        //if mousepressed after gameDone, restart
+        if (gameDone == true) {
+          document.location.reload();
+        }
+
   }

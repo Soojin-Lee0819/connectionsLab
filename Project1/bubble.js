@@ -26,14 +26,14 @@
       fill(this.color);
       //Create ellipse at r
       ellipse(this.x, this.y, r, r);
-      fill(255);
-      textSize(this.a-10);
+      fill(0);
+      textSize(this.a);
       textAlign(CENTER);
       text(this.n,this.x,this.y+(this.a-10)/2);
       //Country Name is smaller than Name
-      textSize((this.a-10)/2);
+      textSize((this.a)/2);
       text(this.c,this.x,this.y-(this.a-10)/2);
-      textSize((this.a-10)/3);
+      textSize((this.a)/3);
       text(this.a+' yr',this.x,this.y-r/4);
     }
 
