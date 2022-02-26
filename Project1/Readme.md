@@ -63,7 +63,7 @@ This is an interactive game where players are given two name cards and they have
 
 <br><br>
 
-On Week1, I created a simple wireframe focusing on how user would put input, and how the data would be visualized. On top, there is a title, description, and an input section where users can enter names. Below is a canvas where the data about the names are visuallized. 
+On Week1, I created a simple wireframe focusing on how user input, and how the data would be visualized as an output. On top, there is a title, description, and an input section where users can enter names. Below is a canvas where the data about the names are visuallized. 
 
 ### Wireframe Week 2
 <img src="images/wireframe2.jpg" width="600">
@@ -73,20 +73,179 @@ Week2, I refined the wireframe. There are 2 sections: the landing page section a
 The game page consists of three sections: the instruction section, user input section, and the data visualization section. The score is represented on the top left corner of the game screen. My goal was to use minimal UI to allow players to focus on the visualized data without being distracted by the surrounding instructions.
 
 
+## Visual Design Choices
+<img src="images/designstyle.png" width="600">
 
-## Process
+I focused on the consistency and the perceived feeling when making choices for visual design. I wanted the website to look bubbly, cute, and comforting. For the font, I used "Gamja Flower" - one font throughout the web. For colors, I used many colors but all of them are pastel-based colors. For the shape, since the main visualization is the circle shape, I used lots of curves and rounded the edges of th boxes to make the website look more bubbly and soft. For the landing page, inspired by Yeji's beautiful color gradient project, I added gradients to the circles to add some whimsical component to the design. 
+
+
+## Process & Challenges
 
 ### Fetching API 
+Fetching API was the first step for this project. I explored two methods. 
 
-With the focus on 
+**Method1**
 
+My first attempt was to fetch API directly from p5.js using **httpGet()** to get **response** data. 
 
-<img src="images/process1.jpg" width="600">
+```
 
+function nameSubmit() {
+ 
+  let ageurl =
+    'https://api.agify.io?name=' + name;
+ 
+  httpGet(ageurl, 'json', false, function (response) {
+    resultAge = response;
+  });
+ 
+  // Log the received data to console
+  console.log(resultAge);
+}
+ 
+ ```
+ 
+ **Method2**
+ 
+ This was a working code. However, I was recommended to use **fetch()** function to bring json data from API. So I recoded with **fetch()** to fetch a resource from the network, with a return **Response** to the request. 
+ 
+ ```
+ function nameSubmit(){
+ 
+  let name = document.querySelector("#name").value;
+  
+    ageurl = 'https://api.agify.io?name=' + name';
+    
+    fetch(ageurl)
+  .then(response => response.json())
+  .then((ageData) => {
+    resultAge = ageData.age;
+    console.log(resultAge);
+      })    
+      }
+ ```   
+ 
+ <br><br>
+ 
+  **Can't Preload**
+  
+ Another challenge was at bringing the user input before requesting **fetch()**. Since the data is brought according to the user input, the name the user types in, json file can't be **preloaded()** but the file has to be brought upon an event; when the user type in a name and clicks the submit button. 
+ 
+ <br>
+ 
+### Spawning Bubbles - Class & Arrays of Objects
 
+I leant how to create [class()](https://www.youtube.com/watch?v=T-HGdc8L-7w) and make [Arrays of Objects](https://www.youtube.com/watch?v=rHiSsgFRgx4
+) to visualize data in the form of bubble shape. I saved the Bubble class as a seperate bubble.js file to organize the code better. For **constructor()** each bubble has following data <br>
+
+```
+  //Bubble Class
+  class bubble {
+    //Construct bubble object
+    constructor(name,age,count,color,x,y,speed) {
+      //resultName
+      this.n = name;
+      //resultAge
+      this.a = age;
+      //resultCountry
+      this.c = count;
+      //color is randomly selected from the pastel color range
+      this.color = color;
+      //x-position 
+      this.x = x;
+      //y-position 
+      this.y =y;
+      //speed of x and y
+      this.xspeed = speed;
+      this.yspeed = speed;
+    }
+    
+  ```
+  
+<br>
+
+To randomly select a pastel color I added the code 
+
+```
+  //Create Random Pastel Color
+  let hue = Math.floor(Math.floor(Math.random() * 360));
+  let randomColor = `hsl(${hue}, 70%, 80%)`;
+```
 <br><br>
 
-For week one, I established the basic structure and successfully fetched data from three different APIs. For now the representation of the data is only based on the datas from Agify API - the size of the bubbles and the colors are determined by the data result - the predicted age of the name that user entered. 
+### Bubbles Position & Animation
+<br>
+ <img src="images/process1.jpg" width="600">
+ <br>
+ The bubbles were not positioned within the canvas. I had to calculate the radius of each circle and add/subtract it to the min/max width/height value to position it within the canvas size. I also added the animation to bubbles where the bubbles are moving and bounces back when it hits the wall. Changing direction was done by reverting speed value from -1 to 1 or 1 to -1. 
+ 
+ <br>
+ 
+ ```
+     move() {
+      let halfr = this.a*2;
+      if(this.x > (width-halfr)) {
+        this.xspeed = this.xspeed * -1;
+      }
+      else if(this.x < halfr) {
+        this.xspeed = this.xspeed * -1;
+      }
+      
+      if(this.y > (height-halfr)) {
+        this.yspeed = this.yspeed * -1;
+      }
+      else if(this.y < halfr) {
+        this.yspeed = this.yspeed * -1;
+      }
+      
+      this.x = this.x + this.xspeed;
+      this.y = this.y + this.yspeed;
+  
+  }
+ ```
+ <br>
+ 
+ ### Region Code to Full Country Name
+ 
+  <img src="images/namecode.png" width="600">
+  <br>
+  
+Since the data is visualized directly from the json data, the country name is represented as a region code. This code is legible and efficient for the computer but not comprehsible for the users. Therefore, I wanted to change this region code to more legible form. Initial attempt was to change region codes to the flag icons. However, I couldn't find the dataset with all the flags around the world. Instead, I used **Intl.DisplayNames** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames to change the region code to the full region name. 
+
+<br>
+
+```
+let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
+
+```
+
+```
+   resultCountryFull = regionNamesInEnglish.of(resultCountry);
+```
+<br>
+  <img src="images/changeNameCodetoFullName.png" width="600">
+
+<br>
+
+
+ ### Playtesting
+ 
+ I did play-testing on Tuesday 22, Feb. I showed my MVP for this game, gamesection without the landing page. Some of the feedback received were:<br>
+ 
+ 1) I would like to read some context that is not too wordy but enough to understand what data is presented in the bubble <br>
+ 2) What if the player enter the name that is not valid?
+ <br>
+ Based on this feedbacks, I continued coding...
+ 
+ <br>
+ 
+ ### Error Prevention
+To prevent gam
+
+ ### When two nationality, Alert and restart the game
+
+ ### Adding Scoring 
+
 
 
 ## Next Steps
@@ -101,13 +260,14 @@ For week one, I established the basic structure and successfully fetched data fr
 8) Prevent Errors such as error message pop up when the input is submitted without any entry.
 
 
-## Process & Challenges
-
-### 
-
-### Change Country Code to Full Name
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 
 
-## Winning Example for Presentation
+## Spoiler Alert!
+### One example of winning the game 
 Soojin -> David -> Francesca -> lily -> Ali -> Simon -> Joseph -> Keiko -> -> Sammy -> Milena 
+
+## What's Next?
+
+### Level Design
+
+When I was playing the game, hitting 500 point was rather easy. This is because I have a diverse upbringing and I know many names around the world who are very diverse. However, I know that for people who grew up in more homogenous cultural background would find this game difficult. For this reason, I want to add a feature where players can select the level of the game (easy, difficult, and 
