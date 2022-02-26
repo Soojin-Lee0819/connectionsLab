@@ -76,14 +76,8 @@ The game page consists of three sections: the instruction section, user input se
 ## Visual Design Choices
 <img src="images/designstyle.png" width="600">
 
-### Font
-Gamja+Flower&family. I made the font sizes to be responsive. 
+I focused on the consistency throughout the process of design. I wanted the website to look bubbly, cute and comforting. I used one font, "Gamja Flower" throughout the web and I used many colors but all of them are pastel-based soft colors. For the shape, since the main visualization is circle, I rounded the the edges of boxes to make the website look more bubbly and soft. For the landing page, inspired by Yeji's beautiful gradients, I added gradients to the circles to add some whimsical component to the design. 
 
-### Colors
-I used pastel colors 
-
-### Shapes
-Bubbly and round 
 
 
 ## Process - Coding! 
