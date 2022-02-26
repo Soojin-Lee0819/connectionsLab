@@ -106,6 +106,7 @@ function nameSubmit() {
  ```
  
  **Method2**
+ 
  This was a working code. However, I was recommended to use **fetch()** function to bring json data from API. So I recoded with **fetch()** to fetch a resource from the network, with a return **Response** to the request. 
  
  ```
@@ -125,16 +126,20 @@ function nameSubmit() {
  ```   
  
  <br><br>
+ 
+  **Can't Preload**
+  
  Another challenge was at bringing the user input before requesting **fetch()**. Since the data is brought according to the user input, the name the user types in, json file can't be **preloaded()** but the file has to be brought upon an event; when the user type in a name and clicks the submit button. 
  
- <img src="images/process1.jpg" width="600">
-
+ <br><br>
  
-
 
 ### Bubbles - Class & Objected Oriented Programming 
 
+ <img src="images/process1.jpg" width="600">
 
+I used [class()](https://www.youtube.com/watch?v=T-HGdc8L-7w) and creating [objects](https://www.youtube.com/watch?v=rHiSsgFRgx4
+) 
 
 <br><br>
 
