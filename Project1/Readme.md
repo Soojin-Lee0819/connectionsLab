@@ -105,6 +105,7 @@ function nameSubmit() {
  
  ```
  
+ **Method2**
  This was a working code. However, I was recommended to use **fetch()** function to bring json data from API. So I recoded with **fetch()** to fetch a resource from the network, with a return **Response** to the request. 
  
  ```
@@ -119,17 +120,20 @@ function nameSubmit() {
   .then((ageData) => {
     resultAge = ageData.age;
     console.log(resultAge);
-      })
-      
+      })    
       }
+ ```   
  
  <br><br>
- Another challenge was at bringing the user input before requesting **fetch()**. Since the data is brought according to the user input, the name the user types in, json file can't be **preloaded()** but has to be brought upon an event, clicking submit button. 
+ Another challenge was at bringing the user input before requesting **fetch()**. Since the data is brought according to the user input, the name the user types in, json file can't be **preloaded()** but the file has to be brought upon an event; when the user type in a name and clicks the submit button. 
+ 
+ <img src="images/process1.jpg" width="600">
+
+ 
 
 
+### Bubbles - Class & Objected Oriented Programming 
 
-
-<img src="images/process1.jpg" width="600">
 
 
 <br><br>
