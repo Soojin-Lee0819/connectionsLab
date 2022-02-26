@@ -29,34 +29,49 @@ For this project, I am using three APIs which are:
 
 I would like to mention that these datasets have biases and assumptions about people. Therefore, the use of data in this project is not to have a perfect understanding of the demographics or to classify people into cookie cutter categories. However, the focus is on making a meaningful visualization of data associated to names and provide a fun game that allows players to explore cultural, gender, and age identities associated with names.
 
-## Process
+## Ideation
 
 Originally, I was planning to use one API, the agify API. I started with brainstorming ideas about how to represent this data can be represented beautifully and purposefully as well as some game mechanics that engages users meaningfully. 
 
 <img src="images/brainstorm.jpg" width="600">
 
-### Signature Generator
+**Signature Generator**
+
 When users type in the name, based on the data result, the website provides a unique signature. For example, the number of the age determines the color values, size of the font, font-family and etcetera. 
 
 **Find the Youngest Name**
+
 In this challenge-style interaction, users are invited to find the youngest name. It was difficult to find names with young ages. Most of the names were between 30-60, and I couldn't find any name that is predicted to be a teenagers' name. This maybe because of the nature of how the data is collected - finding the average age of all the ages associated to the name. 
 
 **Visualizing Name & Age**
+
 To make the visualization intuitive, I wanted to make the size of the bubble in proportion to the predicted age of the names. In this way, players can easily compare different names and ages. 
 
 **Family Tree**
+
 I thought it would be interesting to make a website where the users type in their family members' names and receive a family tree based on the predicted age of the names. 
 
 **Who's Older?**
+
 This is an interactive game where players are given two name cards and they have to guess which name has an older predicted age. 
 
-## Wire Frame
+## Wireframe
+
+### Wireframe Week 1
 
 <img src="images/simplewireframe.jpg" width="600">
 
 <br><br>
 
-On top, there is a title, description, and an input section where users can enter names. Below is a canvas where the data about the names are visuallized. 
+On Week1, I created a simple wireframe focusing on how user would put input, and how the data would be visualized. On top, there is a title, description, and an input section where users can enter names. Below is a canvas where the data about the names are visuallized. 
+
+### Wireframe Week 2
+<img src="images/wireframe2.jpg" width="600">
+
+Week2, I refined the wireframe. There are 2 sections: the landing page section and the game page section that are joint with a scroll function. On landing page, the the big bubble in the center briefuly introduces the project and invites players to interact with sample data visualizations. Sample data are visualiezd in the two bubbles on the side. Once, the players have finished exploring example data visualizations, they click "PLAY" button, which will lead them to the game page. 
+<br>
+The game page consists of three sections: the instruction section, user input section, and the data visualization section. The score is represented on the top left corner of the game screen. My goal was to use minimal UI to allow players to focus on the visualized data without being distracted by the surrounding instructions.
+
 
 
 ## Process
