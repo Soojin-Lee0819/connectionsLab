@@ -223,9 +223,6 @@ let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
    resultCountryFull = regionNamesInEnglish.of(resultCountry);
 ```
 <br>
-  <img src="images/changeNameCodetoFullName.png" width="600">
-
-<br>
 
 
  ### Playtesting
@@ -239,32 +236,91 @@ let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
  
  <br>
  
+ ### Limited Access to API 
+ 
+   <img src="images/limitedaccess.png" width="1000">
+   
+   I was confused when I suddenly started receiving an error message that "failed to load resource". If ound out that it is ecause there is a limit to number of names that I can search using this API and in order to search more than 1000 names a day, I should buy API key. With this API key the fetch url had to be modified as well. 
+   
+   ```
+     ageurl = 'https://api.agify.io?name=' + name + '&apikey=275c8c5db6b62a979b8b4ac71ab76af0';
+   ```
+ 
+ 
  ### Error Prevention
-To prevent gam
+ 
+    <img src="images/error.png" width="600">
+ 
+Show an alert when the name is submitted without any input
 
- ### When two nationality, Alert and restart the game
+```
+ //Effor alert: If there is no entry for name show alert
+  if (document.querySelector('#name').value.length == 0) {
+    alert('Type in a name');
+   }
 
- ### Adding Scoring 
+```
 
-
-
-## Next Steps
-
-1) Associate visual representation of the bubble with nationality and gender as well. (As of now, all the variables such as colors and the sizes are manipulated by the age data).
-2) Make bubbles move within the canvas to make it more visually stimulating (Add some animation).
-3) Add function: Classify age data into categories (for example age between 10-20, age between 20-30) to compare.
-4) Add function: Store all the output data of the userinput to compare with new entry
-5) Add function: If the output data of the new input matches with the previous dataset, the game ends
-6) Consider storing classes to different js files to organize code.
-7) Describe project and write down instructions on how to play the game on the landing page using visual cues (minimize writing). 
-8) Prevent Errors such as error message pop up when the input is submitted without any entry.
-
+Also show an alert when the input name is invald - no existing data
+```
+    //Error alert: if this name is undefined, show alert
+    if(nationalData.country[0]==undefined) {
+      alert('This name is undefined.');
+    };
+```
 
 
+ ### Check duplicate Country
+ 
+ 1. I added array where the country data is pushed to the array for every bubble that is pushed. 
 
-## Spoiler Alert!
-### One example of winning the game 
-Soojin -> David -> Francesca -> lily -> Ali -> Simon -> Joseph -> Keiko -> -> Sammy -> Milena 
+<br>
+ 
+ 2. checkDuplicate
+ <br>
+ ```
+ //Check for Country Duplicate
+function checkDuplicate(){
+   let arrCountries = Countries;
+   let result = false;
+   // go through the Country array
+   for(let i = 0; i < arrCountries.length;i++) {
+      // compare the first and last index of an element
+      if(arrCountries.indexOf(arrCountries[i]) !== arrCountries.lastIndexOf(arrCountries[i])){
+         result = true;
+
+         // terminate the loop
+         break;
+      }
+   }
+   //if there is duplicate
+   if(result) {
+      console.log('Array contains duplicate elements');
+
+      //the game is over and restart the game
+      alert('Game Over');
+      document.location.reload();
+
+   } else {
+      console.log('Array does not contain duplicate elements');
+   }
+}
+ ```
+ <br>
+ 
+ Here, when there is duplicate country value in the array allCountries, there is an alert 'game over' and the page is reloaded. <br>
+ 
+ 
+To me, the concept of Array was unfamiliar at first and how to compare object within the array to the reset of the objects in the array were confusing. However, after coding this part, I started to feel like I am confident with the concept "Array". 
+
+<br>
+
+ ### Add Score System & Construct "End Page"
+ 
+ I added scoring system and constructed end page that shows up when the accumlated score is above 500.
+ 
+ 
+ ### Diverse Names 
 
 ## What's Next?
 
