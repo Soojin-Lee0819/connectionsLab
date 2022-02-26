@@ -179,6 +179,8 @@ To randomly select a pastel color I added the code
  <br>
  The bubbles were not positioned within the canvas. I had to calculate the radius of each circle and add/subtract it to the min/max width/height value to position it within the canvas size. I also added the animation to bubbles where the bubbles are moving and bounces back when it hits the wall. Changing direction was done by reverting speed value from -1 to 1 or 1 to -1. 
  
+ <br>
+ 
  ```
      move() {
       let halfr = this.a*2;
@@ -201,24 +203,48 @@ To randomly select a pastel color I added the code
   
   }
  ```
+ <br>
  
  ### Region Code to Full Country Name
  
   <img src="images/namecode.png" width="600">
+  <br>
   
 Since the data is visualized directly from the json data, the country name is represented as a region code. This code is legible and efficient for the computer but not comprehsible for the users. Therefore, I wanted to change this region code to more legible form. Initial attempt was to change region codes to the flag icons. However, I couldn't find the dataset with all the flags around the world. Instead, I used **Intl.DisplayNames** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames to change the region code to the full region name. 
 
+<br>
 
+```
+let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
+
+```
+
+```
+   resultCountryFull = regionNamesInEnglish.of(resultCountry);
+```
+<br>
   <img src="images/changeNameCodetoFullName.png" width="600">
 
+<br>
 
+
+ ### Playtesting
+ 
+ I did play-testing on Tuesday 22, Feb. I showed my MVP for this game, gamesection without the landing page. Some of the feedback received were:<br>
+ 
+ 1) I would like to read some context that is not too wordy but enough to understand what data is presented in the bubble <br>
+ 2) What if the player enter the name that is not valid?
+ <br>
+ Based on this feedbacks, I continued coding...
+ 
+ <br>
+ 
  ### Error Prevention
- 
- 
- 
+To prevent gam
 
-For week one, I established the basic structure and successfully fetched data from three different APIs. For now the representation of the data is only based on the datas from Agify API - the size of the bubbles and the colors are determined by the data result - the predicted age of the name that user entered. 
+ ### When two nationality, Alert and restart the game
 
+ ### Adding Scoring 
 
 
 
