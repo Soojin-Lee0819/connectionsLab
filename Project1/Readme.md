@@ -335,15 +335,15 @@ When the game is ended, I wanted the players to still be able to see the data vi
 
 When I was playing the game, collecting 500 points weren't too difficult. This is because I grew up in a diverse upbringing. However, I know that for people who grew up in more homogenous cultural background would find this game more difficult. For this reason, I want to add a feature where the players can select the level of the game by adjusting the points they have to earn in order to win. 
 
-### Show Analytics
+### Show Analytics on Game Over
 
 I want to improve the endgame page by adding analytics. For now, it just shows the final score. I want to add more analytics - such as the name that is predicted the oldest, and the list of the countries the users collected. 
 
-### Add Feedback Sections
+### Add Feedback Section
 
 I want to add a feedback section where the players can share some findings and insights. For instance, what are some of the names they couldn't find or what are the names that they find the information to be inaccurate or distorted. This way, we can educate each other and work collectively to find out more about the potential biases in data. With this knwoledge, we make more conscious judgements and educated decisions when we are interacting with data around us. For example, one thing that stood out to me was that a lot of names that are originally from Western world such as "Lily" was categorized as China. This maybe because of the huge population in China, which led to more data entry and when the numbers were compared with other countries with smaller population, China will always come first.
 
 
 ### Reflection
-Overall, I am extremely proud of this project. I learnt so much about using data and organizing them to produce a meaningful work beautiful visualization. I am now a lot more comfortable coding using javascript and p5.js. I realized that making a solid wireframe and writing down steps ahead help a lot when I actually start coding. In future, I want to learn how to make a system where a multiple users can play together.
+Overall, I am extremely proud of this project. Although a bit daunting at first, I learnt so much about applying data to produce a meaningful and fun user interaction on the digital space. I am now a lot more comfortable coding with javascript and p5.js. One important lesson was that making a solid wireframe and writing down steps that I need to complete really helps when I start coding. I also started to think the power and responsibilities of the developers in making ethical choices for how we are going to process and visualize data. As a visual animal, we believe what we see. Therefore, every decision on what we choose to include or to exclude can facilitate players' interaction with the data and steer certain behaviors. For the next project. I want to learn how to build real-time response system and build a game that allows multiples players to play together.
 
