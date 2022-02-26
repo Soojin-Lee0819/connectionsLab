@@ -260,9 +260,10 @@ Show an alert when the name is submitted without any input
 
 ```
 
-    <img src="images/AlertUndefined.png" width="600">
+<img src="images/AlertUndefined.png" width="600">
 
-Also show an alert when the input name is invald - no existing data
+Also show an alert when the input name is invald (no existing data for the input name)
+
 
 ```
     //Error alert: if this name is undefined, show alert
@@ -274,34 +275,29 @@ Also show an alert when the input name is invald - no existing data
 
  ### Check Duplicate Country
  
- 1. I added array where the country data is pushed to the array for every bubble that is pushed. 
- 
- 2. checkDuplicate
- <br>
- 
+When the name with the same predicted nationality is entered, the game ends with an alert 'game over' and the page is refreshed to restart. 
+<br>
+
  ```
- //Check for Country Duplicate
+ //Check if there is a country duplicate
 function checkDuplicate(){
-   let arrCountries = Countries;
    let result = false;
    // go through the Country array
-   for(let i = 0; i < arrCountries.length;i++) {
+   for(let i = 0; i < Countries.length;i++) {
       // compare the first and last index of an element
-      if(arrCountries.indexOf(arrCountries[i]) !== arrCountries.lastIndexOf(arrCountries[i])){
+      if(Countries.indexOf(Countries[i]) !== Countries.lastIndexOf(Countries[i])){
          result = true;
-
          // terminate the loop
          break;
       }
    }
+
    //if there is duplicate
    if(result) {
       console.log('Array contains duplicate elements');
-
       //the game is over and restart the game
       alert('Game Over');
       document.location.reload();
-
    } else {
       console.log('Array does not contain duplicate elements');
    }
@@ -309,45 +305,34 @@ function checkDuplicate(){
 
 ```
 
- <br>
+<br>
  
- Here, when there is duplicate country value in the array allCountries, there is an alert 'game over' and the page is reloaded. <br>
- 
- 
-To me, the concept of Array was unfamiliar at first and how to compare object within the array to the reset of the objects in the array were confusing. However, after coding this part, I started to feel like I am confident with the concept "Array". 
-
+At first, the concept of Array was unfamilia. How to compare object within the array to the reset of the objects in the array was also confusing. However, after successfully coding this part, I started to feel like I am confident with using Array.
 <br>
 
  ### Add Score System & Construct "End Page"
  
    <img src="images/endpage.png" width="600">
    
- I added scoring system and constructed end page that will show up when the accumlated score is above 500. endgame() page is brought using boolean() function where the gameDone is set as false and brought when the gameDone is true.
- 
- ```
-     if( gameDone == true){
-        endGame.display();
+I added scoring system and constructed end page that only shows up when the accumlated score is above 500. endgame() page is brought using boolean() function where the gameDone is set as false and brought when the gameDone is true.
 
-    }
- ```
+When the game is ended, I wanted the players to still be able to see the data visualization. Therefore, I adjusted opacity of the background to make the bubbles visible, along with the Congratulations! card.
  
- 
+
  ### Add Landing Page
- I added 
- 
- Here, users are invited to explore the dataset instead of given. They can hover on the example data visualization of the name "Soojin" and "Fischer" to learn more about the name, the age and the nationality. 
+       <img src="images/landing.png" width="600">
+ I added Landing page onto the Game Page. Here, I focused on the design. Instead of following typical website wireframe with the navigation on top, I wanted the interaction to be unique and intuitive for the players. Here, users are invited to explore how the data is visualized instead of giving a tutorial on how data are presented. They can hover on the example data visualization of the name "Soojin" and "Fischer" to learn more about the concept of this project and have better understanding of the dataset.
  
  ### Final Product 
  
-    <img src="images/landingpage.png" width="600">
- 
+    <img src="images/final.png" width="600">
+
 
 ## Reflections & What's Next?
 
 ### Bias in Data
 
-Some of the obvious trends are found that just like the nature of data, 
-
+Some of the interesting trends were found when I was playing this game. Some data were really accurate. For example, I have a friend called Sammy from Kenya, and when I added the name, the predicted nationality was Kenya. On the other hand, a name like Lily, was predicted as Chinese name, although it is traditionally a western name. Some of the names were simply not found. My friends' name like Ansen or Hanli were not in the dataset. 
 
 ### Level Design
 
@@ -355,4 +340,11 @@ When I was playing the game, hitting 500 point was rather easy. This is because 
 
 ### Show Analytics
 
-### 
+I want to improve the endgame page by adding analytics. I want to show what is the oldest name among the user input, and the list of the countries the users collected. 
+
+### Add Feedback Sections
+
+I want to add a feedback section where the players can add some feedbacks and findings. I want to learn more about what are some of the underrepresented group in this dataset and think about how it can be communicated meaningfully in a way that provides people with an opportunity to think about names and biases.
+
+### Reflection
+Overall, I am extremely proud of this project. I learnt so much about structuring data and organizing them to produce a beautiful visualization. I am now a lot more comfortable coding using javascript and p5.js. I realized that making a solid wireframe and plans for coding helps a lot when I actually start coding. 
