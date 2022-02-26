@@ -1,18 +1,22 @@
-# Identify Names Around the World 
+# Names Around the World 
 
 **Title**:Identify Names Around the World <br>
 **Category**: Project 1 <br>
-**Date**: 9 Feb - Continue Feb 2022 <br>
+**Date**: 9 Feb - 26 Feb 2022 <br>
 **Deliverable**: CSS/HTML/Javascript/API WebGame & Data Visualization <br>
 
 [Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Project1)
 
+<img src="images/namesaroundtheworld.png" width="600">
+
+
+
 ## Project Brief
-A person's name tells a lot about one’s identity. Albeit subconsciously, once we hear names, we immediately associate the names with the naem owners' genders, nationalities, and even their ages. For example, my name “Soojin” is a typical Korean female name in Korea that people who are familiar with Korean culture would immediately build a profile of myself upon introduction. For this project, using three APIs (agify API, genderize API, nationalize API), that predicts the age, gender, and nationality of the given name, I plan to create a data visualization game. There are two elements to this project. The first is data visualization and the second is gamification. For the data-visualization part, players simply need to type in the name and click the submit button to receive visual data about the name’s predicted age, gender, and nationality. For the game part, players need to be more proactively participating in the game by typing in as many diverse names as possible. The goal of this game is to type in as many names as possible that aren’t from the same country, age range (10s, 20s, 30s ...), and gender category. If the player type in two names that shares all three identities (gender, age, and nationality), the data visualization they made so far will disappear and the page will reset. This game is for people who are curious about the cultures, human diversity, or people who live in a diverse community like members of NYUAD. Through the process of playing, I hope players have fun finding different names from different backgrounds but also think critically about the biases and labels that exist in names and identities.
+A person's name tells a lot about one’s identity. Albeit subconsciously, once we hear names, we immediately associate the names with the naem owners' genders, nationalities, and even their ages. For example, my name “Soojin” is a typical Korean female name in Korea that people who are familiar with Korean culture would immediately start making assumptions about me upon introduction. For this project, using two APIs (agify API, nationalize API), that predicts the age, and the nationality of the given name, I created a data visualization game. There are two elements to this project. The first is data visualization and the second is gamification. For the data visualization part, when the players type in a name and hit submit, the data about the name (the predicted age and the predicted nationality of the name) will be displayed in forms of bubbles. Based on this data visualization, the game was built. The predicted age will be added to the player's total ‘Age Score’. When the collective Age Score is above 500, the player win! But there’s a catch: if the player enter two names from the same country, the player lose! This game is for people who are culturally conscious, curious about human diversity, or people who live in a diverse community like the community members of NYUAD. Through the process of playing, I hope players have fun finding interesting datas about the names around the world but also think critically about the biases and labels that exist in names and identities.
 
 ## Inspiration
 
-When starting this project, I wanted this project to be focused on the dataset. Therefore, I started with researching APIs with interesting datasets and I came across [agify API](https://api.agify.io/?name=michael), a simple API for predicting the age of a person given their name. I found this API really cool becasue I recently read an article, about [The 50 best baby names of 2022](https://www.today.com/parents/babies/most-popular-baby-names-2022-rcna14922), and was surprised to find out how names also have trends just like how popular fashion styles change overtime. It also got me to think critically about how we immediately start to profile others' identities when we are introduced with names. Although we don't think about it often, names are a huge part of our identities - a linguistic label that is put on us. Therefore, names can provide a significant information or assuptions aobut us - whether it be the nationality, gender, or the age. Interested in this sociolinguistic aspects of names and the associated datas, I decided to create a website that makes a beautiful visualizations of the datas associated with names and allow users to interact with those data visualization with game mechanics. 
+When starting this project, I wanted this project to be focused on the dataset. Therefore, I started with researching APIs with interesting datasets and I came across [agify API](https://api.agify.io/?name=michael), a simple API for predicting the age of a person given their name. I found this API really cool becasue I recently read an article, about [The 50 best baby names of 2022](https://www.today.com/parents/babies/most-popular-baby-names-2022-rcna14922), and was surprised to find out how names also have trends just like how popular fashion styles change overtime. It also got me to think critically about how we immediately start to profile others' identities when we are introduced with names. Although we don't think about it often, names are a huge part of our identities - a linguistic label that is put on us. Therefore, names can provide a significant information or assuptions about us - whether it be the nationality, gender, or the age. Interested in this sociolinguistic aspects of names and the associated datas, I decided to create a website that makes a beautiful visualizations of the datas associated with names and allows users to interact with those data with some fun game mechanics. 
 
 ## Data & API
 For this project, I am using three APIs which are: 
@@ -27,7 +31,7 @@ I would like to mention that these datasets have biases and assumptions about pe
 
 ## Process
 
-Originally, I was planning to use one API, the agify API. I started with brainstorming ideas about how to represent this data in a visually appealing manner as well as the game mechanics that can engage users to interact with the datas in a meaningful way.
+Originally, I was planning to use one API, the agify API. I started with brainstorming ideas about how to represent this data can be represented beautifully and purposefully as well as some game mechanics that engages users meaningfully. 
 
 <img src="images/brainstorm.jpg" width="600">
 
@@ -46,15 +50,21 @@ I thought it would be interesting to make a website where the users type in thei
 **Who's Older?**
 This is an interactive game where players are given two name cards and they have to guess which name has an older predicted age. 
 
-## Week1
+## Wire Frame
 
 <img src="images/simplewireframe.jpg" width="600">
 
 <br><br>
 
+On top, there is a title, description, and an input section where users can enter names. Below is a canvas where the data about the names are visuallized. 
 
-On top, there is a title, description, and a data input section where users can type in the names. Below is a canvas where the datas are visuallized. The input names are visuallized according to the data.
-<br><br>
+
+## Process
+
+### Fetching API 
+
+With the focus on 
+
 
 <img src="images/process1.jpg" width="600">
 
@@ -74,6 +84,14 @@ For week one, I established the basic structure and successfully fetched data fr
 6) Consider storing classes to different js files to organize code.
 7) Describe project and write down instructions on how to play the game on the landing page using visual cues (minimize writing). 
 8) Prevent Errors such as error message pop up when the input is submitted without any entry.
+
+
+## Process & Challenges
+
+### 
+
+### Change Country Code to Full Name
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 
 
 ## Winning Example for Presentation
