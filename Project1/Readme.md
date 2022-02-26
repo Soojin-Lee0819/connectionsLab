@@ -7,6 +7,10 @@
 
 [Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Project1)
 
+<img src="images/namesaroundtheworld.png" width="600">
+
+
+
 ## Project Brief
 A person's name tells a lot about one’s identity. Albeit subconsciously, once we hear names, we immediately associate the names with the naem owners' genders, nationalities, and even their ages. For example, my name “Soojin” is a typical Korean female name in Korea that people who are familiar with Korean culture would immediately start making assumptions about me upon introduction. For this project, using two APIs (agify API, nationalize API), that predicts the age, and the nationality of the given name, I created a data visualization game. There are two elements to this project. The first is data visualization and the second is gamification. For the data visualization part, when the players type in a name and hit submit, the data about the name (the predicted age and the predicted nationality of the name) will be displayed in forms of bubbles. Based on this data visualization, the game was built. The predicted age will be added to the player's total ‘Age Score’. When the collective Age Score is above 500, the player win! But there’s a catch: if the player enter two names from the same country, the player lose! This game is for people who are culturally conscious, curious about human diversity, or people who live in a diverse community like the community members of NYUAD. Through the process of playing, I hope players have fun finding interesting datas about the names around the world but also think critically about the biases and labels that exist in names and identities.
 
@@ -27,7 +31,7 @@ I would like to mention that these datasets have biases and assumptions about pe
 
 ## Process
 
-Originally, I was planning to use one API, the agify API. I started with brainstorming ideas about how to represent this data in a visually appealing manner as well as the game mechanics that can engage users to interact with the datas in a meaningful way.
+Originally, I was planning to use one API, the agify API. I started with brainstorming ideas about how to represent this data can be represented beautifully and purposefully as well as some game mechanics that engages users meaningfully. 
 
 <img src="images/brainstorm.jpg" width="600">
 
@@ -46,15 +50,21 @@ I thought it would be interesting to make a website where the users type in thei
 **Who's Older?**
 This is an interactive game where players are given two name cards and they have to guess which name has an older predicted age. 
 
-## Week1
+## Wire Frame
 
 <img src="images/simplewireframe.jpg" width="600">
 
 <br><br>
 
+On top, there is a title, description, and an input section where users can enter names. Below is a canvas where the data about the names are visuallized. 
 
-On top, there is a title, description, and a data input section where users can type in the names. Below is a canvas where the datas are visuallized. The input names are visuallized according to the data.
-<br><br>
+
+## Process
+
+### Fetching API 
+
+With the focus on 
+
 
 <img src="images/process1.jpg" width="600">
 
@@ -74,6 +84,14 @@ For week one, I established the basic structure and successfully fetched data fr
 6) Consider storing classes to different js files to organize code.
 7) Describe project and write down instructions on how to play the game on the landing page using visual cues (minimize writing). 
 8) Prevent Errors such as error message pop up when the input is submitted without any entry.
+
+
+## Process & Challenges
+
+### 
+
+### Change Country Code to Full Name
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 
 
 ## Winning Example for Presentation
