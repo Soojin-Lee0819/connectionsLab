@@ -63,7 +63,7 @@ This is an interactive game where players are given two name cards and they have
 
 <br><br>
 
-On Week1, I created a simple wireframe focusing on how user would put input, and how the data would be visualized. On top, there is a title, description, and an input section where users can enter names. Below is a canvas where the data about the names are visuallized. 
+On Week1, I created a simple wireframe focusing on how user input, and how the data would be visualized as an output. On top, there is a title, description, and an input section where users can enter names. Below is a canvas where the data about the names are visuallized. 
 
 ### Wireframe Week 2
 <img src="images/wireframe2.jpg" width="600">
@@ -76,13 +76,15 @@ The game page consists of three sections: the instruction section, user input se
 ## Visual Design Choices
 <img src="images/designstyle.png" width="600">
 
-I focused on the consistency throughout the process of design. I wanted the website to look bubbly, cute and comforting. I used one font, "Gamja Flower" throughout the web and I used many colors but all of them are pastel-based soft colors. For the shape, since the main visualization is circle, I rounded the the edges of boxes to make the website look more bubbly and soft. For the landing page, inspired by Yeji's beautiful gradients, I added gradients to the circles to add some whimsical component to the design. 
+I focused on the consistency and the perceived feeling when making choices for visual design. I wanted the website to look bubbly, cute, and comforting. For the font, I used "Gamja Flower" - one font throughout the web. For colors, I used many colors but all of them are pastel-based colors. For the shape, since the main visualization is the circle shape, I used lots of curves and rounded the edges of th boxes to make the website look more bubbly and soft. For the landing page, inspired by Yeji's beautiful color gradient project, I added gradients to the circles to add some whimsical component to the design. 
 
 
-
-## Process - Coding! 
+## Process & Challenges
 
 ### Fetching API 
+Fetching API was the first step for this project. I explored two methods. Fetching API using I couldn't fetch API at preloaded section because the data is brought according to the user input. Therefore, to fetch API, I made a function that selects the input, **#name** everytime when the **submit** button is pressed, which is added to the fetching API url. This way, the new dataset is fetched for every submission, and the data is brought accordingly. After finish coding, it made sense, but since it was my first time wroking with api, in the beginning 
+
+Instead of calling API from 
 
 With the focus on 
 
@@ -93,6 +95,11 @@ With the focus on
 <br><br>
 
 For week one, I established the basic structure and successfully fetched data from three different APIs. For now the representation of the data is only based on the datas from Agify API - the size of the bubbles and the colors are determined by the data result - the predicted age of the name that user entered. 
+
+
+### Change Country Code to Full Name
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
+
 
 
 ## Next Steps
@@ -107,13 +114,14 @@ For week one, I established the basic structure and successfully fetched data fr
 8) Prevent Errors such as error message pop up when the input is submitted without any entry.
 
 
-## Process & Challenges
-
-### 
-
-### Change Country Code to Full Name
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 
 
-## Winning Example for Presentation
+## Spoiler Alert!
+### One example of winning the game 
 Soojin -> David -> Francesca -> lily -> Ali -> Simon -> Joseph -> Keiko -> -> Sammy -> Milena 
+
+## What's Next?
+
+### Level Design
+
+When I was playing the game, hitting 500 point was rather easy. This is because I have a diverse upbringing and I know many names around the world who are very diverse. However, I know that for people who grew up in more homogenous cultural background would find this game difficult. For this reason, I want to add a feature where players can select the level of the game (easy, difficult, and 
