@@ -279,6 +279,7 @@ Also show an alert when the input name is invald - no existing data
  
  2. checkDuplicate
  <br>
+ 
  ```
  //Check for Country Duplicate
 function checkDuplicate(){
@@ -306,7 +307,9 @@ function checkDuplicate(){
       console.log('Array does not contain duplicate elements');
    }
 }
- ```
+
+```
+
  <br>
  
  Here, when there is duplicate country value in the array allCountries, there is an alert 'game over' and the page is reloaded. <br>
