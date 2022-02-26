@@ -226,6 +226,9 @@ let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
 
  ### Playtesting
  
+   <img src="images/final.png" width="600">
+<br>
+
  I did play-testing on Tuesday 22, Feb. I showed my MVP of the game - Some of the feedback received were:<br>
  
  1) I would like to read some context before playing the game <br>
@@ -253,7 +256,7 @@ let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
 Show an alert when the name is submitted without any input
 
 ```
- //Effor alert: If there is no entry for name show alert
+ //Error alert: If there is no entry for name show alert
   if (document.querySelector('#name').value.length == 0) {
     alert('Type in a name');
    }
@@ -314,37 +317,32 @@ At first, the concept of Array was unfamilia. How to compare object within the a
  
    <img src="images/endpage.png" width="600">
    
-I added scoring system and constructed end page that only shows up when the accumlated score is above 500. endgame() page is brought using boolean() function where the gameDone is set as false and brought when the gameDone is true.
+I added scoring system and constructed the end page that only shows up when the accumlated score is above 500. I used boolean() function to bring the endpage when the gameDone becomes true.
 
 When the game is ended, I wanted the players to still be able to see the data visualization. Therefore, I adjusted opacity of the background to make the bubbles visible, along with the Congratulations! card.
  
 
  ### Add Landing Page
+ 
        <img src="images/landing.png" width="600">
- I added Landing page onto the Game Page. Here, I focused on the design. Instead of following typical website wireframe with the navigation on top, I wanted the interaction to be unique and intuitive for the players. Here, users are invited to explore how the data is visualized instead of giving a tutorial on how data are presented. They can hover on the example data visualization of the name "Soojin" and "Fischer" to learn more about the concept of this project and have better understanding of the dataset.
+       
+ I added Landing page onto the Game Page. Here, I focused on the meaningful and unique design. Instead of following typical website wireframe with the navigation bar on top, I wanted the interaction to be unique and intuitive for the players. Here, users are invited to explore how the data is visualized by themselves instead of giving instructions. They can hover on the example data visualization of the name "Soojin" and "Fischer" to learn more about the concept of this project and have better understanding of the dataset.
  
- ### Final Product 
- 
-    <img src="images/final.png" width="600">
-
 
 ## Reflections & What's Next?
 
-### Bias in Data
-
-Some of the interesting trends were found when I was playing this game. While some data were really accurate, for example, I have a friend called Sammy from Kenya, and when I added the name, the predicted nationality was Kenya. On the other hand, a name like Lily, was predicted to be a Chinese. I was surprised because Lily is not traditinally a Chinese name. My assumption was that since it is "data" based, the more people who names "Lily" enter their name from China, and since the population in China is much bigger, it will so the result as Chinese. Some of the names were simply not found. Some of my friends' name like Ansen or Hanli were not in the dataset. 
-
 ### Level Design
 
-When I was playing the game, hitting 500 point was rather easy. This is because I have a diverse group of friend and I grew up in a diverse upbringing. However, I know that for people who grew up in more homogenous cultural background would find this game more difficult. For this reason, I want to add a feature where the players can select the level of the game by adjusting the points they have to earn in order to win.
+When I was playing the game, collecting 500 points weren't too difficult. This is because I grew up in a diverse upbringing. However, I know that for people who grew up in more homogenous cultural background would find this game more difficult. For this reason, I want to add a feature where the players can select the level of the game by adjusting the points they have to earn in order to win. 
 
 ### Show Analytics
 
-I want to improve the endgame page by adding analytics. For now, it just shows the final score. I want to add more analytics - for example, what is the oldest name among the inputed names, and the list of the countries the users collected. 
+I want to improve the endgame page by adding analytics. For now, it just shows the final score. I want to add more analytics - such as the name that is predicted the oldest, and the list of the countries the users collected. 
 
 ### Add Feedback Sections
 
-I want to add a feedback section where the players can share some findings and insights. For instance, what are some of the names they couldn't find or find the data to be inaccurate and etcetera. This way, we can learn more about what are the underrepresented group in this dataset and think about how the game can be improved so that it provides people with an opportunity to think critical about names and biases.
+I want to add a feedback section where the players can share some findings and insights. For instance, what are some of the names they couldn't find or what are the names that they find the information to be inaccurate or distorted. This way, we can educate each other and work collectively to find out more about the potential biases in data. With this knwoledge, we make more conscious judgements and educated decisions when we are interacting with data around us. For example, one thing that stood out to me was that a lot of names that are originally from Western world such as "Lily" was categorized as China. This maybe because of the huge population in China, which led to more data entry and when the numbers were compared with other countries with smaller population, China will always come first.
+
 
 ### Reflection
 Overall, I am extremely proud of this project. I learnt so much about using data and organizing them to produce a meaningful work beautiful visualization. I am now a lot more comfortable coding using javascript and p5.js. I realized that making a solid wireframe and writing down steps ahead help a lot when I actually start coding. In future, I want to learn how to make a system where a multiple users can play together.
