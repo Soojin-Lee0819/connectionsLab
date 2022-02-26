@@ -73,8 +73,20 @@ Week2, I refined the wireframe. There are 2 sections: the landing page section a
 The game page consists of three sections: the instruction section, user input section, and the data visualization section. The score is represented on the top left corner of the game screen. My goal was to use minimal UI to allow players to focus on the visualized data without being distracted by the surrounding instructions.
 
 
+## Visual Design Choices
+<img src="images/designstyle.png" width="600">
 
-## Process
+### Font
+Gamja+Flower&family. I made the font sizes to be responsive. 
+
+### Colors
+I used pastel colors 
+
+### Shapes
+Bubbly and round 
+
+
+## Process - Coding! 
 
 ### Fetching API 
 
