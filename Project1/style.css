@@ -7,6 +7,7 @@ html, body {
     color:white;
   }
 
+  /*Section 1: Landing Page*/
 .instruction {
   background-color: #EFD9CC;
   width: 100vw;
@@ -14,7 +15,7 @@ html, body {
   margin:0;
 }
 
-
+/*Soojin Bubble*/
 .soojinCircle {
   background: radial-gradient(#F3D47E, #CB4B2F);
   width: 15vw;
@@ -42,16 +43,7 @@ html, body {
   white-space: pre-wrap;
 }
 
-.fischerName:after{
-  content:'Fischer';
-}
-
-.fischerName:hover:after{
-  font-size: 1.8vw;
-  content:"Fischer \A Switzerland \A 28 yrs";
-  white-space: pre-wrap;
-  margin:0;
-}
+/*Fischer Bubble*/
 
 .fischerCircle {
   background: radial-gradient(#9BE8D5, #899979);
@@ -67,7 +59,18 @@ html, body {
   align-items: center;
 }
 
+.fischerName:after{
+  content:'Fischer';
+}
 
+.fischerName:hover:after{
+  font-size: 1.8vw;
+  content:"Fischer \A Switzerland \A 28 yrs";
+  white-space: pre-wrap;
+  margin:0;
+}
+
+/*Main Bubble*/
 .mainCircle {
   background: radial-gradient(#C18FA7, #616093);
   width: 40vw;
@@ -86,18 +89,6 @@ html, body {
   margin-bottom: auto;
 }
 
-#game {
-  position:relative;
-  padding-top:5vw;
-}
-
-#userInput {
-  margin:0;
-}
-#game p{
-  margin:auto;
-  width:60%;
-}
 .mainCircle h1{
   display: inline-block;
   font-size: 3vw;
@@ -131,32 +122,30 @@ html, body {
   font-size: 1.8vw;
 }
 
+#play:hover {
+  background-color: #3f2b75;
+}
+
+
+
+/*Section 2: Game Page*/
+#game {
+  position:relative;
+  padding-top:5vw;
+}
+
+/*User Input*/
+#userInput {
+  margin:0;
+}
+
 #game p{
+  margin:auto;
+  width:60%;
   padding:2vw;
   border-width: 2px;
   color:#ffffff;
   font-size: 1.8vw;
-}
-
-#play:hover {
-  background-color: #3f2b75;
-
-}
-
-
-
-#dataOutput {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-   }
-
-#canvas {
- margin-top:5vw;
- position: relative;
- margin-bottom:5vw;
-
 }
 
 #name{
@@ -189,6 +178,24 @@ html, body {
     font-size: 1.5vw;
     background-color: #2E1F59;
 }
+
+/*Data Output*/
+#dataOutput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   }
+
+#canvas {
+ margin-top:5vw;
+ position: relative;
+ margin-bottom:5vw;
+
+}
+
+
+/*Adjust size according to the window width*/
 
 @media only screen and (max-width: 800px) {
 

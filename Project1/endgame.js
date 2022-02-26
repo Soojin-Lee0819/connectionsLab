@@ -1,3 +1,4 @@
+//endgame class
 class endgame{
     display(){
         fill(0,150);
@@ -8,8 +9,6 @@ class endgame{
         text("Score: "+ score,width/2,height/2 );
         textSize(width/30);
         text("Click any key to restart",width/2,height/2+width/20 );
-        
-        
     }
 
 }

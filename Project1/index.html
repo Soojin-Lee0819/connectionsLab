@@ -1,60 +1,67 @@
 <!-- 
 Connections Lab Project 1
-Diversity Game
-10- Feb 2022
+Names Around the World
+10-26 Feb 2022
 Soojin Lee
  -->
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
 
-    <!-- importing font-->
-    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
 
-  </head>
+  <!-- importing font-->
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Inter:wght@400;700&display=swap"
+    rel="stylesheet">
 
-    <body>
-      <!-- Landing Instruction Section -->
-        <div class="instruction">
-          <div class="soojinCircle">
-            <p span class="soojinName"></p>
-            </div>
-            <div class="fischerCircle">
-              <p span class="fischerName"></p>
-            </div>
+</head>
 
-          <div class="mainCircle">
-            <div id="circleText">
-          <h1>What's Your Name?</h1>
-          <p> There's a lot to a name. Where is Soojin from? How old is Fischer? Hover to find out what data says about these names and click PLAY to start the game.
-      
-          </p>
-            <input type="submit" id="play" value="PLAY"/>
-            </div>
-          </div>
-          </div>
-      
-      <!-- Game Section -->
-        <div id ="game">
-          <h1>Collect Names Around the World</h1>
-          <p>Type in a name and hit submit! The predicted age and country of each name will be displayed. The predicted age will be added to your total ‘Age Score’. When the collective Age Score is above 500, you win! But there’s a catch: if you enter two names from the same country, you lose!</p>
-      <p><input id = "name" value = "" placeholder="name"> </input> 
-        <input type="submit" id="submit" value="Submit"/>
-      </p>
-      
-      <!-- Container "dataOutput"  -->
-
-        <div id="canvas">
-          </div>
-
+<body>
+  <!-- Section 1: Landing Page -->
+  <div class="instruction">
+    <!-- Soojin Circle -->
+    <div class="soojinCircle">
+      <p span class="soojinName"></p>
     </div>
-    </body>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
-    <script src="app.js"></script>
-    <script src="bubble.js"></script>
-    <script src="endgame.js"></script>
-  </body>
-</html>
+    <!-- Fischer Circle -->
+    <div class="fischerCircle">
+      <p span class="fischerName"></p>
+    </div>
+    <!-- Main Circle -->
+    <div class="mainCircle">
+      <div id="circleText">
+        <h1>What's Your Name?</h1>
+        <p> There's a lot to a name. Where is Soojin from? How old is Fischer? Hover to find out what data says about
+          these names and click PLAY to start the game.
+        </p>
+        <!-- Play Button -->
+        <input type="submit" id="play" value="PLAY" />
+      </div>
+    </div>
+  </div>
 
+  <!-- Section 1: Game Page -->
+  <div id="game">
+    <h1>Collect Names Around the World</h1>
+    <p>Type in a name and hit submit! The predicted age and country of each name will be displayed. The predicted age
+      will be added to your total ‘Age Score’. When the collective Age Score is above 500, you win! But there’s a catch:
+      if you enter two names from the same country, you lose!</p>
+    <!-- User Input Name -->
+    <p><input id="name" value="" placeholder="name"> </input>
+      <!-- Submit Name Button -->
+      <input type="submit" id="submit" value="Submit" />
+    </p>
+
+    <!-- Container "dataOutput"  -->
+    <div id="canvas">
+    </div>
+
+  </div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+<script src="app.js"></script>
+<script src="bubble.js"></script>
+<script src="endgame.js"></script>
+
+</html>

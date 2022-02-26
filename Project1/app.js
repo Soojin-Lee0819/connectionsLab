@@ -1,5 +1,5 @@
 //Landing Page Interaction
-
+//Scroll when play button is pressed 
 document.getElementById('play').onclick = function scrollGame() {
   let elmnt = document.getElementById("game");
   elmnt.scrollIntoView({ behavior: 'smooth'});
@@ -9,15 +9,15 @@ document.getElementById('play').onclick = function scrollGame() {
 
 //GamePage Interaction
 
-//font gamja
+//declare font gamja
 let gamjaFont;
 
-//api URL + userinput
+//declare URL (api URL + userinput)
 let ageurl;
 let nationalurl;
 
 
-//declare API data
+//declare result data
 let resultName;
 let resultAge;
 let resultCountry;
@@ -27,15 +27,19 @@ let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
 //declare country full name 
 let resultCountryFull;
 
-//declare Bubble 
+//declare Bubble Array
 let Bubbles = [];
+
+//declare Country Array
 let Countries = [];
+
+//declare Age Array
 let Ages = [];
 
-//startscore at 0
+//declare startscore at 0
 let score = 0;
 
-//GameDone Boolean
+//declare gameDone Boolean
 let gameDone = false;
 
 
@@ -61,22 +65,22 @@ function setup() {
   let button = select('#submit');
   button.mousePressed(nameSubmit);
 
-  //Input select
+  //seleft userinput
   input = select('#name');
 }
 
-//resize canvas when the window is resized
+//resize canvas when the windowsize is resized
 function windowResized() {
   resizeCanvas(windowWidth*0.8, windowHeight*0.6);
 }
 
-//function that happens when the user submit name. It fetch API, process, data and trigger push Bubble function
+//function that happens when the user submit name. 1.fetch API 2.process data 3.trigger pushBubble function
 function nameSubmit(){
   let name = document.querySelector("#name").value;
   ageurl = 'https://api.agify.io?name=' + name + '&apikey=275c8c5db6b62a979b8b4ac71ab76af0';
   nationalurl = 'https://api.nationalize.io/?name=' + name + '&apikey=275c8c5db6b62a979b8b4ac71ab76af0';
 
-  //fetchcing age url & store result age, name data
+  //fetchcing age url & store result 
   fetch(ageurl)
   .then(response => response.json())
   .then((ageData) => {
@@ -94,13 +98,13 @@ function nameSubmit(){
     if(nationalData.country[0]==undefined) {
       alert('This name is undefined.');
     };
-    //find countrycode within the result data
+    //find countrycode in the result data
     resultCountry = nationalData.country[0].country_id;
     //convert countrycode to full name
     resultCountryFull = regionNamesInEnglish.of(resultCountry);
     console.log(resultCountryFull);
 
-    //if the national data is defined, ushBubble
+    //if the nationalurl can be fetched, pushBubble
     loadJSON(nationalurl,pushBubble);
   })
 
@@ -109,18 +113,13 @@ function nameSubmit(){
     alert('Type in a name');
    }
 
-  //empty the input section after submission 
+  //empty input section after submission 
   document.querySelector("#name").value = "";
 }
 
-
+  // pushBubble
 function pushBubble () {
-
-  //Create Random Pastel Color
-  let hue = Math.floor(Math.floor(Math.random() * 360));
-  let randomColor = `hsl(${hue}, 70%, 80%)`;
-
-  Bubbles.push(new bubble(resultName, resultAge, resultCountryFull,randomColor, width/2,height/2,random(1,2)));
+  Bubbles.push(new bubble(resultName, resultAge, resultCountryFull, width/2,height/2,random(1,2)));
   console.log(Bubbles);
   Countries.push(resultCountryFull);
   Ages.push(resultAge);
@@ -131,43 +130,36 @@ function pushBubble () {
   scoreFunction();
 }
 
-//Check for Country Duplicate
+//Check if there is a country duplicate
 function checkDuplicate(){
-   let arrCountries = Countries;
    let result = false;
    // go through the Country array
-   for(let i = 0; i < arrCountries.length;i++) {
+   for(let i = 0; i < Countries.length;i++) {
       // compare the first and last index of an element
-      if(arrCountries.indexOf(arrCountries[i]) !== arrCountries.lastIndexOf(arrCountries[i])){
+      if(Countries.indexOf(Countries[i]) !== Countries.lastIndexOf(Countries[i])){
          result = true;
-
          // terminate the loop
          break;
       }
    }
+
    //if there is duplicate
    if(result) {
       console.log('Array contains duplicate elements');
-
       //the game is over and restart the game
       alert('Game Over');
       document.location.reload();
-
    } else {
       console.log('Array does not contain duplicate elements');
    }
 }
 
-//Compare the most recently added data with the rest of the ages in the array
-
-function checkAge(){
-}
-
-//draw canvas
+//draw canvas 
 function draw() {
   noStroke();
   fill(49,43,61);
   rect(0,0,width,height,width/20);
+
       //display bubbles
       for (let i = 0; i < Bubbles.length; i++) {
         let p = Bubbles[i];
@@ -178,7 +170,7 @@ function draw() {
       //display score
       scoreDisplay();
       
-      //display notification
+      //endgamepage boolean check and display
       if( gameDone == true){
         endGame.display();
 
@@ -204,21 +196,19 @@ function scoreDisplay(){
    text("Age Score: " + score, width/10, width/20);
 }
 
-
 function keyPressed() {
   //when Enterkey Pressed, start nameSubmit function
     if (gameDone == false && keyCode === ENTER) {
         nameSubmit();
     }
-      //any key is pressed after gameDone, restart
+      //If any key is pressed after gameDone, refresh the page
     if (gameDone == true) {
       document.location.reload();
     }
   }
 
-
+  //if mousepressed after gameDone, restart
   function mousePressed() {
-        //if mousepressed after gameDone, restart
         if (gameDone == true) {
           document.location.reload();
         }
