@@ -68,15 +68,17 @@ On Week1, I created a simple wireframe focusing on how user input, and how the d
 ### Wireframe Week 2
 <img src="images/wireframe2.jpg" width="600">
 
-Week2, I refined the wireframe. There are 2 sections: the landing page section and the game page section that are joint with a scroll function. On landing page, the the big bubble in the center briefuly introduces the project and invites players to interact with sample data visualizations. Sample data are visualiezd in the two bubbles on the side. Once, the players have finished exploring example data visualizations, they click "PLAY" button, which will lead them to the game page. 
+On Week2, I refined the wireframe. There are 2 sections: the landing page section and the game page section that are joint with a scroll function. 
+
+Section 1(Landing page) - the the big bubble in the center briefuly introduces the project and invites players to interact with sample data visualizations. Sample data are visualiezd in the two bubbles on the side. Once, the players have finished exploring example data visualizations, they click "PLAY" button, which will lead them to the game page. 
 <br>
-The game page consists of three sections: the instruction section, user input section, and the data visualization section. The score is represented on the top left corner of the game screen. My goal was to use minimal UI to allow players to focus on the visualized data without being distracted by the surrounding instructions.
+Section 2(The Game page) The game page consists of three parts: the instruction section, user input section, and the data visualization section. The score is represented on the top left corner of the game screen. My goal when designing wireframe was to use minimal UI to allow players to focus on the visualized data without being distracted by the supporting components.
 
 
 ## Visual Design Choices
 <img src="images/designstyle.png" width="600">
 
-I focused on the consistency and the perceived feeling when making choices for visual design. I wanted the website to look bubbly, cute, and comforting. For the font, I used "Gamja Flower" - one font throughout the web. For colors, I used many colors but all of them are pastel-based colors. For the shape, since the main visualization is the circle shape, I used lots of curves and rounded the edges of th boxes to make the website look more bubbly and soft. For the landing page, inspired by Yeji's beautiful color gradient project, I added gradients to the circles to add some whimsical component to the design. 
+I focused on the consistency of the perceived feeling when making choices for visual design. I wanted the website to look bubbly, cute, and comforting. For the font, I used "Gamja Flower" - one font throughout the web. For colors, I used many colors but all of them are pastel-based colors. For the shape, since the main visualization is the circle shape, I used lots of curves and rounded the edges of th boxes to make the website look more bubbly and soft. For the landing page, inspired by Yeji's beautiful color gradient project, I added gradients to the circles to add some whimsical component to the design. 
 
 
 ## Process & Challenges
@@ -107,7 +109,7 @@ function nameSubmit() {
  
  **Method2**
  
- This was a working code. However, I was recommended to use **fetch()** function to bring json data from API. So I recoded with **fetch()** to fetch a resource from the network, with a return **Response** to the request. 
+ Method 1 was working fine. However, I was recommended to use **fetch()** function to bring json data from API. So I did the coding with **fetch()** function to fetch a resource from the network, followed by returning **Response** to the request. 
  
  ```
  function nameSubmit(){
@@ -129,14 +131,15 @@ function nameSubmit() {
  
   **Can't Preload**
   
- Another challenge was at bringing the user input before requesting **fetch()**. Since the data is brought according to the user input, the name the user types in, json file can't be **preloaded()** but the file has to be brought upon an event; when the user type in a name and clicks the submit button. 
+Another challenge was at bringing the user input before requesting **fetch()**. Since the data should be fetched according to the user input, json file shouldn't be **preloaded()**. The file has to be brought upon an event- when the user type in a name and clicks the submit button. 
  
  <br>
  
 ### Spawning Bubbles - Class & Arrays of Objects
 
-I leant how to create [class()](https://www.youtube.com/watch?v=T-HGdc8L-7w) and make [Arrays of Objects](https://www.youtube.com/watch?v=rHiSsgFRgx4
-) to visualize data in the form of bubble shape. I saved the Bubble class as a seperate bubble.js file to organize the code better. For **constructor()** each bubble has following data <br>
+I learned how to create [class()](https://www.youtube.com/watch?v=T-HGdc8L-7w) and make [Arrays of Objects](https://www.youtube.com/watch?v=rHiSsgFRgx4
+). I then used these to visualize data in the form of bubble shape. I saved the Bubble class as a seperate bubble.js file to keep the code more organized. The most challenging part for creating bubble object was building constructor().
+<br>
 
 ```
   //Bubble Class
@@ -238,7 +241,7 @@ let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
  
  ### Limited Access to API 
  
-   <img src="images/limitedaccess.png" width="1000">
+   <img src="images/exceedlimit.png" width="1000">
    
    I was confused when I suddenly started receiving an error message that "failed to load resource". If ound out that it is ecause there is a limit to number of names that I can search using this API and in order to search more than 1000 names a day, I should buy API key. With this API key the fetch url had to be modified as well. 
    
@@ -249,7 +252,7 @@ let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
  
  ### Error Prevention
  
-    <img src="images/error.png" width="600">
+    <img src="images/errornoinput.png" width="600">
  
 Show an alert when the name is submitted without any input
 
@@ -261,7 +264,10 @@ Show an alert when the name is submitted without any input
 
 ```
 
+    <img src="images/AlertUndefined.png" width="600">
+
 Also show an alert when the input name is invald - no existing data
+
 ```
     //Error alert: if this name is undefined, show alert
     if(nationalData.country[0]==undefined) {
@@ -270,14 +276,13 @@ Also show an alert when the input name is invald - no existing data
 ```
 
 
- ### Check duplicate Country
+ ### Check Duplicate Country
  
  1. I added array where the country data is pushed to the array for every bubble that is pushed. 
-
-<br>
  
  2. checkDuplicate
  <br>
+ 
  ```
  //Check for Country Duplicate
 function checkDuplicate(){
@@ -305,7 +310,9 @@ function checkDuplicate(){
       console.log('Array does not contain duplicate elements');
    }
 }
- ```
+
+```
+
  <br>
  
  Here, when there is duplicate country value in the array allCountries, there is an alert 'game over' and the page is reloaded. <br>
@@ -317,13 +324,39 @@ To me, the concept of Array was unfamiliar at first and how to compare object wi
 
  ### Add Score System & Construct "End Page"
  
- I added scoring system and constructed end page that shows up when the accumlated score is above 500.
+   <img src="images/endpage.png" width="600">
+   
+ I added scoring system and constructed end page that will show up when the accumlated score is above 500. endgame() page is brought using boolean() function where the gameDone is set as false and brought when the gameDone is true.
  
- 
- ### Diverse Names 
+ ```
+     if( gameDone == true){
+        endGame.display();
 
-## What's Next?
+    }
+ ```
+ 
+ 
+ ### Add Landing Page
+ I added 
+ 
+ Here, users are invited to explore the dataset instead of given. They can hover on the example data visualization of the name "Soojin" and "Fischer" to learn more about the name, the age and the nationality. 
+ 
+ ### Final Product 
+ 
+    <img src="images/landingpage.png" width="600">
+ 
+
+## Reflections & What's Next?
+
+### Bias in Data
+
+Some of the obvious trends are found that just like the nature of data, 
+
 
 ### Level Design
 
 When I was playing the game, hitting 500 point was rather easy. This is because I have a diverse upbringing and I know many names around the world who are very diverse. However, I know that for people who grew up in more homogenous cultural background would find this game difficult. For this reason, I want to add a feature where players can select the level of the game (easy, difficult, and 
+
+### Show Analytics
+
+### 
