@@ -164,26 +164,61 @@ I leant how to create [class()](https://www.youtube.com/watch?v=T-HGdc8L-7w) and
   
 <br>
 
-To randomly select a color that is within the range of pastel color, I added the code 
+To randomly select a pastel color I added the code 
 
 ```
   //Create Random Pastel Color
   let hue = Math.floor(Math.floor(Math.random() * 360));
   let randomColor = `hsl(${hue}, 70%, 80%)`;
 ```
+<br><br>
 
+### Bubbles Position & Animation
 <br>
  <img src="images/process1.jpg" width="600">
- 
  <br>
-**Animation** 
+ The bubbles were not positioned within the canvas. I had to calculate the radius of each circle and add/subtract it to the min/max width/height value to position it within the canvas size. I also added the animation to bubbles where the bubbles are moving and bounces back when it hits the wall. Changing direction was done by reverting speed value from -1 to 1 or 1 to -1. 
+ 
+ ```
+     move() {
+      let halfr = this.a*2;
+      if(this.x > (width-halfr)) {
+        this.xspeed = this.xspeed * -1;
+      }
+      else if(this.x < halfr) {
+        this.xspeed = this.xspeed * -1;
+      }
+      
+      if(this.y > (height-halfr)) {
+        this.yspeed = this.yspeed * -1;
+      }
+      else if(this.y < halfr) {
+        this.yspeed = this.yspeed * -1;
+      }
+      
+      this.x = this.x + this.xspeed;
+      this.y = this.y + this.yspeed;
+  
+  }
+ ```
+ 
+ ### Region Code to Full Country Name
+ 
+  <img src="images/namecode.png" width="600">
+  
+Since the data is visualized directly from the json data, the country name is represented as a region code. This code is legible and efficient for the computer but not comprehsible for the users. Therefore, I wanted to change this region code to more legible form. Initial attempt was to change region codes to the flag icons. However, I couldn't find the dataset with all the flags around the world. Instead, I used **Intl.DisplayNames** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames to change the region code to the full region name. 
 
+
+  <img src="images/changeNameCodetoFullName.png" width="600">
+
+
+ ### Error Prevention
+ 
+ 
+ 
 
 For week one, I established the basic structure and successfully fetched data from three different APIs. For now the representation of the data is only based on the datas from Agify API - the size of the bubbles and the colors are determined by the data result - the predicted age of the name that user entered. 
 
-
-### Change Country Code to Full Name
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 
 
 
