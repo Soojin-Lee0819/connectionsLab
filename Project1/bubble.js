@@ -2,18 +2,19 @@
   class bubble {
     //Construct bubble object
     constructor(name,age,count,color,x,y,speed) {
-      this.color = color;
-  
       //resultName
       this.n = name;
       //resultAge
       this.a = age;
-      //resultcount
+      //resultCountry
       this.c = count;
-      
-
+      //color is randomly selected from the pastel color range
+      this.color = color;
+      //x-position 
       this.x = x;
+      //y-position 
       this.y =y;
+      //speed of x and y
       this.xspeed = speed;
       this.yspeed = speed;
     }

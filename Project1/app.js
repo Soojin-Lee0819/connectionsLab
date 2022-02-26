@@ -39,7 +39,7 @@ let score = 0;
 let gameDone = false;
 
 
-//preload
+//preload font
 function preload() {
   gamjaFont = loadFont('GamjaFlower-Regular.ttf');
 }
@@ -50,69 +50,68 @@ function setup() {
 
   textFont(gamjaFont);
 
-  //create Canvas and put it to HTML
+  //create Canvas and direct it to HTML
   let canvas = createCanvas(windowWidth*0.8, windowHeight*0.8);
   canvas.parent("canvas");
 
-  //endpage
- endGame = new endgame();
+  //endgame page
+  endGame = new endgame();
 
-  //Button & Declare
+  //button for submitting the name
   let button = select('#submit');
   button.mousePressed(nameSubmit);
-
 
   //Input select
   input = select('#name');
 }
 
-//resize canvas on windowsize resized
+//resize canvas when the window is resized
 function windowResized() {
   resizeCanvas(windowWidth*0.8, windowHeight*0.6);
 }
 
-//when the user submit name, fetch api and load data
+//function that happens when the user submit name. It fetch API, process, data and trigger push Bubble function
 function nameSubmit(){
   let name = document.querySelector("#name").value;
   ageurl = 'https://api.agify.io?name=' + name + '&apikey=275c8c5db6b62a979b8b4ac71ab76af0';
   nationalurl = 'https://api.nationalize.io/?name=' + name + '&apikey=275c8c5db6b62a979b8b4ac71ab76af0';
 
-  //console.log age data
+  //fetchcing age url & store result age, name data
   fetch(ageurl)
   .then(response => response.json())
   .then((ageData) => {
     resultAge = ageData.age;
     resultName = ageData.name;
-    console.log(resultName);
     console.log(resultAge);
+    console.log(resultName);
   })
   
-  //console.log national data
+  //fetchcing national url & store result age, name data
   fetch(nationalurl)
   .then(response => response.json())
   .then((nationalData) => {
-    //if this name is undefined show alert
+    //Error alert: if this name is undefined, show alert
     if(nationalData.country[0]==undefined) {
       alert('This name is undefined.');
     };
+    //find countrycode within the result data
     resultCountry = nationalData.country[0].country_id;
+    //convert countrycode to full name
     resultCountryFull = regionNamesInEnglish.of(resultCountry);
     console.log(resultCountryFull);
+
+    //if the national data is defined, ushBubble
     loadJSON(nationalurl,pushBubble);
   })
 
-if (fetch(nationalurl)==0) {
-  alert('Type in a name');
-};
-
-  //If there is no entry for name show alert
+  //Effor alert: If there is no entry for name show alert
   if (document.querySelector('#name').value.length == 0) {
     alert('Type in a name');
    }
    if(resultCountry == 0){
     alert('Type in a name');
   }
-  //empty the input section once submit button is pressed
+  //empty the input section after submission 
   document.querySelector("#name").value = "";
 }
 
