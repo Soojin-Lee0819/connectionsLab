@@ -1,4 +1,4 @@
-# Identify Names Around the World 
+# Names Around the World 
 
 **Title**:Identify Names Around the World <br>
 **Category**: Project 1 <br>
