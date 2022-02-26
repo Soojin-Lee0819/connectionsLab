@@ -138,14 +138,17 @@ Another challenge was at bringing the user input before requesting **fetch()**. 
 ### Spawning Bubbles - Class & Arrays of Objects
 
 I learned how to create [class()](https://www.youtube.com/watch?v=T-HGdc8L-7w) and make [Arrays of Objects](https://www.youtube.com/watch?v=rHiSsgFRgx4
-). I then used these to visualize data in the form of bubble shape. I saved the Bubble class as a seperate bubble.js file to keep the code more organized. The most challenging part for creating bubble object was building constructor().
+). I then used these to visualize data in the form of bubble shape. I saved the Bubble class as a seperate bubble.js file to keep the code more organized. The most challenging part for creating bubble object was to understand the concept of constructor().
 <br>
 
 ```
-  //Bubble Class
-  class bubble {
-    //Construct bubble object
-    constructor(name,age,count,color,x,y,speed) {
+  //Construct bubble object
+  constructor(name,age,count,x,y,speed) {
+
+  //Create Random Pastel Color
+  let hue = Math.floor(Math.floor(Math.random() * 360));
+  let randomColor = `hsl(${hue}, 70%, 80%)`;
+
       //resultName
       this.n = name;
       //resultAge
@@ -161,28 +164,21 @@ I learned how to create [class()](https://www.youtube.com/watch?v=T-HGdc8L-7w) a
       //speed of x and y
       this.xspeed = speed;
       this.yspeed = speed;
+      this.randomcolor = randomColor;
     }
+
     
   ```
   
 <br>
 
-To randomly select a pastel color I added the code 
-
-```
-  //Create Random Pastel Color
-  let hue = Math.floor(Math.floor(Math.random() * 360));
-  let randomColor = `hsl(${hue}, 70%, 80%)`;
-```
-<br><br>
-
 ### Bubbles Position & Animation
 <br>
  <img src="images/process1.jpg" width="600">
  <br>
- The bubbles were not positioned within the canvas. I had to calculate the radius of each circle and add/subtract it to the min/max width/height value to position it within the canvas size. I also added the animation to bubbles where the bubbles are moving and bounces back when it hits the wall. Changing direction was done by reverting speed value from -1 to 1 or 1 to -1. 
+ The bubbles were displayed but they were not positioned within the canvas. I had to calculate the radius of each circle and add/subtract it to the min/max width/height value to make sure it is positioned within the canvas size. I also added the animation to bubbles where the bubbles are moving and bounce back when it hits the wall. Changing direction was done by reverting speed value from -1 to 1 or vice versa.
  
- <br>
+ <br> <br>
  
  ```
      move() {
@@ -213,7 +209,7 @@ To randomly select a pastel color I added the code
   <img src="images/regioncode.png" width="1000">
   <br>
   
-Since the data is visualized directly from the json data, the country name is represented as a region code. This code is legible and efficient for the computer but not comprehsible for the users. Therefore, I wanted to change this region code to more legible form. Initial attempt was to change region codes to the flag icons. However, I couldn't find the dataset with all the flags around the world. Instead, I used **Intl.DisplayNames** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames to change the region code to the full region name. 
+Since the data is visualized directly from the json data, the country name is saved as a region code. This code is legible and efficient for the computer, but it is not friendly for the users. At first, I thought it is kind of fun exercise to guess what country the two letter represents. However, after some play-testing, I found out that people find it very difficult to make understanding of what the region code represents. Therefore, I decided to change this region code to more legible form. Initial attempt was to change the region codes to the flag icons. However, I couldn't find the dataset with all flags around the world. Instead, I used **Intl.DisplayNames** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames to change the region code to full country name. 
 
 <br>
 
@@ -230,10 +226,10 @@ let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
 
  ### Playtesting
  
- I did play-testing on Tuesday 22, Feb. I showed my MVP for this game, gamesection without the landing page. Some of the feedback received were:<br>
+ I did play-testing on Tuesday 22, Feb. I showed my MVP of the game - Some of the feedback received were:<br>
  
- 1) I would like to read some context that is not too wordy but enough to understand what data is presented in the bubble <br>
- 2) What if the player enter the name that is not valid?
+ 1) I would like to read some context before playing the game <br>
+ 2) What if the player enter the name that is not valid such as "pencil?"
  <br>
  Based on this feedbacks, I continued coding...
  
@@ -241,18 +237,18 @@ let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
  
  ### Limited Access to API 
  
-   <img src="images/exceedlimit.png" width="1000">
+   <img src="images/exceedlimit.png" width="600">
    
-   I was confused when I suddenly started receiving an error message that "failed to load resource". If ound out that it is ecause there is a limit to number of names that I can search using this API and in order to search more than 1000 names a day, I should buy API key. With this API key the fetch url had to be modified as well. 
+   I was confused when I suddenly started receiving an error messages that says "failed to load resource". I spent hours trying to fix my code but I still couldn't find the issue. I found out that the issue was not at the code it self but there is a limit to the number of names that I can search using this API. In order to search more than 1000 names a day, I had to buy API key. With this API key the fetch url had to be modified as well. 
    
    ```
      ageurl = 'https://api.agify.io?name=' + name + '&apikey=275c8c5db6b62a979b8b4ac71ab76af0';
-   ```
+     
+```
  
  
  ### Error Prevention
- 
-    <img src="images/errornoinput.png" width="600">
+  <img src="images/errornoinput.png" width="600">
  
 Show an alert when the name is submitted without any input
 
@@ -264,9 +260,10 @@ Show an alert when the name is submitted without any input
 
 ```
 
-    <img src="images/AlertUndefined.png" width="600">
+<img src="images/AlertUndefined.png" width="600">
 
-Also show an alert when the input name is invald - no existing data
+Also show an alert when the input name is invald (no existing data for the input name)
+
 
 ```
     //Error alert: if this name is undefined, show alert
@@ -278,34 +275,29 @@ Also show an alert when the input name is invald - no existing data
 
  ### Check Duplicate Country
  
- 1. I added array where the country data is pushed to the array for every bubble that is pushed. 
- 
- 2. checkDuplicate
- <br>
- 
+When the name with the same predicted nationality is entered, the game ends with an alert 'game over' and the page is refreshed to restart. 
+<br>
+
  ```
- //Check for Country Duplicate
+ //Check if there is a country duplicate
 function checkDuplicate(){
-   let arrCountries = Countries;
    let result = false;
    // go through the Country array
-   for(let i = 0; i < arrCountries.length;i++) {
+   for(let i = 0; i < Countries.length;i++) {
       // compare the first and last index of an element
-      if(arrCountries.indexOf(arrCountries[i]) !== arrCountries.lastIndexOf(arrCountries[i])){
+      if(Countries.indexOf(Countries[i]) !== Countries.lastIndexOf(Countries[i])){
          result = true;
-
          // terminate the loop
          break;
       }
    }
+
    //if there is duplicate
    if(result) {
       console.log('Array contains duplicate elements');
-
       //the game is over and restart the game
       alert('Game Over');
       document.location.reload();
-
    } else {
       console.log('Array does not contain duplicate elements');
    }
@@ -313,45 +305,34 @@ function checkDuplicate(){
 
 ```
 
- <br>
+<br>
  
- Here, when there is duplicate country value in the array allCountries, there is an alert 'game over' and the page is reloaded. <br>
- 
- 
-To me, the concept of Array was unfamiliar at first and how to compare object within the array to the reset of the objects in the array were confusing. However, after coding this part, I started to feel like I am confident with the concept "Array". 
-
+At first, the concept of Array was unfamilia. How to compare object within the array to the reset of the objects in the array was also confusing. However, after successfully coding this part, I started to feel like I am confident with using Array.
 <br>
 
  ### Add Score System & Construct "End Page"
  
    <img src="images/endpage.png" width="600">
    
- I added scoring system and constructed end page that will show up when the accumlated score is above 500. endgame() page is brought using boolean() function where the gameDone is set as false and brought when the gameDone is true.
- 
- ```
-     if( gameDone == true){
-        endGame.display();
+I added scoring system and constructed end page that only shows up when the accumlated score is above 500. endgame() page is brought using boolean() function where the gameDone is set as false and brought when the gameDone is true.
 
-    }
- ```
+When the game is ended, I wanted the players to still be able to see the data visualization. Therefore, I adjusted opacity of the background to make the bubbles visible, along with the Congratulations! card.
  
- 
+
  ### Add Landing Page
- I added 
- 
- Here, users are invited to explore the dataset instead of given. They can hover on the example data visualization of the name "Soojin" and "Fischer" to learn more about the name, the age and the nationality. 
+       <img src="images/landing.png" width="600">
+ I added Landing page onto the Game Page. Here, I focused on the design. Instead of following typical website wireframe with the navigation on top, I wanted the interaction to be unique and intuitive for the players. Here, users are invited to explore how the data is visualized instead of giving a tutorial on how data are presented. They can hover on the example data visualization of the name "Soojin" and "Fischer" to learn more about the concept of this project and have better understanding of the dataset.
  
  ### Final Product 
  
-    <img src="images/landingpage.png" width="600">
- 
+    <img src="images/final.png" width="600">
+
 
 ## Reflections & What's Next?
 
 ### Bias in Data
 
-Some of the obvious trends are found that just like the nature of data, 
-
+Some of the interesting trends were found when I was playing this game. Some data were really accurate. For example, I have a friend called Sammy from Kenya, and when I added the name, the predicted nationality was Kenya. On the other hand, a name like Lily, was predicted as Chinese name, although it is traditionally a western name. Some of the names were simply not found. My friends' name like Ansen or Hanli were not in the dataset. 
 
 ### Level Design
 
@@ -359,4 +340,13 @@ When I was playing the game, hitting 500 point was rather easy. This is because 
 
 ### Show Analytics
 
-### 
+I want to improve the endgame page by adding analytics. I want to show what is the oldest name among the user input, and the list of the countries the users collected. 
+
+### Add Feedback Sections
+
+I want to add a feedback section where the players can add some feedbacks and findings. I want to learn more about what are some of the underrepresented group in this dataset and think about how it can be communicated meaningfully in a way that provides people with an opportunity to think about names and biases.
+
+### Reflection
+Overall, I am extremely proud of this project. I learnt so much about structuring data and organizing them to produce a beautiful visualization. I am now a lot more comfortable coding using javascript and p5.js. I realized that making a solid wireframe and plans for coding helps a lot when I actually start coding. 
+
+Please remind me to unsubscrib API when you finish reviewing my work.
