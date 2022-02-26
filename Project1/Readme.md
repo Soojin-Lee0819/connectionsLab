@@ -238,7 +238,7 @@ let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
  
  ### Limited Access to API 
  
-   <img src="images/limitedaccess.png" width="1000">
+   <img src="images/exceedlimit.png" width="1000">
    
    I was confused when I suddenly started receiving an error message that "failed to load resource". If ound out that it is ecause there is a limit to number of names that I can search using this API and in order to search more than 1000 names a day, I should buy API key. With this API key the fetch url had to be modified as well. 
    
@@ -249,7 +249,7 @@ let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
  
  ### Error Prevention
  
-    <img src="images/error.png" width="600">
+    <img src="images/errornoinput.png" width="600">
  
 Show an alert when the name is submitted without any input
 
@@ -261,7 +261,10 @@ Show an alert when the name is submitted without any input
 
 ```
 
+    <img src="images/AlertUndefined.png" width="600">
+
 Also show an alert when the input name is invald - no existing data
+
 ```
     //Error alert: if this name is undefined, show alert
     if(nationalData.country[0]==undefined) {
