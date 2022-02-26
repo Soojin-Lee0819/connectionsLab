@@ -134,12 +134,12 @@ function nameSubmit() {
  <br><br>
  
 
-### Bubbles - Class & Objected Oriented Programming 
+### Spawning Bubbles - Class & Arrays of Objects
 
  <img src="images/process1.jpg" width="600">
 
-I used [class()](https://www.youtube.com/watch?v=T-HGdc8L-7w) and creating [objects](https://www.youtube.com/watch?v=rHiSsgFRgx4
-) 
+I created [class()](https://www.youtube.com/watch?v=T-HGdc8L-7w) and [Arrays of Objects](https://www.youtube.com/watch?v=rHiSsgFRgx4
+) to visualize data in the form of bubble shape. Constructor function was challenging. 
 
 <br><br>
 
