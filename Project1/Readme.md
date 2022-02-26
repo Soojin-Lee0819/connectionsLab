@@ -207,7 +207,7 @@ To randomly select a pastel color I added the code
  
  ### Region Code to Full Country Name
  
-  <img src="images/namecode.png" width="600">
+  <img src="images/regioncode.png" width="1000">
   <br>
   
 Since the data is visualized directly from the json data, the country name is represented as a region code. This code is legible and efficient for the computer but not comprehsible for the users. Therefore, I wanted to change this region code to more legible form. Initial attempt was to change region codes to the flag icons. However, I couldn't find the dataset with all the flags around the world. Instead, I used **Intl.DisplayNames** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames to change the region code to the full region name. 
