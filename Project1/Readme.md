@@ -320,10 +320,27 @@ To me, the concept of Array was unfamiliar at first and how to compare object wi
 
  ### Add Score System & Construct "End Page"
  
- I added scoring system and constructed end page that shows up when the accumlated score is above 500.
+   <img src="images/endpage.png" width="600">
+   
+ I added scoring system and constructed end page that will show up when the accumlated score is above 500. endgame() page is brought using boolean() function where the gameDone is set as false and brought when the gameDone is true.
+ 
+ ```
+     if( gameDone == true){
+        endGame.display();
+
+    }
+ ```
  
  
- ### Diverse Names 
+ ### Add Landing Page
+ I added 
+ 
+ Here, users are invited to explore the dataset instead of given. They can hover on the example data visualization of the name "Soojin" and "Fischer" to learn more about the name, the age and the nationality. 
+ 
+ ### Final Product 
+ 
+    <img src="images/landingpage.png" width="600">
+ 
 
 ## What's Next?
 
