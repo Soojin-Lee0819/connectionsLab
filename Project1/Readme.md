@@ -138,14 +138,17 @@ Another challenge was at bringing the user input before requesting **fetch()**. 
 ### Spawning Bubbles - Class & Arrays of Objects
 
 I learned how to create [class()](https://www.youtube.com/watch?v=T-HGdc8L-7w) and make [Arrays of Objects](https://www.youtube.com/watch?v=rHiSsgFRgx4
-). I then used these to visualize data in the form of bubble shape. I saved the Bubble class as a seperate bubble.js file to keep the code more organized. The most challenging part for creating bubble object was building constructor().
+). I then used these to visualize data in the form of bubble shape. I saved the Bubble class as a seperate bubble.js file to keep the code more organized. The most challenging part for creating bubble object was to understand the concept of constructor().
 <br>
 
 ```
-  //Bubble Class
-  class bubble {
-    //Construct bubble object
-    constructor(name,age,count,color,x,y,speed) {
+  //Construct bubble object
+  constructor(name,age,count,x,y,speed) {
+
+  //Create Random Pastel Color
+  let hue = Math.floor(Math.floor(Math.random() * 360));
+  let randomColor = `hsl(${hue}, 70%, 80%)`;
+
       //resultName
       this.n = name;
       //resultAge
@@ -161,28 +164,21 @@ I learned how to create [class()](https://www.youtube.com/watch?v=T-HGdc8L-7w) a
       //speed of x and y
       this.xspeed = speed;
       this.yspeed = speed;
+      this.randomcolor = randomColor;
     }
+
     
   ```
   
 <br>
 
-To randomly select a pastel color I added the code 
-
-```
-  //Create Random Pastel Color
-  let hue = Math.floor(Math.floor(Math.random() * 360));
-  let randomColor = `hsl(${hue}, 70%, 80%)`;
-```
-<br><br>
-
 ### Bubbles Position & Animation
 <br>
  <img src="images/process1.jpg" width="600">
  <br>
- The bubbles were not positioned within the canvas. I had to calculate the radius of each circle and add/subtract it to the min/max width/height value to position it within the canvas size. I also added the animation to bubbles where the bubbles are moving and bounces back when it hits the wall. Changing direction was done by reverting speed value from -1 to 1 or 1 to -1. 
+ The bubbles were displayed but they were not positioned within the canvas. I had to calculate the radius of each circle and add/subtract it to the min/max width/height value to make sure it is positioned within the canvas size. I also added the animation to bubbles where the bubbles are moving and bounce back when it hits the wall. Changing direction was done by reverting speed value from -1 to 1 or vice versa.
  
- <br>
+ <br> <br>
  
  ```
      move() {
@@ -213,7 +209,7 @@ To randomly select a pastel color I added the code
   <img src="images/regioncode.png" width="1000">
   <br>
   
-Since the data is visualized directly from the json data, the country name is represented as a region code. This code is legible and efficient for the computer but not comprehsible for the users. Therefore, I wanted to change this region code to more legible form. Initial attempt was to change region codes to the flag icons. However, I couldn't find the dataset with all the flags around the world. Instead, I used **Intl.DisplayNames** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames to change the region code to the full region name. 
+Since the data is visualized directly from the json data, the country name is saved as a region code. This code is legible and efficient for the computer, but it is not friendly for the users. At first, I thought it is kind of fun exercise to guess what country the two letter represents. However, after some play-testing, I found out that people find it very difficult to make understanding of what the region code represents. Therefore, I decided to change this region code to more legible form. Initial attempt was to change the region codes to the flag icons. However, I couldn't find the dataset with all flags around the world. Instead, I used **Intl.DisplayNames** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames to change the region code to full country name. 
 
 <br>
 
@@ -230,10 +226,10 @@ let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
 
  ### Playtesting
  
- I did play-testing on Tuesday 22, Feb. I showed my MVP for this game, gamesection without the landing page. Some of the feedback received were:<br>
+ I did play-testing on Tuesday 22, Feb. I showed my MVP of the game - Some of the feedback received were:<br>
  
- 1) I would like to read some context that is not too wordy but enough to understand what data is presented in the bubble <br>
- 2) What if the player enter the name that is not valid?
+ 1) I would like to read some context before playing the game <br>
+ 2) What if the player enter the name that is not valid such as "pencil?"
  <br>
  Based on this feedbacks, I continued coding...
  
@@ -241,18 +237,18 @@ let regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
  
  ### Limited Access to API 
  
-   <img src="images/exceedlimit.png" width="1000">
+   <img src="images/exceedlimit.png" width="600">
    
-   I was confused when I suddenly started receiving an error message that "failed to load resource". If ound out that it is ecause there is a limit to number of names that I can search using this API and in order to search more than 1000 names a day, I should buy API key. With this API key the fetch url had to be modified as well. 
+   I was confused when I suddenly started receiving an error messages that says "failed to load resource". I spent hours trying to fix my code but I still couldn't find the issue. I found out that the issue was not at the code it self but there is a limit to the number of names that I can search using this API. In order to search more than 1000 names a day, I had to buy API key. With this API key the fetch url had to be modified as well. 
    
    ```
      ageurl = 'https://api.agify.io?name=' + name + '&apikey=275c8c5db6b62a979b8b4ac71ab76af0';
-   ```
+     
+```
  
  
  ### Error Prevention
- 
-    <img src="images/errornoinput.png" width="600">
+  <img src="images/errornoinput.png" width="600">
  
 Show an alert when the name is submitted without any input
 
