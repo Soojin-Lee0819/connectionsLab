@@ -348,3 +348,5 @@ I want to add a feedback section where the players can add some feedbacks and fi
 
 ### Reflection
 Overall, I am extremely proud of this project. I learnt so much about structuring data and organizing them to produce a beautiful visualization. I am now a lot more comfortable coding using javascript and p5.js. I realized that making a solid wireframe and plans for coding helps a lot when I actually start coding. 
+
+Please remind me to unsubscrib API when you finish reviewing my work.
