@@ -340,13 +340,12 @@ When I was playing the game, hitting 500 point was rather easy. This is because 
 
 ### Show Analytics
 
-I want to improve the endgame page by adding analytics. For now, it just shows the final score. I want to add more analytics such as what is the oldest name among the inputed name, and the list of the countries the users collected. 
+I want to improve the endgame page by adding analytics. For now, it just shows the final score. I want to add more analytics - for example, what is the oldest name among the inputed names, and the list of the countries the users collected. 
 
 ### Add Feedback Sections
 
 I want to add a feedback section where the players can share some findings and insights. For instance, what are some of the names they couldn't find or find the data to be inaccurate and etcetera. This way, we can learn more about what are the underrepresented group in this dataset and think about how the game can be improved so that it provides people with an opportunity to think critical about names and biases.
 
 ### Reflection
-Overall, I am extremely proud of this project. I learnt so much about using data and organizing them to produce a meaningful work beautiful visualization. I am now a lot more comfortable coding using javascript and p5.js. I realized that making a solid wireframe and plans for coding helps a lot when I actually start coding. 
+Overall, I am extremely proud of this project. I learnt so much about using data and organizing them to produce a meaningful work beautiful visualization. I am now a lot more comfortable coding using javascript and p5.js. I realized that making a solid wireframe and writing down steps ahead help a lot when I actually start coding. In future, I want to learn how to make a system where a multiple users can play together.
 
-Please remind me to unsubscrib API when you finish reviewing my work.
