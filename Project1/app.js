@@ -108,9 +108,7 @@ function nameSubmit(){
   if (document.querySelector('#name').value.length == 0) {
     alert('Type in a name');
    }
-   if(resultCountry == 0){
-    alert('Type in a name');
-  }
+
   //empty the input section after submission 
   document.querySelector("#name").value = "";
 }
