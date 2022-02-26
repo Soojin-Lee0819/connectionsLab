@@ -329,7 +329,7 @@ When the game is ended, I wanted the players to still be able to see the data vi
  I added Landing page onto the Game Page. Here, I focused on the meaningful and unique design. Instead of following typical website wireframe with the navigation bar on top, I wanted the interaction to be unique and intuitive for the players. Here, users are invited to explore how the data is visualized by themselves instead of giving instructions. They can hover on the example data visualization of the name "Soojin" and "Fischer" to learn more about the concept of this project and have better understanding of the dataset.
  
 
-## Reflections & What's Next?
+## Reflection & What's Next?
 
 ### Level Design
 
