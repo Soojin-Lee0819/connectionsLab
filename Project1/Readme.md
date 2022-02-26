@@ -131,17 +131,53 @@ function nameSubmit() {
   
  Another challenge was at bringing the user input before requesting **fetch()**. Since the data is brought according to the user input, the name the user types in, json file can't be **preloaded()** but the file has to be brought upon an event; when the user type in a name and clicks the submit button. 
  
- <br><br>
+ <br>
  
-
 ### Spawning Bubbles - Class & Arrays of Objects
 
+I leant how to create [class()](https://www.youtube.com/watch?v=T-HGdc8L-7w) and make [Arrays of Objects](https://www.youtube.com/watch?v=rHiSsgFRgx4
+) to visualize data in the form of bubble shape. I saved the Bubble class as a seperate bubble.js file to organize the code better. For **constructor()** each bubble has following data <br>
+
+```
+  //Bubble Class
+  class bubble {
+    //Construct bubble object
+    constructor(name,age,count,color,x,y,speed) {
+      //resultName
+      this.n = name;
+      //resultAge
+      this.a = age;
+      //resultCountry
+      this.c = count;
+      //color is randomly selected from the pastel color range
+      this.color = color;
+      //x-position 
+      this.x = x;
+      //y-position 
+      this.y =y;
+      //speed of x and y
+      this.xspeed = speed;
+      this.yspeed = speed;
+    }
+    
+  ```
+  
+<br>
+
+To randomly select a color that is within the range of pastel color, I added the code 
+
+```
+  //Create Random Pastel Color
+  let hue = Math.floor(Math.floor(Math.random() * 360));
+  let randomColor = `hsl(${hue}, 70%, 80%)`;
+```
+
+<br>
  <img src="images/process1.jpg" width="600">
+ 
+ <br>
+**Animation** 
 
-I created [class()](https://www.youtube.com/watch?v=T-HGdc8L-7w) and [Arrays of Objects](https://www.youtube.com/watch?v=rHiSsgFRgx4
-) to visualize data in the form of bubble shape. Constructor function was challenging. 
-
-<br><br>
 
 For week one, I established the basic structure and successfully fetched data from three different APIs. For now the representation of the data is only based on the datas from Agify API - the size of the bubbles and the colors are determined by the data result - the predicted age of the name that user entered. 
 
