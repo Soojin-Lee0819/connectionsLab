@@ -82,11 +82,46 @@ I focused on the consistency and the perceived feeling when making choices for v
 ## Process & Challenges
 
 ### Fetching API 
-Fetching API was the first step for this project. I explored two methods. Fetching API using I couldn't fetch API at preloaded section because the data is brought according to the user input. Therefore, to fetch API, I made a function that selects the input, **#name** everytime when the **submit** button is pressed, which is added to the fetching API url. This way, the new dataset is fetched for every submission, and the data is brought accordingly. After finish coding, it made sense, but since it was my first time wroking with api, in the beginning 
+Fetching API was the first step for this project. I explored two methods. 
 
-Instead of calling API from 
+**Method1**
 
-With the focus on 
+My first attempt was to fetch API directly from p5.js using **httpGet()** to get **response** data. 
+
+```
+
+function nameSubmit() {
+ 
+  let ageurl =
+    'https://api.agify.io?name=' + name;
+ 
+  httpGet(ageurl, 'json', false, function (response) {
+    resultAge = response;
+  });
+ 
+  // Log the received data to console
+  console.log(resultAge);
+}
+ 
+ ```
+ 
+ This was a working code. However, I was recommended to use **fetch()** function to bring json data from API. So I recoded with **fetch()** to fetch a resource from the network, with a return **Response** to the request. 
+ 
+ ```
+ function nameSubmit(){
+  let name = document.querySelector("#name").value;
+    ageurl = 'https://api.agify.io?name=' + name';
+    fetch(ageurl)
+  .then(response => response.json())
+  .then((ageData) => {
+    resultAge = ageData.age;
+    console.log(resultAge);
+      })
+ 
+ <br><br>
+ Another challenge was at bringing the user input before requesting **fetch()**. Since the data is brought according to the user input, the name the user types in, json file can't be **preloaded()** but has to be brought upon an event, clicking submit button. 
+
+
 
 
 <img src="images/process1.jpg" width="600">
