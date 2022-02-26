@@ -109,14 +109,19 @@ function nameSubmit() {
  
  ```
  function nameSubmit(){
+ 
   let name = document.querySelector("#name").value;
+  
     ageurl = 'https://api.agify.io?name=' + name';
+    
     fetch(ageurl)
   .then(response => response.json())
   .then((ageData) => {
     resultAge = ageData.age;
     console.log(resultAge);
       })
+      
+      }
  
  <br><br>
  Another challenge was at bringing the user input before requesting **fetch()**. Since the data is brought according to the user input, the name the user types in, json file can't be **preloaded()** but has to be brought upon an event, clicking submit button. 
