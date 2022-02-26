@@ -273,11 +273,9 @@ Also show an alert when the input name is invald - no existing data
 ```
 
 
- ### Check duplicate Country
+ ### Check Duplicate Country
  
  1. I added array where the country data is pushed to the array for every bubble that is pushed. 
-
-<br>
  
  2. checkDuplicate
  <br>
@@ -342,8 +340,17 @@ To me, the concept of Array was unfamiliar at first and how to compare object wi
     <img src="images/landingpage.png" width="600">
  
 
-## What's Next?
+## Reflections & What's Next?
+
+### Bias in Data
+
+Some of the obvious trends are found that just like the nature of data, 
+
 
 ### Level Design
 
 When I was playing the game, hitting 500 point was rather easy. This is because I have a diverse upbringing and I know many names around the world who are very diverse. However, I know that for people who grew up in more homogenous cultural background would find this game difficult. For this reason, I want to add a feature where players can select the level of the game (easy, difficult, and 
+
+### Show Analytics
+
+### 
