@@ -35,19 +35,24 @@ Originally, I was planning to use one API, the agify API. I started with brainst
 
 <img src="images/brainstorm.jpg" width="600">
 
-### Signature Generator
+**Signature Generator**
+
 When users type in the name, based on the data result, the website provides a unique signature. For example, the number of the age determines the color values, size of the font, font-family and etcetera. 
 
 **Find the Youngest Name**
+
 In this challenge-style interaction, users are invited to find the youngest name. It was difficult to find names with young ages. Most of the names were between 30-60, and I couldn't find any name that is predicted to be a teenagers' name. This maybe because of the nature of how the data is collected - finding the average age of all the ages associated to the name. 
 
 **Visualizing Name & Age**
+
 To make the visualization intuitive, I wanted to make the size of the bubble in proportion to the predicted age of the names. In this way, players can easily compare different names and ages. 
 
 **Family Tree**
+
 I thought it would be interesting to make a website where the users type in their family members' names and receive a family tree based on the predicted age of the names. 
 
 **Who's Older?**
+
 This is an interactive game where players are given two name cards and they have to guess which name has an older predicted age. 
 
 ## Wireframe
