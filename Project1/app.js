@@ -77,8 +77,8 @@ function windowResized() {
 //function that happens when the user submit name. 1.fetch API 2.process data 3.trigger pushBubble function
 function nameSubmit(){
   let name = document.querySelector("#name").value;
-  ageurl = 'https://api.agify.io?name=' + name + '&apikey=275c8c5db6b62a979b8b4ac71ab76af0';
-  nationalurl = 'https://api.nationalize.io/?name=' + name + '&apikey=275c8c5db6b62a979b8b4ac71ab76af0';
+  ageurl = 'https://api.agify.io?name=' + name;
+  nationalurl = 'https://api.nationalize.io/?name=' + name;
 
   //fetchcing age url & store result 
   fetch(ageurl)
