@@ -8,7 +8,7 @@
 
 ## Overview
 
-For this project, I decided to make a meaningful 
+For week 2, I learned how to make interactions using Javascript. Inspired by my Notion planner that I use everyday to stay productive, I created an interactive To-do List page for this week's assignment. I wanted to create a weekly To-do-list page that has a motivational quote slideshow on top. This project has two main user-interactivities; motivational quote slideshow that moves on click, and to-do list user-input interactivity that has user-input, add/delete button and checkbox functions.
 
 <img src="images/soojinplanner.png" width="600">
 
@@ -41,28 +41,39 @@ Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a
 9. Duplicate To-Do list for 7 days
 10. Allow press Enter to add new task
 
-### Processing Dataset 
-<img src="images/wireframe.jpg" width="600">
 
-### CSV file to JSON file
-The original data source was in csv format. I used online csv to json file converter to convert the file. 
+### Motivational Quote Slideshow 
+I started with creating a motivational Quote slideshow. I found out that there is a <q></q> tag for quote. It wasn't too complicated but after learning how to use API, I want to replace this section with quote API to have a more varieties of quotes and to add an element of surprise. 
 
 
-### JSON file Structure
-The file
+ ### To-do list system
+ 
+ Before start coding, I listed the steps for how users would add to-do list; from users clicking on user-input section -> type-in task -> click add -> task is added to the to do list -> when the task is completed, users can mark complete -> if needed, users can delete the task 
+ 
 
-### req.query & req.params 
-Some of the challenges were making understanding of the concept of **req.query** and **req.params**
+### Error prevention
+To prevent an error, I added an alert system where if the input section is empty(input value.length == 0), it gives a feedback for the users to enter a task.
+
+<img src="images/error.png" width="600">
+
+
+### Adding Checkbox
+Initially, to mark completed tasks, I created a class "completed" and added an eventlistener to strike the line when the text is clicked. However, without a checkbox icon, the process of clicking the completed task to mark it complete wasn't very intuitive. Therefore, I added a checkbox, that visually signals users to clcik on it when the task is completed.
+
+<img src="images/checkbox.png" width="600">
+
+### Grid system 
+Developing a grid system for 7 days of to-do list was challenging. When the task was added, the neighboring list on the same row were pushed down. To fix the issue, I used in-line block display with relative position to make sure the input bar is always stick to the top of the row. To see the position and orientation better, when coding, I added background colors to each to-do containers. 
+
+<img src="images/challenge.png" width="600">
 
 ### Final Project Demonstration
 
 <img src="images/todolistimg.png" width="700">
 
 
-
-
-
-
 ## Reflection & Evaluation
 
-I want to develop this project by adding price of the beverages to the dataset. On webpage, I want to make a quick survey, either checkbox or user-entry for users to filter the beverage of their choice. I also want to add images for each beverage and have it displayed on the side. Having to npm start for any changes made in index.js file was a bit frustrating. I was wondering if there are any automatic version of this. 
+One takeaway from this exercise is that seemingly simple user-interaction can take many steps and considerations to develop the interaction. For example, for users, to use the to-do list function, they just need to type in task and press add. However, from the developer's perspective, I need to consider how the input tasks are stacked to one another, how to prevent errors of user adding an empty task, and much more. I have edited/added more features along the way - such as check-box system that allows users to click to mark completed task. 
+
+For the following projects, I want to learn how to write more effecient code. I also want to add the function where users can drag and move tasks from one list to another.One concern with this web-based weekly to-do list is that without a log-in system, when tab is closed, the input data is lost. Therefore there should be a log-in feature where the input data can be stored with user ID and the stored data is displayed at log-in. 
