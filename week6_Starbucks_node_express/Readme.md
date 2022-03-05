@@ -128,14 +128,16 @@ Below shows the working prototype of searching for specific drink using the func
 
 I created a webpage that serves to and using "fetch" function to receive /random data from JSON file. Everytime when the user click "Drink" button, they will receive a drink randomly from the arraylist with the nutritional information displayed on the side. 
 
-**landing page**
+### Landing Page
+
 <img src="public/images/landingpage.png" width="700">
 <br>
-**random drink #1**
+### Random Drink 1
+
 <img src="public/images/random-request.png" width="700">
 
 <br>
-**random drink #2**
+### Random Drink 2
 <img src="public/images/random-request2.png" width="700">
 
 
