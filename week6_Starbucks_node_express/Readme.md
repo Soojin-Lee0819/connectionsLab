@@ -17,17 +17,16 @@ For this week, I created own API that serves JSON file, and made a webpage that 
 The nutritional information for starbucks drinks were found here [Starbucks Nutrition Analysis](https://github.com/yhejazi/starbucks-nutrition/blob/master/data/sbux_nutrition.csv).
 
 This data set includes following nutritional information:
-⋅⋅* Drink Name
-⋅⋅* type
-⋅⋅* size
-⋅⋅* calories
-⋅⋅* fat
-⋅⋅* cholesterol
-⋅⋅* sodium
-⋅⋅* carb
-⋅⋅* sugar
-⋅⋅* protein
-⋅⋅* caffeine
+- Drink Name
+- type
+- calories
+- fat
+- cholesterol
+- sodium
+- carb
+- sugar
+- protein
+- caffeine
 
 
 ### CSV file to JSON file
