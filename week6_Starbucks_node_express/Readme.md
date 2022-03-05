@@ -36,30 +36,53 @@ I also cleaned language in a way that is easier for the users. For example, in t
 
 <img src="public/images/starbucks_menu.png" width="600">
 
-**Workflow**
+For example, the drink Caffee Latte's nutritional info is organied as such:
 
-Before I start, I wrote down the workflow
+```
+
+let coffeeData = {
+  "coffee": 
+    [
+      {
+        "drink_name": "Caffe Latte",
+        "type": "Hot Coffees",
+        "size": "Tall",
+        "calories": 150,
+        "fat": 6,
+        "cholesterol": 25,
+        "sodium": 135,
+        "carb": 15,
+        "sugar": 14,
+        "protein": 10,
+        "caffeine": 75
+      },
+      ]
+      }
+
+```
+
+### Workflow
+
+Before I start, I wrote down the workflow.
 
 **To-do List** <br>
-1. Find, create, and edit the dataset
-2. Add a new task function 
-3. At empty input, pop-up error message
-4. Deleting a task 
-5. Crossing out a completed task
-6. Clearing input field after each entry
-7. Error message pop-up(if the add button is pressed when the input field is empty, show error message) 
-8. Add focus() method for input element ready for entering
-9. Duplicate To-Do list for 7 days
-10. Allow press Enter to add new task
+1. Find, create, and edit nutritional info data to JSON format (make sure it is formatted correctly)
+2. Craete Sever with Express
+3. Add JSON format data to index.js file
+4. Route html webpage to "/" 
+5. connect to specific local host port
+6. Create index html landing page
+7. create **/random** randomly select drink and show JSON file 
+8. create **/coffee** that shows all the existing drink data JSON file
+9. Add query to **/coffee** that respond with a JSON of drinks less than a certain calories
+10. Add condition so that user asks for coffee with higher calorie, the API should still work
+11. Creatre function user can search for specific drink name using params 
 
 ## Wireframe
 
-<img src="images/wireframe.jpg" width="600">
+<img src="public/images/wireframe.jpg" width="600">
 
-Section 1 - Motivational quote slideshow with prev & next button
-
-Section 2 - Weekly To-Do list (from Mon- Sun). Inside each container, there is a user input section, and an output section where the inputted tasks appear.
-
+I created a simple wirefram with a section where users can click Coffee? button to receive random coffee with nutritional info. Nutritional info is displayed on the side (right). I used simple white, black color with a highlight of Starbucks Green color. 
 
 
 ### JSON file Structure
