@@ -131,12 +131,12 @@ I created a webpage that serves to and using "fetch" function to receive /random
 ### Landing Page
 
 <img src="public/images/landingpage.png" width="700">
-<br>
+
 ### Random Drink 1
 
 <img src="public/images/random-request.png" width="700">
 
-<br>
+
 ### Random Drink 2
 <img src="public/images/random-request2.png" width="700">
 
