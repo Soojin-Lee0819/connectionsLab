@@ -491,14 +491,12 @@ app.get('/random', (req, response) => {
   response.json(randomCoffee);
 })
 
-
 //show all coffee JSON
 app.get('/coffee', (req,res) => {
   let maxCal = req.query.calorieLowerThan;
 
-
   lowerCalorieDrinks = {};
-  // respond with a json of cats less than a certain calorie
+  // respond with a json of drinks less than a certain calorie
   for(drink in coffeeData.coffee) // loops through the keys in campusCats 
   {
     let lowerCalorieDrink = coffeeData.coffee[drink];
@@ -507,11 +505,11 @@ app.get('/coffee', (req,res) => {
     }
   }
 
-// add conditions so that when user asks for all cats with no queries, the API should still work
+// add conditions so that when user asks for coffee with higher calorie, the API should still work
   if(maxCal) {
     res.json(lowerCalorieDrinks);
   } else {
-    res.json(coffeeData.coffee);
+    res.json({status: "info not present"});
   }
 })
 
@@ -531,7 +529,7 @@ app.get('/coffee/:coffeeName', (req,res)=> {
   if(user_obj) {
       res.json(user_obj);
   } else {
-      res.json({status: "info not present"});
+      res.json({status: "this drink does not exist"});
   }
 })
 
