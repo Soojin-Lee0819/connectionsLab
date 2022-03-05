@@ -63,9 +63,6 @@ let coffeeData = {
 
 ### Workflow
 
-Before I start, I wrote down the workflow.
-
-**To-do List** <br>
 1. Find, create, and edit nutritional info data to JSON format (make sure it is formatted correctly)
 2. Craete Sever with Express
 3. Add JSON format data to index.js file
@@ -85,27 +82,65 @@ Before I start, I wrote down the workflow.
 I created a simple wirefram with a section where users can click Coffee? button to receive random coffee with nutritional info. Nutritional info is displayed on the side (right). I used simple white, black color with a highlight of Starbucks Green color. 
 
 
-### JSON file Structure
-The file
+### req.query 
+I ran into issues with req.query because. I first practiced with the in-class campus cats example. 
 
-### req.query & req.params 
-Some of the challenges were making understanding of the concept of **req.query** and **req.params**
+<img src="public/images/querychallenge1.png" width="600">
 
-### Final Project Demonstration
+For query, the users have to ask for specific instead of adding "?" I added "/" so I have been receiving errors. With the help of Alia, I was able to solve this issue. 
+
+<img src="public/images/query.png" width="600">
+
+I created the query where users can search for the drink that is less calories than "x". For example, if the user types /coffee?calorieLowerThan=30, the JSON data with less 30 Kcal will be displayed. 
+
+
+### req.params 
+for req.params, I created a function where users can search/request data for specific name of the drink. To develop this, I had to have a good understanding of how the data is formatted in JSON file. The format of my data was a bit confusing. In class exercise, the name of the object, was the name of the cats; laalo, grumpy, and snow.
+
+```
+let campusCats = {
+  laalo : {
+    colour : "orange",
+    hangout : "D2",
+    age: 2
+  },
+  grumpy : {
+    colour : "black",
+    hangout : "C2", 
+    age : 4
+  },
+  snow : {
+    colour : "white",
+    hangout : "A5",
+    age: 10
+  }
+}
+
+```
+
+However, for this specific dataset, the objects are not defined, instead the name of the drink is within the data set under drink_name. Name of the drink resides in the object. The object name are the number of array list 1,2,3,4,5 etc... Without having a solid understanding of the data structure, I couldn't get the name of the drink from the data set at first.
+
+Below shows the working prototype of searching for specific drink using the function params.
+
+<img src="public/images/params.png" width="600">
+
+### Creating Webpage
+
+I created a webpage that serves to and using "fetch" function to receive /random data from JSON file. Everytime when the user click "Drink" button, they will receive a drink randomly from the arraylist with the nutritional information displayed on the side. 
+
+### Landing Page
 
 <img src="public/images/landingpage.png" width="700">
+
+### Random Drink 1
+
 <img src="public/images/random-request.png" width="700">
+
+
+### Random Drink 2
 <img src="public/images/random-request2.png" width="700">
-<img src="public/images/query.png" width="600">
-<img src="public/images/params.png" width="600">
-<img src="public/images/error.png" width="600">
-
-
-
-
 
 
 ## Reflection & Evaluation
 
-I want to develop this project by adding price of the beverages to the dataset. On webpage, I want to make a quick survey, either checkbox or user-entry for users to filter the beverage of their choice. I also want to add images for each beverage and have it displayed on the side. Having to npm start for any changes made in index.js file was a bit frustrating. I was wondering if there are any automatic version of this. 
-
+I want to develop this project by adding price of the beverages to the dataset. Now, only the /random function is connected with node.js server. By connecting multiple routes that includes params and query, I would like to make a function where users can search for specific drink directly on the webpage, as well as do a quick survey to receive filtered information, For example, on the landing page, I will be creating a quick survey, either checkbox or user-entry. I also want to add images for each beverage and have it displayed on the side. It is just the beginning but I see a lot of application and a room for creativity for this project. I am excited to develop this application to make something useful for the members of NYUAD community. 
