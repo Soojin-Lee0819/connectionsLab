@@ -17,7 +17,14 @@ ___
 
 ___
 
-# Project 1
+# Week 3-5 Project 1
 [Identify Name Game Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project1)
 
 [Identify Name Game Page](https://soojin-lee0819.github.io/connectionsLab/Project1)
+
+
+___
+
+# Week 6
+[Starbucks Nutrition Label Node.js](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/week6)
+
