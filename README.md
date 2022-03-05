@@ -26,5 +26,5 @@ ___
 ___
 
 # Week 6
-[Starbucks Nutrition Label Node.js](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/week6)
+[Starbucks Nutritional Label Node.js](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/week6_Starbucks_node_express)
 
