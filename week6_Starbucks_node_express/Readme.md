@@ -93,7 +93,12 @@ Some of the challenges were making understanding of the concept of **req.query**
 
 ### Final Project Demonstration
 
-<img src="images/todolistimg.png" width="700">
+<img src="public/images/landingpage.png" width="700">
+<img src="public/images/random-request.png" width="700">
+<img src="public/images/random-request2.png" width="700">
+<img src="public/images/query.png" width="600">
+<img src="public/images/params.png" width="600">
+<img src="public/images/error.png" width="600">
 
 
 
