@@ -49,23 +49,56 @@
   }
 
   
-  #coffee-button {
+  .buttons {
+     /* remove default behavior */
+     appearance:none;
+     -webkit-appearance:none;
+   
+     /* usual styles */
+     position:relative;
+     width:15vw;
+     padding:1vw;
+     margin-top:3vw;
+     border:none;
+     border-style: solid;
+     border-width: medium;
+     border-color: #1f592d;
+     color:#fff;
+     font-weight:600;
+     border-radius:5px;
+     font-size: 1.5vw;
+     background-color: #1f592d;
 
-    /* remove default behavior */
-    appearance:none;
-    -webkit-appearance:none;
+  }
   
-    /* usual styles */
-    position:relative;
-    width:10vw;
-    padding:1vw;
-    margin-top:3vw;
-    border:none;
-    color:#fff;
-    font-weight:600;
-    border-radius:5px;
-    font-size: 1.5vw;
-    background-color: #1f592d;
+#coffee-button-low {
+  color:black;
+  background-color: white;
+  width:20vw;
+
+}
+
+#specific-menu {
+  width:100%;
+  display: inline-block;
+  margin-top: 3vw;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+}
+
+#specific-menu p{
+  font-weight: 600;
+  font-size: 1.8vw;
+}
+
+
+.menuButton{
+  border:none;
+  font-size: 1.2vw;
+  width:15vw;
+  background-color: rgb(178, 184, 174);
+  color:black;
+  
 }
 
 .sideboard {

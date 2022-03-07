@@ -6,6 +6,7 @@ Soojin Lee
  -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,24 +15,33 @@ Soojin Lee
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <title>Starbucks</title>
 </head>
+
 <body>
     <div class="mainpage">
-        <div class ="mainboard">
+        <div class="mainboard">
             <div id="textarea">
                 <h1>NYUAD Library Cafe</h1>
-                <button id="coffee-button">Drink?</button>
+                <button class="buttons" id="coffee-button">Any Drink?</button>
+                <button class="buttons" id="coffee-button-low">Low Calorie Drink?</button>
+                <div id="specific-menu">
+                    <p>Check out Specific Menu</p>
+                    <button class="buttons menuButton" id="americano">Iced Caffe Americano</button>
+                    <button class="buttons menuButton" id="caffee-mocha">Iced Caffe Mocha</button>
+                    <button class="buttons menuButton" id="hot-chocolate">Hot-Chocolate</button>
+                    </div>
             </div>
+
         </div>
         <div class="sideboard">
-            <div id="drink_info"> 
+            <div id="drink_info">
                 <p id="coffee-random"> </p>
-                <div id = drink_info_left></div>
-                <div id = drink_info_right></div>
+                <div id=drink_info_left></div>
+                <div id=drink_info_right></div>
             </div>
-          </div>
         </div>
-    
-<script src="app.js"></script>
-</body>
-</html>
+    </div>
 
+    <script src="app.js"></script>
+</body>
+
+</html>
