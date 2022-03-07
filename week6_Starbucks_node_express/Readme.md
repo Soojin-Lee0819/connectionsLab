@@ -144,3 +144,7 @@ I created a webpage that serves to and using "fetch" function to receive /random
 ## Reflection & Evaluation
 
 I want to develop this project by adding the price of the beverages to the dataset. Now, only the **/random** function is connected with node.js server. By connecting multiple routes that include params and query, I would like to make a function where the users can search for specific drink directly on the webpage, as well as do a quick survey they can fill out to receive filtered information. I also want to add images for each beverage and have it displayed on the side. It is just the beginning of what can be implemented on this project. I am excited to develop this application to make something useful for the members of NYUAD community. 
+
+### Improvements
+
+I made an improvement by bringing params and query to webpage. Further documentaiton will be updated next week. 
