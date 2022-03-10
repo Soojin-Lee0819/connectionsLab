@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Connerter</title>
+</head>
+<body>
+
+    <header class="header container">
+<img class="logo" src ="images/connecter.png"/>
+<h1>Connecter</h1>
+
+    </header>
+
+  <!-- Feed of posts-->
+    <section class="container"> 
+        <ul class ="posts">
+            <li class = "post">
+                <h2 class ="post_person">xyz</h2>
+                <h3 class="post_time">Date | Time</h3>
+                <p class ="post_content"> This is the actual post, things that I want to say</p>
+            </li>
+
+        </ul>
+    </section>
+
+    <!-- Button to add a new post-->
+    <section class="container"> 
+        <div class="new">
+            <button id="new_button" class="new_button">post Content</button>
+        </div>
+    </section>
+
+<!-- Creating new posts-->
+    <section class="create">
+        <div class="create_container" id="create_container">
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="create_name" name="name" required>
+            <label for="name">Post:</label>
+            <input type="text" id="post" class="create_post" name="post" required>
+            <button class="create_button" id="create_button">Post</button>
+        </div>
+    </section>
+    
+
+
+    
+</body>
+<script src="app.js"></script>
+</html>
