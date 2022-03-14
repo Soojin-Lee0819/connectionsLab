@@ -4,44 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"/>
-    <title>Connerter</title>
+    <title>CONNECTER</title>
 </head>
 <body>
-
-    <header class="header container">
-<img class="logo" src ="images/connecter.png"/>
-<h1>Connecter</h1>
-
-    </header>
+  <!-- header-->
+<header class="header">
+<h1>CONNECTER</h1>
+</header>
 
   <!-- Feed of posts-->
-    <section class="container"> 
-        <ul class ="posts">
+    <section class="container post_container"> 
+        <ul class ="posts" id="posts">
             <li class = "post">
-                <h2 class ="post_person">xyz</h2>
-                <h3 class="post_time">Date | Time</h3>
-                <p class ="post_content"> This is the actual post, things that I want to say</p>
+                <p class ="post_person"></p>
+                <p class="post_time"></p>
+                <p class ="post_content"></p>
             </li>
-
         </ul>
     </section>
 
     <!-- Button to add a new post-->
-    <section class="container"> 
+    <section class="container createButton_container"> 
         <div class="new">
-            <button id="new_button" class="new_button">post Content</button>
+            <button id="new_button" class="new_button">Create Post</button>
         </div>
     </section>
 
-<!-- Creating new posts-->
-    <section class="create">
+<!-- Creating new posts this should be a pop-up-->
+    <section class="create" id="create">
         <div class="create_container" id="create_container">
-            <label for="name">Name:</label>
-            <input type="text" id="name" class="create_name" name="name" required>
-            <label for="name">Post:</label>
-            <input type="text" id="post" class="create_post" name="post" required>
+
+    <!-- User Input Name -->
+    <p><input id="name" class="create_name"  value="" placeholder="name" required> </input></p>
+    <p><textarea id="post" class="create_post"  value="" placeholder="write your post here" required> </textarea></p>
             <button class="create_button" id="create_button">Post</button>
+
         </div>
     </section>
     

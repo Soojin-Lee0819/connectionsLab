@@ -1,35 +1,123 @@
 html, body {
     margin:0;
     padding:0;
-    background-color:rgb(233, 229, 224);
+    width:100%;
+    height:100%;
 }
 
-.container {
-    width: 80%;
-    margin:0 auto;
-    display: flex;
-
+p {
+    margin: 0;
+    padding: 0;
 }
 
+/*header*/
 .header {
-    height: 10vh;
+    width:100%;
+    margin:0;
+    height:10vh;
+    position:relative;
+    
+    background-color: #fa8072;
+    top:0;
 }
 
-.posts{
-    height:90vh;
-}
-
-.logo {
-width:10%;
-}
-
-.new{
+h1 {
+    width:100%;
+    margin:0;
     position: absolute;
-    bottom:5vh;
-    right: 5vh;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Barlow', sans-serif;
+    text-align:center;
+    color: white;
+}
+
+/*post_container*/
+
+.post_container{
+    height: 80vh;
+    background-color: yellow;
+    border-radius: 15px 15px 0% 0%;
+}
+
+ul {
+    margin:0;
+    list-style-type:none;
+}
+
+/*createButton_container*/
+.createButton_container{
+    height: 10vh;
+    margin:0;
+    width:100%;
+    display:flex;
+}
+
+.new {
+    width:100%;
+    position:relative;
 }
 
 .new_button{
-    height: 5vh;
+    /* remove default behavior */
+    appearance:none;
+    -webkit-appearance:none;
+  
+    /* add styles */
+    position:relative;
+    margin-left:30%;
+    width:40%;
+    border:none;
+    color:#fa8072;
+    border-radius:5px;
+    background-color: #ffffff;
+    font-size: 1.5vw;
+    padding:1vw;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 
 }
+
+
+.create {
+    width:100%;
+}
+
+/*createButton_container*/
+.create_container {
+    height: 50vh;
+    width:80%;
+    position: absolute;
+    top: 50%;
+    background-color: chocolate;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding:10%;
+}
+
+.create_container input {
+    appearance:none;
+    -webkit-appearance:none;
+    margin:0;
+    padding:5% 2%;
+    width:90%;
+    border:none;
+    border-radius:5px;
+}
+
+#post {
+    appearance:none;
+    -webkit-appearance:none;
+    margin:0;
+    height:30vh;
+    padding:2vw;
+    border:none;
+    border-radius:5px;
+}
+
+
+#name{
+  }
+
