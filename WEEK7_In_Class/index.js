@@ -7,9 +7,9 @@ let Datastore = require('nedb');
 
 //tell your express app to accept json information and parse it 
 app.use(express.json());
-// app.use(express.urlencoded)({
-//     extended:true
-// });
+app.use(express.urlencoded({
+    extended: true
+  }));
 
 //initialize database
 let db = new Datastore({
@@ -18,35 +18,43 @@ let db = new Datastore({
 });//creates a new one if needed
 db.loadDatabase();//loads the db with the data
 
-//app variables
-let posts=[];
-
 app.use('/', express.static('public'));
   
 app.post('/message',(req,res)=> {
     console.log(req.body);
+    let currentDate = Date();
+    let obj = {
+        date: currentDate,
+        name: req.body.name,
+        post: req.body.post
+    }
     //add it into the database?
-db.insert(req.body, function(err,newDoc){
-    console.log(newDoc)
+    db.insert(obj,(err, newDocs)=>{
+        if(err) {
+            res.json({task: "task failed"});
+        } else {
+            res.json({task:"success"});
+        }
+
+    })
+
+
 })
 
-    res.json({"message":"OK"});
-})
+//add route to get all coffee track information
+app.get('/messages', (req,res)=> {
 
-app.get('/messages',(req,res)=>{
-    let dataToSend;
-    db.find({},function(err,docs){
-        console.log(docs);
-        dataToSend = {data: docs};
-        res.json(dataToSend);
-    });
-    // let dataToSend = {
-    //     "posts" : posts
-    // };
-    // console.log(req);
-    // res.json(dataToSend);
-    // console.log(posts);
-});
+    db.find({}, (err, docs)=> {
+        if(err) {
+            res.json({task: "task failed"})
+        } else {
+            let obj = {data: docs};
+            res.json(obj);
+        }
+
+    })
+
+})
 
 //what port whould we listen to?
 app.listen(7000, () => {

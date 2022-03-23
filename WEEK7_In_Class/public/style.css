@@ -36,8 +36,7 @@ h1 {
 
 .post_container{
     height: 80vh;
-    background-color: yellow;
-    border-radius: 15px 15px 0% 0%;
+    background-color: rgb(221, 207, 221);
 }
 
 ul {
@@ -81,17 +80,14 @@ ul {
 }
 
 
-.create {
-    width:100%;
-}
-
 /*createButton_container*/
-.create_container {
+#create_container {
     height: 50vh;
-    width:80%;
+    width:50%;
     position: absolute;
     top: 50%;
-    background-color: chocolate;
+    margin-left:15%;
+    background-color: #c5425f;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     padding:10%;
@@ -112,12 +108,12 @@ ul {
     -webkit-appearance:none;
     margin:0;
     height:30vh;
-    padding:2vw;
+    width:90%;
+    padding:5% 2%;
     border:none;
     border-radius:5px;
 }
 
 
-#name{
-  }
+
 
