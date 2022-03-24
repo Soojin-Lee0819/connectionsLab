@@ -44,15 +44,11 @@ app.post('/message',(req,res)=> {
 //add route to get all coffee track information
 app.get('/messages', (req,res)=> {
 
-    db.find({}, (err, docs)=> {
-        if(err) {
-            res.json({task: "task failed"})
-        } else {
-            let obj = {data: docs};
-            res.json(obj);
-        }
-
-    })
+    db.find({}).sort({ createdAt: -1 }).exec(function (err, docs) {
+        console.log(docs);
+            dataToSend = {data: docs};
+        res.json(dataToSend);
+      });
 
 })
 
