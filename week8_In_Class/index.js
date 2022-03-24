@@ -18,7 +18,7 @@ app.use('/', express.static('public'));
 io.sockets.on('connection',(socket)=> {
     console.log("we have", socket.id);
     socket.on('disconnect',()=> {
-        console.log('sockethas been disconnected',connect.id);
+        console.log('sockethas been disconnected',socket.id);
     })
 
 //listen for a message from a client
