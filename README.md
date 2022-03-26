@@ -22,4 +22,4 @@
 [Starbucks Nutritional Label Node.js](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/week6_Starbucks_node_express)
 
 # Week 8
-[NYUAD Pictionary](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/week6_Starbucks_node_express)
+[NYUAD Pictionary](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/week8_NYUAD_Pictionary)
