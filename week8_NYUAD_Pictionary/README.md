@@ -7,21 +7,30 @@
 
 [Access Project Here](https://foregoing-shrub-tail.glitch.me)
 
-<img src="images/pictionary.png" width="600">
+<img src="images/pictionarymain.png" width="600">
 
 ## Project Overview
-Incorporating Socket.io, I made Node-Express app NYUAD Pictionary. Pictionary is a fun drawing game where one person draws and other players try to guess what is being drawn. For this game, 
+Using Node-Express and incorporating socket.io, I created NYUAD Pictionary Game. Pictionary is a fun drawing game where one person draws and other players try to guess what is being drawn. For this game, the words are randomly drawn from the JSON file I created myself. 
 
 
 
 ## WireFrame
 
 
-## Disable Click Button when Drawing
 
-## Clients all Receive
+## Two Clients
+<img src="images/clients2.png" width="600">
+
+When a client has drawn the word, drawing word function is disabled to reset of the clients. A person who draws the word can start drawing, or redraw the word if needed. 
+
+
+## All clients notified correct and move on to next
+<img src="images/correct2.png" width="600">
+When a client answers the drawing correctly, everyone will be notified and the game moves to the next round. Again, any player can draw the word by clicking Draw button. 
 
 ## When Correct Answer, Inform
+
+<img src="images/correct2.png" width="600">
 
 ## Reflection & What's Next
 I am so proud of this project because pictionary is one of my favorite online game that kept me sane during quarantine. How to implementation all the feature was daunting at first. My strategy was to make MVP and elaborate. In the end, I was able to build a playable pictionary game with NYUAD theme. 
