@@ -7,10 +7,10 @@
 
 [Access Project Here](https://foregoing-shrub-tail.glitch.me)
 
-<img src="images/pictionary.png" width="600">
+<img src="images/pictionarymain.png" width="600">
 
 ## Project Overview
-Incorporating Socket.io, I made Node-Express app NYUAD Pictionary. Pictionary is a fun drawing game where one person draws and other players try to guess what is being drawn. For this game, 
+Using Node-Express and incorporating socket.io, I created NYUAD Pictionary Game. Pictionary is a fun drawing game where one person draws and other players try to guess what is being drawn. For this game, 
 
 
 
@@ -18,6 +18,8 @@ Incorporating Socket.io, I made Node-Express app NYUAD Pictionary. Pictionary is
 
 
 ## Disable Click Button when Drawing
+
+
 
 ## Clients all Receive
 
