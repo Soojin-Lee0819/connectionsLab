@@ -23,4 +23,5 @@
 
 # Week 8
 [Play NYUAD Pictionary Here](https://foregoing-shrub-tail.glitch.me)
+
 [NYUAD Pictionary Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/week8_NYUAD_Pictionary)
