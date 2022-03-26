@@ -10,36 +10,38 @@
 <img src="images/pictionarymain.png" width="600">
 
 ## Project Overview
-Using Node-Express and incorporating socket.io, I created NYUAD Pictionary Game. Pictionary is a fun drawing game where one person draws and other players try to guess what is being drawn. For this game, the words are randomly drawn from the JSON file I created myself. 
-
-
+Using Node-Express and incorporating socket.io, I created NYUAD Pictionary Game. Pictionary is a fun drawing game where one person draws and other players try to guess what is being drawn. For this game, I created the JSON file with the words associated with NYUAD to draw words from there.
 
 ## WireFrame
+<img src="images/wireframe.jpg" width="600">
+This project has two sections: canvas where the players can draw, and the chat section where the players can make guesses. 
 
 
+## Allow one person to draw & Diable Button
+<img src="images/twoclients.png" width="600">
 
-## Two Clients
-<img src="images/clients2.png" width="600">
-
-When a client has drawn the word, drawing word function is disabled to reset of the clients. A person who draws the word can start drawing, or redraw the word if needed. 
+When players connect to ther server, everyone has access to draw the word until one person draws the word. Once the word is drawn by one player, drawing word function is disabled to reset of the clients. A person who draws the word can start drawing, or redraw the word if needed. 
 
 
 ## All clients notified correct and move on to next
 <img src="images/correct2.png" width="600">
-When a client answers the drawing correctly, everyone will be notified and the game moves to the next round. Again, any player can draw the word by clicking Draw button. 
+When a client answers the drawing correctly, everyone will be notified and the game moves to the next round. Again, any player can draw the word by clicking "Draw" button. 
 
 ## When Correct Answer, Inform
 
 <img src="images/correct2.png" width="600">
 
+When a player guesses the correct, answer, every player is notified, and the game moves to the next round. Same as how it started, everyone has access to receive the word and the first person to receive the word will be the next player to draw.
+
 ## Reflection & What's Next
+
 I am so proud of this project because pictionary is one of my favorite online game that kept me sane during quarantine. How to implementation all the feature was daunting at first. My strategy was to make MVP and elaborate. In the end, I was able to build a playable pictionary game with NYUAD theme. 
 
 Here are some of the improvements I want to make moving forward. 
 
-1) I want to improve this project by adding more words for word.json file. For now, I have only added a few, but 
+1) I want to improve this project by adding more words for word.json file. For now, I have only added a few, but I plan to make more.
 
-2) Improve on drawing function. For now, the player can only draw with a default brush stroke and color. By adding customizable color, brush stroke feature, players will be able to illustrate better. The erasor function should be added as well. 
+2) Improve on drawing function. For now, the player can only draw with a default brush stroke and black color. By adding customizable colors, brush stroke feature, players will be able to illustrate better. Erasor function will be added as well.
 
+3) Client points system. For now, when a client guess the correct word, they get an alert and move on to the next round. I plan to implement the scoreboard where the multiplayers can compete with each other and ear points. 
 
-Also, I would like to add a score function where for 
