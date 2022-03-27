@@ -3,7 +3,7 @@
 **Title**:NYUAD Pictionary <br>
 **Category**: WEEK 8 <br>
 **Date**: 25 Mar 2022 <br>
-**Deliverable**: CSS/HTML/Javascript/Node.js/Client-server Connected Game <br>
+**Deliverable**: Node.js/Socket.io/CSS/HTML/Javascript/Node.js Connected Game <br>
 
 [Access Project Here](https://foregoing-shrub-tail.glitch.me)
 
