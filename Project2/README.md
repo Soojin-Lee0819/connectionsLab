@@ -15,3 +15,6 @@ This game is inspired by Expo 2020 where the visitors go around different pavili
 
 On the landing page, there would be a map of campus with 4 clickable locations as well as the total number of players inside each pavilion. The players pick the pavilion of their choice and get redirected to a specific game page. At the Track & Field pavilion, players can play tug of war against each other. At the C2 admissions office, players can play a game where they need to collectively write down all majors on campus, and if they write the same major twice, they lose. The third pavilion is D2, where players are given an order and their goal is to complete as many orders as possible (the gameplay mechanism will be a click and pick). The last pavilion is a classroom in A2 where the players would play Pictionary. 
 
+### Wire Frame
+
+### Challenges
