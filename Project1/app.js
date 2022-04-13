@@ -64,7 +64,7 @@ function setup() {
   //button for submitting the name
   let button = select('#submit');
   button.mousePressed(nameSubmit);
-
+  
   //seleft userinput
   input = select('#name');
 }
