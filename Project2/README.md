@@ -248,5 +248,4 @@ The next steps for this game is clear: I want to improve on cleaning the visual 
 
 I also want to learn how to manage socket.io better so that the number of clients in each room is updated when they enter the map or refresh the page. 
 
-Making the accumulative score system where the players can collect the points from different mini-games and have it shown on the map. 
-
+Making the accumulative score system where the players can collect the points from different mini-games and have it shown on the map.
