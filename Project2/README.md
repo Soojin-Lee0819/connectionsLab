@@ -109,7 +109,10 @@ function joinRoom(img) {
   
 <br>
   
-Here, the user's name is paired with their socket.id and depending on the number of players in the room, they the room is created (when 0 player is in the room), added to the room (when 1 player is in the room), or asked to wait (when more than 2 players in the room). <br><br>
+Here, the user's name is paired with their socket.id and depending on the number of players in the room, <br>
+they the room is created (when 0 player is in the room), 
+<br> added to the room (when 1 player is in the room), 
+<br> or asked to wait (when more than 2 players in the room). <br><br>
   
 <b> Server | index.js<b> <br>
 
