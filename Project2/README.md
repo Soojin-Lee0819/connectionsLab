@@ -50,7 +50,8 @@ Following are the list of games available at NYUAD Expo:
 
 ### Coding & Challenges
 
-The most challenging part of this project was definitly the coding part. I have br
+The most challenging part of this project was definitly the coding part. Some game mechanics had to be adjusted so that it is managable for us to code. For instance, instead of making the room open for everyone, we have set the limit of the players to be 2 players max. Alongside implementing the game itelf, we did many error checkings. I have learnt from this project that to create a game where the multiple players are playing realtime, there needs to be a lot of error checkings than a game for a single player. 
+
 
 ### Workflow
 
@@ -151,7 +152,7 @@ Here, the user's name is paired with their socket.id and depending on the number
   <img src="images/mapnumber.png" width="600">
   
   <br>
-  Also when the client joins to the room, the number of players in each room are sent to map to be displayed. For example, there is one player at C2. 
+Also when the client joins the room, the number of the players in each room are sent to the map to be displayed. For example, on the image above there is one player at C2. 
   
   <br><br>
   
@@ -171,20 +172,64 @@ Here, the user's name is paired with their socket.id and depending on the number
   
   ````
   
- ### Map | Error Checking
+ ### Map | Error Checking - Unresolved
   
- When the new client joins, the number of players displayed at each room is accurate. However, when the player returns to the map after completing the game or through clicking the home button, the number of client in each room is no longer accurate. The number of players in all the rooms are set to 0. This also means that when the user return to the map page (not immediately after joining the server), more than 2 players can join the same gameroom. We didn't know how to fix this issue. Not only one the client display but on the server side, the number of user in each room is not updated.
+However, there is an error that is still unresolved. When the new client joins, the displayed number of players at each room is accurate. However, when the player returns to the map after joining the room, whether after completing the game or through clicking the home button, the number of client in each room is no longer accurate. The number of players in all the rooms are set to 0. This also means that when the user returns to the map page more than 2 players can join the same gameroom. We didn't know how to fix this issue. It is not only the display error but the number is not updated on the server side as well. 
  
- It is only updated when the user disconnect() by closing the tab, or joins another room on the map. 
+Through more error check, I found out that when the user is fully disconnected by closing the tab, or joins another room on the map, it gets updated.
  
  <img src="images/numcountissue.png" width="600">
    
 
 ### GAME | 2 PAGES (Instruction + Play Game)
+Originally, the instruction was going to be on the game page itself. However,due to the limited space, we added an instruction page where the players are prompted to read the instruction and click the **start** button before they enter the game. 
 
-### GAME START |
+ <img src="images/instruction.png" width="800"> <br><br>
+ 
+Since the games are time-based, when there is only one player in the room, they shouldn't be able to start the game. It would be unfair when one player starts typing in the word while the other player is still reading the instruction. Therefore, we added the code where on window "load", it checks if there are two players in the game, and have read the instruction. If there is only one player even, when the player clicks **Start** the timer is not triggered nor the buttons or the input boxes are working.
+ 
+  <img src="images/oneplayer.png" width="600"> 
+  
+By adding one more step: where the second player joins the room, and have clicked the **Start** Button, it sends **canStart** that allows all players to be trigger the button to begin the game and the timer gets started. <br><br>
 
-### Next Step
+Although this sounds easy at first, in order to implement this was much more complicated. This is because the program has to first, track the number of players in the room, then check if the player has finished reading the instruction, then wait for the player to click a button that starts the game (and the timer), send to all players to start the game and run the timer in sync, as well as to start tracking their scores as soon as the game is started. 
+
+<br><br>
+ 
+
+### GAME START | Timer
+
+Setting a timer 
+
+### Play-Testing 
+
+For user testing, we had our basic game mechanics ready for testing. 
+
+Here are some goals in mind:
+
+1) For D2 game, do they know how to delete the misplaced items with out instructions? Is it intuitive to delete the item on the tray by clicking it again?
+3) Are the instructions intuitive and easy to understand?
+4) Do they want more/less time for each game?
+5) Do they have fun when playing the game?
+
+
+Here are some of the things that I observed or feedback I got from the user testing:
+
+1) For A2 Major Hunt game, instead of the randomlize colors for the bubbles. Users want to see two different colors: one for themselves, and another for the counterpart player. This makes them visualize better how many majors they have guessed correct in comparison to the other person
+2) For Field Tug of War game, increase the increment for each keypress. Users were struggling to win since the difference was only so much. This will increase the game flow and the speed. 
+3) One player mentioned that it would be nice if the game scores collected from each game sum up. 
+4) They wish to see the **Home** buttons for each page. 
+5) For the games that requires players to "type-in", allow both capital letter and small letter to be considered a correct answer
+
+Play-testing was fun and insightful. I was surprised to see how people need only so much instruction to learn how to play the game. 
+
+### Reflection & Next Step
+
+**Reflection***
+
+Managing socket.io was so Working on this game, I learnt how to code collaboratively. 
+
+**Next Step***
 
 The next steps for this game is clear: I want to improve on cleaning the visual elements of the game, make the accumulative score system where the players can collect points from different mini-games and have it shown on the map. 
 
