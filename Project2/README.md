@@ -81,7 +81,7 @@ User connects to socket.io and is given with socket id. The user name, and the s
 
 On map tab, users can click on the map to join the room. This function will redirect the user to (roomName).html The information about which room to join is also saved as session storage and emitted to the server.  <br><br>
 
-<B> map | script.js<b> <br>
+<B> map | script.js</b> <br>
 
 ````
 function joinRoom(img) {
