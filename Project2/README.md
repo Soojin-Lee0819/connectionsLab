@@ -50,7 +50,8 @@ Following are the list of games available at NYUAD Expo:
 
 ### Coding & Challenges
 
-The most challenging part of this project was definitly the coding part. I have br
+The most challenging part of this project was definitly the coding part. Some game mechanics had to be adjusted so that it is managable for us to code. For instance, instead of making the room open for everyone, we have set the limit of the players to be 2 players max. Alongside implementing the game itelf, we did many error checkings. I have learnt from this project that to create a game where the multiple players are playing realtime, there needs to be a lot of error checkings than a game for a single player. 
+
 
 ### Workflow
 
@@ -111,15 +112,14 @@ function joinRoom(img) {
   
 Here, the user's name is paired with their socket.id and depending on the number of players in the room, <br>
 1) The room is created (when 0 player is in the room), 
-<br> 2) added to the room (when 1 player is in the room), 
-<br> 3) or asked to wait (when more than 2 players in the room). <br><br>
+2) added to the room (when 1 player is in the room), 
+3) or asked to wait (when more than 2 players are in the room). <br><br>
 
 <img src="images/alert3rdplayer.png" width="600">
   
 <b> Server | index.js</b> <br>
 
 ````
-
  socket.on('userData', (data) => {
         //save username in an array with their ID
         socket.name = data.name;
@@ -147,16 +147,18 @@ Here, the user's name is paired with their socket.id and depending on the number
   <br>
   
   
-  <img src="images/mapnumber.png" width="600">
-  
   ### Map | Display Number of Players in each Room
   
-  Also when the client joins to the room, the number of players in each room are sent to map to be displayed
+  <img src="images/mapnumber.png" width="600">
   
   <br>
+Also when the client joins the room, the number of the players in each room are sent to the map to be displayed. For example, on the image above there is one player at C2. 
   
-  <b> Server | index.js<b> <br>
-    
+  <br><br>
+  
+  <b> Server | index.js</b> <br> 
+  
+  ````
   // get the number of players in each room and send to map
         let A2 = rooms["A2"];
         let C2 = rooms["C2"];
@@ -168,11 +170,83 @@ Here, the user's name is paired with their socket.id and depending on the number
         io.in("map").emit("D2PlayerNum", D2);
         io.in("map").emit("FieldPlayerNum", Field);
   
+  ````
   
+ ### Map | Error Checking - Unresolved
+  
+However, there is an error that is still unresolved. When the new client joins, the displayed number of players at each room is accurate. However, when the player returns to the map after joining the room, whether after completing the game or through clicking the home button, the number of client in each room is no longer accurate. The number of players in all the rooms are set to 0. This also means that when the user returns to the map page more than 2 players can join the same gameroom. We didn't know how to fix this issue. It is not only the display error but the number is not updated on the server side as well. 
+ 
+Through more error checkings, I found out that when the user is fully disconnected by closing the tab, or joins another room on the map, it gets updated.
+ 
+ <img src="images/numcountissue.png" width="600">
+   
 
-### Next Step
+### GAME | 2 PAGES (Instruction + Play Game)
 
-The next steps for this game is clear: I want to improve on cleaning the visual elements of the game, make the accumulative score system where the players can collect points from different mini-games and have it shown on the map. 
+Originally, the instruction was going to be on the game page itself. However,due to the limited space, we added an instruction page where the players are prompted to read the instruction and click the **start** button before they enter the game. 
 
-The idea is 
+ <img src="images/instruction.png" width="800"> <br><br>
+ 
+Since the games are time-based, when there is only one player in the room, they shouldn't be able to start the game. It would be unfair when one player starts typing in the word while the other player is still reading the instruction. Therefore, we added the code where on window "load", it checks if there are two players in the game, and have read the instruction. If there is only one player even, when the player clicks **Start** the timer is not triggered nor the buttons or the input boxes are working.
+ 
+  <img src="images/oneplayer.png" width="600"> 
+  
+By adding one more step: where the second player joins the room, and have clicked the **Start** Button, it sends **canStart** that allows all players to be able to access the buttons to begin the game, and the timer gets started as well. <br><br>
+
+Although this sounds easy at first, in order to implement this was much more complicated. This is because the program has to first, track the number of the players in the room, then check if the player has finished reading the instruction, then wait for the player to click a button that starts the game (and the timer), send to all players to start the game and run the timer in sync, as well as to start tracking their scores as soon as the game is started. 
+
+<br><br>
+ 
+
+### Play-Testing 
+
+For the play testing, we had our basic game mechanics ready for testing. 
+
+**Here are some of the goals in mind:**
+
+1) For D2 game, do they know how to delete the misplaced items with out instructions? Is it intuitive to delete the item on the tray by clicking it again?
+
+
+2) Are the instructions intuitive and easy to understand?
+
+
+3) Do they want more/less time for each game?
+
+
+4) Do they have fun when playing the game?
+
+
+**Here are some of the things that I observed or feedback I got from the user testing:**
+
+1) For A2 Major Hunt game, instead of the randomlize colors for the bubbles. Users want to see two different colors: one for themselves, and another for the counterpart player. This makes them visualize better how many majors they have guessed correct in comparison to the other person
+
+2) For Field Tug of War game, increase the increment for each keypress. Users were struggling to win since the difference was only so much. This will increase the game flow and the speed. 
+
+3) One player mentioned that it would be nice if the game scores collected from each game sum up. 
+
+4) They wish to see the **Home** buttons for each page. 
+
+5) For the games that require players to "type-in", allow both capital letter and small letter to be considered a correct answer
+
+6) Players hate reading. => Minimize instruction 
+
+
+Play-testing was fun and insightful. During the playtesting, I wanted to "observe" how users interact with the environment that we have designed for them to interact with. Therefore, I tried to minimize giving them instructions. Since the concept of the game is rather straightforward, to click a button to join a room and start playing simple games, I was surprised to see how people need only so much instruction to learn how to play the game. It was only 10 minutes short playtesting but I was able to gain a lot of insights from their behaviors. 
+
+### Reflection & Next Step
+
+**Reflection***
+
+From the ideation stage to design, and production, this project was a lot of fun. Since there was plentiful room for creativity, it gave me freedom to make something original, and unique using the skills I have acquired for the last 10 weeks. I am proud that I was able to code this with Alia as a team. Coding together means we need to be constantly communicating and communicating effectively. Before we push our files to github, we always made sure we give each others a heads up and planned ahead to avoid working on the same file. This project was convenient since it has many rooms with separate games. 
+
+Although we have spent a lot of efforts to this game, two weeks was not enough to fine-tune the UI of the game and the graphics. 
+
+
+**Next Step***
+
+The next steps for this game is clear: I want to improve on cleaning the visual elements of the game
+
+I also want to learn how to manage socket.io better so that the number of clients in each room is updated when they enter the map or refresh the page. 
+
+Making the accumulative score system where the players can collect the points from different mini-games and have it shown on the map. 
 
