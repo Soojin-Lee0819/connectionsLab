@@ -153,9 +153,9 @@ Here, the user's name is paired with their socket.id and depending on the number
   <br>
   Also when the client joins to the room, the number of players in each room are sent to map to be displayed. For example, there is one player at C2. 
   
-  <br>
+  <br><br>
   
-  <b> Server | index.js</b> <br>
+  <b> Server | index.js</b> <br> 
   
   ````
   // get the number of players in each room and send to map
@@ -173,7 +173,16 @@ Here, the user's name is paired with their socket.id and depending on the number
   
  ### Map | Error Checking
   
- When the new client joins, the number of players displayed at each room is accurate. However, when the player joins the map through home button, the number of clients in each room is not accurate. 
+ When the new client joins, the number of players displayed at each room is accurate. However, when the player returns to the map after completing the game or through clicking the home button, the number of client in each room is no longer accurate. The number of players in all the rooms are set to 0. This also means that when the user return to the map page (not immediately after joining the server), more than 2 players can join the same gameroom. We didn't know how to fix this issue. Not only one the client display but on the server side, the number of user in each room is not updated.
+ 
+ It is only updated when the user disconnect() by closing the tab, or joins another room on the map. 
+ 
+ <img src="images/numcountissue.png" width="600">
+   
+
+### GAME | 2 PAGES (Instruction + Play Game)
+
+### GAME START |
 
 ### Next Step
 
