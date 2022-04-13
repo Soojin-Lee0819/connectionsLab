@@ -176,12 +176,13 @@ Also when the client joins the room, the number of the players in each room are 
   
 However, there is an error that is still unresolved. When the new client joins, the displayed number of players at each room is accurate. However, when the player returns to the map after joining the room, whether after completing the game or through clicking the home button, the number of client in each room is no longer accurate. The number of players in all the rooms are set to 0. This also means that when the user returns to the map page more than 2 players can join the same gameroom. We didn't know how to fix this issue. It is not only the display error but the number is not updated on the server side as well. 
  
-Through more error check, I found out that when the user is fully disconnected by closing the tab, or joins another room on the map, it gets updated.
+Through more error checkings, I found out that when the user is fully disconnected by closing the tab, or joins another room on the map, it gets updated.
  
  <img src="images/numcountissue.png" width="600">
    
 
 ### GAME | 2 PAGES (Instruction + Play Game)
+
 Originally, the instruction was going to be on the game page itself. However,due to the limited space, we added an instruction page where the players are prompted to read the instruction and click the **start** button before they enter the game. 
 
  <img src="images/instruction.png" width="800"> <br><br>
@@ -190,46 +191,62 @@ Since the games are time-based, when there is only one player in the room, they 
  
   <img src="images/oneplayer.png" width="600"> 
   
-By adding one more step: where the second player joins the room, and have clicked the **Start** Button, it sends **canStart** that allows all players to be trigger the button to begin the game and the timer gets started. <br><br>
+By adding one more step: where the second player joins the room, and have clicked the **Start** Button, it sends **canStart** that allows all players to be able to access the buttons to begin the game, and the timer gets started as well. <br><br>
 
-Although this sounds easy at first, in order to implement this was much more complicated. This is because the program has to first, track the number of players in the room, then check if the player has finished reading the instruction, then wait for the player to click a button that starts the game (and the timer), send to all players to start the game and run the timer in sync, as well as to start tracking their scores as soon as the game is started. 
+Although this sounds easy at first, in order to implement this was much more complicated. This is because the program has to first, track the number of the players in the room, then check if the player has finished reading the instruction, then wait for the player to click a button that starts the game (and the timer), send to all players to start the game and run the timer in sync, as well as to start tracking their scores as soon as the game is started. 
 
 <br><br>
  
 
-### GAME START | Timer
-
-Setting a timer 
-
 ### Play-Testing 
 
-For user testing, we had our basic game mechanics ready for testing. 
+For the play testing, we had our basic game mechanics ready for testing. 
 
-Here are some goals in mind:
+**Here are some of the goals in mind:**
 
 1) For D2 game, do they know how to delete the misplaced items with out instructions? Is it intuitive to delete the item on the tray by clicking it again?
-3) Are the instructions intuitive and easy to understand?
-4) Do they want more/less time for each game?
-5) Do they have fun when playing the game?
 
 
-Here are some of the things that I observed or feedback I got from the user testing:
+2) Are the instructions intuitive and easy to understand?
+
+
+3) Do they want more/less time for each game?
+
+
+4) Do they have fun when playing the game?
+
+
+**Here are some of the things that I observed or feedback I got from the user testing:**
 
 1) For A2 Major Hunt game, instead of the randomlize colors for the bubbles. Users want to see two different colors: one for themselves, and another for the counterpart player. This makes them visualize better how many majors they have guessed correct in comparison to the other person
-2) For Field Tug of War game, increase the increment for each keypress. Users were struggling to win since the difference was only so much. This will increase the game flow and the speed. 
-3) One player mentioned that it would be nice if the game scores collected from each game sum up. 
-4) They wish to see the **Home** buttons for each page. 
-5) For the games that requires players to "type-in", allow both capital letter and small letter to be considered a correct answer
 
-Play-testing was fun and insightful. I was surprised to see how people need only so much instruction to learn how to play the game. 
+2) For Field Tug of War game, increase the increment for each keypress. Users were struggling to win since the difference was only so much. This will increase the game flow and the speed. 
+
+3) One player mentioned that it would be nice if the game scores collected from each game sum up. 
+
+4) They wish to see the **Home** buttons for each page. 
+
+5) For the games that require players to "type-in", allow both capital letter and small letter to be considered a correct answer
+
+6) Players hate reading. => Minimize instruction 
+
+
+Play-testing was fun and insightful. During the playtesting, I wanted to "observe" how users interact with the environment that we have designed for them to interact with. Therefore, I tried to minimize giving them instructions. Since the concept of the game is rather straightforward, to click a button to join a room and start playing simple games, I was surprised to see how people need only so much instruction to learn how to play the game. It was only 10 minutes short playtesting but I was able to gain a lot of insights from their behaviors. 
 
 ### Reflection & Next Step
 
 **Reflection***
 
-Managing socket.io was so Working on this game, I learnt how to code collaboratively. 
+From the ideation stage to design, and production, this project was a lot of fun. Since there was plentiful room for creativity, it gave me freedom to make something original, and unique using the skills I have acquired for the last 10 weeks. I am proud that I was able to code this with Alia as a team. Coding together means we need to be constantly communicating and communicating effectively. Before we push our files to github, we always made sure we give each others a heads up and planned ahead to avoid working on the same file. This project was convenient since it has many rooms with separate games. 
+
+Although we have spent a lot of efforts to this game, two weeks was not enough to fine-tune the UI of the game and the graphics. 
+
 
 **Next Step***
 
-The next steps for this game is clear: I want to improve on cleaning the visual elements of the game, make the accumulative score system where the players can collect points from different mini-games and have it shown on the map. 
+The next steps for this game is clear: I want to improve on cleaning the visual elements of the game
+
+I also want to learn how to manage socket.io better so that the number of clients in each room is updated when they enter the map or refresh the page. 
+
+Making the accumulative score system where the players can collect the points from different mini-games and have it shown on the map. 
 
