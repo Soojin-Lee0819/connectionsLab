@@ -148,13 +148,14 @@ Here, the user's name is paired with their socket.id and depending on the number
   
   ### Map | Display Number of Players in each Room
   
-    <img src="images/mapnumber.png" width="600">
+  <img src="images/mapnumber.png" width="600">
   
+  <br>
   Also when the client joins to the room, the number of players in each room are sent to map to be displayed. For example, there is one player at C2. 
   
   <br>
   
-  <b> Server | index.js<b> <br>
+  <b> Server | index.js</b> <br>
   
   ````
   // get the number of players in each room and send to map
@@ -169,6 +170,10 @@ Here, the user's name is paired with their socket.id and depending on the number
         io.in("map").emit("FieldPlayerNum", Field);
   
   ````
+  
+ ### Map | Error Checking
+  
+ When the new client joins, the number of players displayed at each room is accurate. However, when the player joins the map through home button, the number of clients in each room is not accurate. 
 
 ### Next Step
 
