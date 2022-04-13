@@ -20,15 +20,19 @@ On the landing page, there would be a map of campus with 4 clickable locations a
 
 
 ### Wire Frame
-This is the initial wireframe I made focusing on the structure of the webpage and how users' would access each game. On landing page, users will be given the map of NYUAD with the locations highlighted to enter. When users click the location, they will be directed to the according game page.
+This is the initial wireframe I made focusing on the structure of the webpage and how users' would access each game. On landing page, users will be given the map of NYUAD with the locations highlighted to enter. When users click the location, they will be directed to the according game page. <br> <br>
 
 <img src="images/wireframe1.jpg" width="600">
 
+<br> <br>
+
 Using figma, I have designed the landing page. At first, I used the 3D modelling map of NYUAD. Here, I added location pin with the real-life images of the location in the shape of bubble. After discussing with Alia, we decided to use the 2D map of NYUAD with the part of the map highlighted. 
 
-<img src="images/landingpagewireframe.png" width="800">
+<img src="images/landingpagewireframe.png" width="800"> <br> <br>
 
 We also designed the quick mockup of each game room to make sure the visual interface is consistent throughout the game. Although each game has its own unique features, by making the background consistent with image overlay and the title on the top, we made sure that the game feels - one big game with four minigames, rather than four separate games. 
+
+<br> <br>
 
 <img src="images/wireframeconsistent.png" width="800">
 
@@ -53,8 +57,84 @@ The most challenging part of this project was definitly the coding part. I have 
 <img src="images/Workflow1.png" width="800">
 <img src="images/Workflow2.png" width="800">
 
-### Track 
+### Session Storage
 
+<img src="images/landingpage.png" width="600">
+
+Once the user joins the game, on landing page they are asked to enter their names. The entered name is saved in session storage, and later when the socket is connected, this name is paired with the player's unique socket.id. 
+
+User enter name at landingPage.js & Saved in session storage <br><br> 
+
+<b> landingPage.js <b> 
+  
+````
+   joinForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let name = document.getElementById('name-input').value;
+      //save the name and the room in session storage
+      sessionStorage.setItem('name', name);
+    })
+````
+User connects to socket.io and is given with socket id. The user name, and the socke.id is paired at index.js file. <br><br>
+
+### Session Storage
+
+<img src="images/mappage.png" width="600">
+
+On map tab, users can click on the map to join the room. The information about which room to join is saved as session storage and emitted.  <br><br>
+
+<B> map | script.js<b> <br>
+
+````
+function joinRoom(img) {
+    let room = img.id;
+    //redirect the user to game.html
+    console.log(room);
+    if (room == 'Field') {
+      window.location = '/field/field.html';
+    }
+    else if (room == 'A2'){
+      window.location = '/a2/a2.html';
+    }
+    else if (room == 'C2'){
+      window.location = '/c2/c2.html';
+    }
+    else if (room == 'D2'){
+      window.location = '/d2/d2.html';
+    }
+    else{ //to be changed
+      alert("not available")
+    }
+    sessionStorage.setItem('room', room); //save to session storage
+}
+````
+
+````
+
+ socket.on('userData', (data) => {
+        //save username in an array with their ID
+        socket.name = data.name;
+        users[socket.name] = socket.id;
+        console.log(users);
+
+        //let the socket join room of choice
+        socket.roomName = data.room;
+
+        socket.join(socket.roomName);
+        if (rooms[socket.roomName]) { //if room exists
+            // do not increment if there are 2 people in the room 
+            if (rooms[socket.roomName] == 2) {
+                console.log("Client > 2: ", socket.id);
+                socket.emit('morePlayers', '');
+            }
+            else{
+                rooms[socket.roomName]++;
+            }
+        } else {
+            rooms[socket.roomName] = 1;
+        }
+        
+        ````
 
 ### Next Step
 
