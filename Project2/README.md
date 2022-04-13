@@ -22,7 +22,7 @@ On the landing page, there would be a map of campus with 4 clickable locations a
 ### Wire Frame
 This is the initial wireframe I made focusing on the structure of the webpage and how users' would access each game. On landing page, users will be given the map of NYUAD with the locations highlighted to enter. When users click the location, they will be directed to the according game page.
 
-<img src="images/wireframe1.png" width="600">
+<img src="images/wireframe1.jpg" width="600">
 
 Using figma, I have designed the landing page. At first, I used the 3D modelling map of NYUAD. Here, I added location pin with the real-life images of the location in the shape of bubble. After discussing with Alia, we decided to use the 2D map of NYUAD with the part of the map highlighted. 
 
