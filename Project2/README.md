@@ -119,7 +119,6 @@ Here, the user's name is paired with their socket.id and depending on the number
 <b> Server | index.js</b> <br>
 
 ````
-
  socket.on('userData', (data) => {
         //save username in an array with their ID
         socket.name = data.name;
@@ -156,6 +155,7 @@ Here, the user's name is paired with their socket.id and depending on the number
   <br>
   
   <b> Server | index.js<b> <br>
+  
   ````
   // get the number of players in each room and send to map
         let A2 = rooms["A2"];
@@ -168,11 +168,9 @@ Here, the user's name is paired with their socket.id and depending on the number
         io.in("map").emit("D2PlayerNum", D2);
         io.in("map").emit("FieldPlayerNum", Field);
   
-    ````
+  ````
 
 ### Next Step
 
 The next steps for this game is clear: I want to improve on cleaning the visual elements of the game, make the accumulative score system where the players can collect points from different mini-games and have it shown on the map. 
-
-The idea is 
 
