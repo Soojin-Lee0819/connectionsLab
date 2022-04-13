@@ -26,17 +26,17 @@ This is the initial wireframe I made focusing on the structure of the webpage an
 
 Using figma, I have designed the landing page. At first, I used the 3D modelling map of NYUAD. Here, I added location pin with the real-life images of the location in the shape of bubble. After discussing with Alia, we decided to use the 2D map of NYUAD with the part of the map highlighted. 
 
-<img src="images/landingpagewireframe.png" width="600">
+<img src="images/landingpagewireframe.png" width="800">
 
 We also designed the quick mockup of each game room to make sure the visual interface is consistent throughout the game. Although each game has its own unique features, by making the background consistent with image overlay and the title on the top, we made sure that the game feels - one big game with four minigames, rather than four separate games. 
 
-<img src="images/wireframeconsistent.png" width="600">
+<img src="images/wireframeconsistent.png" width="800">
 
 ### Developing Game Mechanics 
 
-Two of the game mechanics were already developed from our previous assignment - C2 | Pictionary from my NYUAD Pictionary Game and D2 | Tug or War from Alia's previous Tug of War game. Two other games were designed with the idea of making use of the location. For D2 (school cafeteria), we decided to create a game where the two players are given with a string of order, and they need to click images to fill the tray. For A2, we wanted to make a game where the students need to remember majors at NYUAD as quickly as possible. 
+The basic game mechanics of the two minigames are from our previous assignment - C2 | Pictionary from my [NYUAD Pictionary](https://bustling-tortoiseshell-citrine.glitch.me) and D2 | Tug or War from Alia's previous [Tug of War](https://tug-of-war-alia.glitch.me) game. Two other games were ideated in relation to the purpose of locations. For D2 (school cafeteria), inspired by burger making game, we decided to create a game where the players are given with order and need to click images of the D2 food to complete an order. For A2, we wanted to make a game where the players are asked to remember and type in the majors at NYUAD as quickly as possible. 
 
-Following are the games at NYUAD Expo 
+Following are the list of games available at NYUAD Expo:
 
 1) A2 | Major Hunt
 1) C2 | Pictionary
@@ -46,7 +46,14 @@ Following are the games at NYUAD Expo
 
 ### Coding & Challenges
 
-Here are some of the 
+The most challenging part of this project was definitly the coding part. I have br
+
+### Workflow
+
+<img src="images/Workflow1.png" width="800">
+<img src="images/Workflow2.png" width="800">
+
+### Track 
 
 
 ### Next Step
