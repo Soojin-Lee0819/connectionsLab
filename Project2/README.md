@@ -114,7 +114,7 @@ they the room is created (when 0 player is in the room),
 <br> added to the room (when 1 player is in the room), 
 <br> or asked to wait (when more than 2 players in the room). <br><br>
   
-<b> Server | index.js<b> <br>
+<b> Server | index.js</b> <br>
 
 ````
 
@@ -140,8 +140,33 @@ they the room is created (when 0 player is in the room),
         } else {
             rooms[socket.roomName] = 1;
         }
-        
-        ````
+  
+````
+  <br>
+  
+  
+  <img src="images/mapnumber.png" width="600">
+  
+  ### Map | Display Number of Players in each Room
+  
+  Also when the client joins to the room, the number of players in each room are sent to map to be displayed
+  
+  <br>
+  
+  <b> Server | index.js<b> <br>
+    
+  // get the number of players in each room and send to map
+        let A2 = rooms["A2"];
+        let C2 = rooms["C2"];
+        let D2 = rooms["D2"];
+        let Field = rooms["Field"];
+
+        io.in("map").emit("A2PlayerNum", A2);
+        io.in("map").emit("C2PlayerNum", C2);
+        io.in("map").emit("D2PlayerNum", D2);
+        io.in("map").emit("FieldPlayerNum", Field);
+  
+  
 
 ### Next Step
 
