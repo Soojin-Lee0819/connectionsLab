@@ -237,7 +237,7 @@ Play-testing was fun and insightful. During the playtesting, I wanted to "observ
 
 **Reflection***
 
-From the ideation stage to design, and production, this project was a lot of fun. Since there was plentiful room for creativity, it gave me freedom to make something original, and unique using the skills I have acquired for the last 10 weeks. I am proud that I was able to code this with Alia as a team. Coding together means we need to be constantly communicating and communicating effectively. Before we push our files to github, we always made sure we give each others a heads up and planned ahead to avoid working on the same file. This project was convenient since it has many rooms with separate games. 
+From the ideation stage to design, and production, this project was a lot of fun. Since there was plentiful room for creativity and experiment it gave me freedom to make something original, and to create something unique using the skills I have acquired for the last 10 weeks. I am proud that I was able to code this with Alia as a team. Coding together means that we need to be constantly communicating and communicating effectively. We used github to work together. Before we push our files to github, we always made sure we give each others a heads up and planned ahead to avoid working on the same file. This project was convenient since it has many rooms with separate games - we would dedicate to work on certain rooms and swap the roles. However, since index.js file is shared across four games, it was messed up for several times.
 
 Although we have spent a lot of efforts to this game, two weeks was not enough to fine-tune the UI of the game and the graphics. 
 
