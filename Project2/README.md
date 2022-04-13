@@ -111,8 +111,8 @@ function joinRoom(img) {
   
 Here, the user's name is paired with their socket.id and depending on the number of players in the room, <br>
 1) The room is created (when 0 player is in the room), 
-<br> 2) added to the room (when 1 player is in the room), 
-<br> 3) or asked to wait (when more than 2 players in the room). <br><br>
+2) added to the room (when 1 player is in the room), 
+3) or asked to wait (when more than 2 players are in the room). <br><br>
 
 <img src="images/alert3rdplayer.png" width="600">
   
@@ -147,16 +147,16 @@ Here, the user's name is paired with their socket.id and depending on the number
   <br>
   
   
-  <img src="images/mapnumber.png" width="600">
-  
   ### Map | Display Number of Players in each Room
   
-  Also when the client joins to the room, the number of players in each room are sent to map to be displayed
+    <img src="images/mapnumber.png" width="600">
+  
+  Also when the client joins to the room, the number of players in each room are sent to map to be displayed. For example, there is one player at C2. 
   
   <br>
   
   <b> Server | index.js<b> <br>
-    
+  ````
   // get the number of players in each room and send to map
         let A2 = rooms["A2"];
         let C2 = rooms["C2"];
@@ -168,7 +168,7 @@ Here, the user's name is paired with their socket.id and depending on the number
         io.in("map").emit("D2PlayerNum", D2);
         io.in("map").emit("FieldPlayerNum", Field);
   
-  
+    ````
 
 ### Next Step
 
