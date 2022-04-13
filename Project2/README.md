@@ -113,6 +113,8 @@ Here, the user's name is paired with their socket.id and depending on the number
 1) The room is created (when 0 player is in the room), 
 <br> 2) added to the room (when 1 player is in the room), 
 <br> 3) or asked to wait (when more than 2 players in the room). <br><br>
+
+<img src="images/alert3rdplayer.png" width="600">
   
 <b> Server | index.js</b> <br>
 
