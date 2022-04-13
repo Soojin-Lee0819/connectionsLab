@@ -54,18 +54,16 @@ The most challenging part of this project was definitly the coding part. I have 
 
 ### Workflow
 
-<img src="images/Workflow1.png" width="800">
-<img src="images/Workflow2.png" width="800">
+<img src="images/Workflow1.jpg" width="800">
+<img src="images/Workflow2.jpg" width="800">
 
 ### Session Storage
 
 <img src="images/landingpage.png" width="600">
 
-Once the user joins the game, on landing page they are asked to enter their names. The entered name is saved in session storage, and later when the socket is connected, this name is paired with the player's unique socket.id. 
+Once the user joins the game, on landing page they are asked to enter their names. The entered name is saved in session storage. 
 
-User enter name at landingPage.js & Saved in session storage <br><br> 
-
-<b> landingPage.js <b> 
+<b> landingPage.js </b> 
   
 ````
    joinForm.addEventListener('submit', (e) => {
@@ -77,13 +75,13 @@ User enter name at landingPage.js & Saved in session storage <br><br>
 ````
 User connects to socket.io and is given with socket id. The user name, and the socke.id is paired at index.js file. <br><br>
 
-### Session Storage
+### Map | Join Room
 
 <img src="images/mappage.png" width="600">
 
-On map tab, users can click on the map to join the room. The information about which room to join is saved as session storage and emitted.  <br><br>
+On map tab, users can click on the map to join the room. This function will redirect the user to (roomName).html The information about which room to join is also saved as session storage and emitted to the server.  <br><br>
 
-<B> map | script.js<b> <br>
+<B> map | script.js</b> <br>
 
 ````
 function joinRoom(img) {
@@ -108,6 +106,17 @@ function joinRoom(img) {
     sessionStorage.setItem('room', room); //save to session storage
 }
 ````
+  
+<br>
+  
+Here, the user's name is paired with their socket.id and depending on the number of players in the room, <br>
+1) The room is created (when 0 player is in the room), 
+<br> 2) added to the room (when 1 player is in the room), 
+<br> 3) or asked to wait (when more than 2 players in the room). <br><br>
+
+<img src="images/alert3rdplayer.png" width="600">
+  
+<b> Server | index.js</b> <br>
 
 ````
 
@@ -133,8 +142,33 @@ function joinRoom(img) {
         } else {
             rooms[socket.roomName] = 1;
         }
-        
-        ````
+  
+````
+  <br>
+  
+  
+  <img src="images/mapnumber.png" width="600">
+  
+  ### Map | Display Number of Players in each Room
+  
+  Also when the client joins to the room, the number of players in each room are sent to map to be displayed
+  
+  <br>
+  
+  <b> Server | index.js<b> <br>
+    
+  // get the number of players in each room and send to map
+        let A2 = rooms["A2"];
+        let C2 = rooms["C2"];
+        let D2 = rooms["D2"];
+        let Field = rooms["Field"];
+
+        io.in("map").emit("A2PlayerNum", A2);
+        io.in("map").emit("C2PlayerNum", C2);
+        io.in("map").emit("D2PlayerNum", D2);
+        io.in("map").emit("FieldPlayerNum", Field);
+  
+  
 
 ### Next Step
 
