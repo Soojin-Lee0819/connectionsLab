@@ -26,5 +26,8 @@
 
 [NYUAD Pictionary Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/week8_NYUAD_Pictionary)
 
-# Week 9
+# Project 2
 
+[Play NYUAD Expo](https://nyuad-expo.glitch.me)
+
+[NYUAD Pictionary Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project2)
