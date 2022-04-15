@@ -6,7 +6,7 @@
 **Group**: Soojin Lee | Alia Waleed <br>
 **Deliverable**: CSS/HTML/Javascript/p5.js/Socket.IO Multiplayer Web Game <br>
 
-[Access Project Here](https://warp-lyrical-price.glitch.me/)
+[Access Project Here](https://nyuad-expo-final.glitch.me)
 
 
 ### Project Brief 
