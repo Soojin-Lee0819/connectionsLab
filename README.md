@@ -28,6 +28,6 @@
 
 # Project 2
 
-[Play NYUAD Expo](https://warp-lyrical-price.glitch.me/)
+[Play NYUAD Expo](https://nyuad-expo-final.glitch.me)
 
 [NYUAD Pictionary Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project2)
