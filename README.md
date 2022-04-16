@@ -13,10 +13,10 @@
 # Week 2
 [Weekly To-Do List](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Week2)
 
-# Week 3-5 Project 1
-[Names Around The World](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project1) | Data Visualization, API, Game
+# Project 1
+[Names Around The World Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project1) | Data Visualization, API, Game
 
-[Identify Name Game Page](https://soojin-lee0819.github.io/connectionsLab/Project1)
+[Names Around the World](https://soojin-lee0819.github.io/connectionsLab/Project1)
 
 # Week 6
 [Starbucks Nutritional Label Node.js](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/week6_Starbucks_node_express)
