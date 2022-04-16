@@ -14,7 +14,7 @@
 [Weekly To-Do List](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Week2)
 
 # Week 3-5 Project 1
-[Identify Name Game Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project1)
+[Names Around The World](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project1) | Data Visualization, API, Game
 
 [Identify Name Game Page](https://soojin-lee0819.github.io/connectionsLab/Project1)
 
