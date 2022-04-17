@@ -6,7 +6,7 @@
 **Group**: Soojin Lee <br>
 **Deliverable**: CSS/HTML/Javascript/D3 Data Visualization <br>
 
-
+[Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Week12)
 
 
 ## Reflection
