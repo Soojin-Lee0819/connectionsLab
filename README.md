@@ -41,4 +41,4 @@ Welcome to Soojin's Connection's Lab Project Portfolio. In this class, I design 
 # Week 12
 
 [Starbucks Nutritional Label Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Week12_StarbucksNutritionalLabel)
-[Starbucks Nutritional Label](https://soojin-lee0819.github.io/connectionsLab/tree/main/Week12_StarbucksNutritionalLabel)
+[Starbucks Nutritional Label](https://soojin-lee0819.github.io/connectionsLab/Week12_StarbucksNutritionalLabel)
