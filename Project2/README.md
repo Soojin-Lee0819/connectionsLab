@@ -6,7 +6,7 @@
 **Group**: Soojin Lee | Alia Waleed <br>
 **Deliverable**: CSS/HTML/Javascript/p5.js/Socket.IO Multiplayer Web Game <br>
 
-[Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Project1)
+[Access Project Here](https://nyuad-expo-final.glitch.me)
 
 
 ### Project Brief 
@@ -110,7 +110,7 @@ function joinRoom(img) {
   
 <br>
   
-Here, the user's name is paired with their socket.id and depending on the number of players in the room, <br>
+Here, the user's name is paired with their socket.id and depending on the number of players in the room, following happens to the player<br>
 1) The room is created (when 0 player is in the room), 
 2) added to the room (when 1 player is in the room), 
 3) or asked to wait (when more than 2 players are in the room). <br><br>
@@ -176,7 +176,7 @@ Also when the client joins the room, the number of the players in each room are 
   
 However, there is an error that is still unresolved. When the new client joins, the displayed number of players at each room is accurate. However, when the player returns to the map after joining the room, whether after completing the game or through clicking the home button, the number of client in each room is no longer accurate. The number of players in all the rooms are set to 0. This also means that when the user returns to the map page more than 2 players can join the same gameroom. We didn't know how to fix this issue. It is not only the display error but the number is not updated on the server side as well. 
  
-Through more error checkings, I found out that when the user is fully disconnected by closing the tab, or joins another room on the map, it gets updated.
+Through more error checkings, I found out that when the user is fully disconnected by closing the tab, or joins another room on the map, it gets updated. Below shows how the three players can join the room after returnning to the map by cliking home button.
  
  <img src="images/numcountissue.png" width="600">
    
@@ -193,18 +193,18 @@ Since the games are time-based, when there is only one player in the room, they 
   
 By adding one more step: where the second player joins the room, and have clicked the **Start** Button, it sends **canStart** that allows all players to be able to access the buttons to begin the game, and the timer gets started as well. <br><br>
 
-Although this sounds easy at first, in order to implement this was much more complicated. This is because the program has to first, track the number of the players in the room, then check if the player has finished reading the instruction, then wait for the player to click a button that starts the game (and the timer), send to all players to start the game and run the timer in sync, as well as to start tracking their scores as soon as the game is started. 
+Although this sounds easy at first, in order to implement this was quite complicated. This is because the program has to first, track the number of the players in the room, then check if the player has finished reading the instruction, then wait for the player to click a button that starts the game (and the timer), send to all players to start running the game and timer in sync, as well as to start tracking their scores as soon as the game is started. 
 
 <br><br>
  
 
 ### Play-Testing 
 
-For the play testing, we had our basic game mechanics ready for testing. 
+For the play testing, we had our basic game mechanics ready for testing. Our main aim for the playtesting was to check if the players are able to follow the instruction or visual cues without further help. We also wanted to see if there are any error checking that we have missed. 
 
 **Here are some of the goals in mind:**
 
-1) For D2 game, do they know how to delete the misplaced items with out instructions? Is it intuitive to delete the item on the tray by clicking it again?
+1) For D2 game, do they know how to delete the misplaced items with out the instructions? Is it intuitive to delete the item on the tray by clicking it again?
 
 
 2) Are the instructions intuitive and easy to understand?
@@ -213,39 +213,52 @@ For the play testing, we had our basic game mechanics ready for testing.
 3) Do they want more/less time for each game?
 
 
-4) Do they have fun when playing the game?
+4) Do they have fun when playing the game? (Are the games too difficult/easy to play?)
 
 
 **Here are some of the things that I observed or feedback I got from the user testing:**
 
-1) For A2 Major Hunt game, instead of the randomlize colors for the bubbles. Users want to see two different colors: one for themselves, and another for the counterpart player. This makes them visualize better how many majors they have guessed correct in comparison to the other person
+1) For A2 Major Hunt game, instead of randomizing colors for the bubbles, users want to see two different colors only: one color that represents themselves, and another that represents the counterpart player. This helps them to visualize how many majors they have guessed correct in comparison to the other person.
 
-2) For Field Tug of War game, increase the increment for each keypress. Users were struggling to win since the difference was only so much. This will increase the game flow and the speed. 
+2) For the Field Tug of War game, increase the increment for each keypress. Users were struggling to win since the difference was only little. This will increase the game flow and the speed. 
 
-3) One player mentioned that it would be nice if the game scores collected from each game sum up. 
+3) One player mentioned that it would be nice if the game scores collected from each game can be summed up. 
 
 4) They wish to see the **Home** buttons for each page. 
 
-5) For the games that require players to "type-in", allow both capital letter and small letter to be considered a correct answer
+5) For the games that require players to "type-in", allow both capital letter and small letter 
 
-6) Players hate reading. => Minimize instruction 
+6) Players hate reading. => Minimize text-based instruction 
 
 
-Play-testing was fun and insightful. During the playtesting, I wanted to "observe" how users interact with the environment that we have designed for them to interact with. Therefore, I tried to minimize giving them instructions. Since the concept of the game is rather straightforward, to click a button to join a room and start playing simple games, I was surprised to see how people need only so much instruction to learn how to play the game. It was only 10 minutes short playtesting but I was able to gain a lot of insights from their behaviors. 
+Play-testing was fun and insightful. During the playtesting, I wanted to "observe" how users interact with the environment that we have designed for them to interact with. Therefore, I tried to minimize talking. Since the concept of the game is rather straightforward, to click a button to join a room, and start playing the games, I was surprised to see how people need only so much instruction to learn how to play the game. It was only 10 minutes short playtesting session but I was able to gain a lot of insights from their behaviors. 
 
 ### Reflection & Next Step
 
-**Reflection***
+**Reflection**
 
-From the ideation stage to design, and production, this project was a lot of fun. Since there was plentiful room for creativity and experiment it gave me freedom to make something original, and to create something unique using the skills I have acquired for the last 10 weeks. I am proud that I was able to code this with Alia as a team. Coding together means that we need to be constantly communicating and communicating effectively. We used github to work together. Before we push our files to github, we always made sure we give each others a heads up and planned ahead to avoid working on the same file. This project was convenient since it has many rooms with separate games - we would dedicate to work on certain rooms and swap the roles. However, since index.js file is shared across four games, it was messed up for several times.
+From the ideation stage to design, and production, this project was a lot of fun. I loved how there was plentiful room for creativity and experiment. This gave me lots of freedom to make something original, and to create something meaningful using the skills I have acquired for the last 10 weeks. I am proud that I was able to code this with Alia as a team. Coding together means that we had to constantly and effectively communicate. We used github to work together. Before we push our files to github, we always made sure that we give each others a heads up and planned ahead to avoid working on the same file. 
+<br><br>
+To this regard, this project was convenient since it has many rooms with separate games. For each room, we made a sub folder. Therefore we dedicated to work on certain rooms and swapped the roles. However, since index.js file is shared across all four games, sometimes when we pushed together, the file got messed up. Learning from this mistake, we started to be much more careful when pushing the updated file to the github, or prevent the errors by sharing the code before uploading it. I find such skills I gained working as a team highly valuable.
+<br><br> 
 
-Although we have spent a lot of efforts to this game, two weeks was not enough to fine-tune the UI of the game and the graphics. 
+Overall, I am super proud of this game. Not only because I was able to create a web-based multi-player game for the first time, but especially because I was able to make a game that is unique for the community. One lessen I learnt is to manage file and organize code well from the beginning. It may take extra time at the moment to re-write the messy code or to restructure the game. However, this will save a lot of time in the future - for debugging, reorganizing, or making edits to the file. Especially since I was working with a partner, well-commenting what each line does was crucial for the other person to understand what changes were made. 
 
 
-**Next Step***
+**Next Step**
 
-The next steps for this game is clear: I want to improve on cleaning the visual elements of the game
+The next steps for this game is clear: I want to improve on cleaning the visual elements of the game. Although we have spent a lot of time and effort on this project, 10 days were not enough. Some UI elements like buttons and how the text are displayed can be improved. <br><br>
 
-I also want to learn how to manage socket.io better so that the number of clients in each room is updated when they enter the map or refresh the page. 
+I also want to learn how to manage socket.io better so that the number of clients in each room is updated everytime when they leave the room. As of now, I have found out that the issue is at emitting 'userLeft' to the server.
 
-Making the accumulative score system where the players can collect the points from different mini-games and have it shown on the map.
+````
+function joinRoom() {
+   socket.emit('userLeft', '');
+   console.log('left room okay');
+   window.location = '/map/index.html';
+}
+````
+
+Here, the comment 'left room okay' is logged and the player is located to mappage. However, socket.emit('userLeft', ''); is not passing through. Once this issue is solved, I want to make the accumulative score system where the player can collect the points from different mini-games and have them copmiled on the scoreboard that will be displayed on the map page. 
+
+  <img src="images/score_ui.png" width="600"> 
