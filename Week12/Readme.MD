@@ -54,6 +54,13 @@ fetch('coffee.json')
 
 ````
 
+## Final Outcome
+
+<img src="images/dots.png" width="600">
+
+On hover, the data is displayed, and the dot size gets bigger according to the calorie of the drink.
+
+<img src="images/data.2.png" width="600">
 
 
 ## Reflection
