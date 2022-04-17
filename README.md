@@ -38,9 +38,9 @@ Welcome to Soojin's Connection's Lab Project Portfolio. In this class, I design 
 
 [NYUAD Pictionary Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project2)
 
-# Week 12
+# Week 11
 
-[Starbucks Nutritional Label Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Week12) | Data Visualization Using D3 Library <br>
+[Starbucks Nutritional Label Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Week11) | Data Visualization Using D3 Library <br>
 
-[Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Week12)
+[Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Week11/)
  
