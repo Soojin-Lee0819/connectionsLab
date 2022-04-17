@@ -5,7 +5,6 @@ let coffeeList = [];
 
 
 let width = window.innerWidth;
-
 let height = self.innerHeight;
 
 
@@ -17,7 +16,7 @@ let coffeeCaffeine = document.getElementById("coffee-caffeine");
 let coffeeSugar = document.getElementById("coffee-sugar");
 let coffeeProtein = document.getElementById("coffee-protein");
 
-//Fetch Space Data
+//Fetch Coffee
 fetch('coffee.json')
     .then(response => response.json())
     .then(data => {
@@ -34,11 +33,6 @@ fetch('coffee.json')
 
 //Append Coffee Data
 function addSVG(coffeeList) {
-
-    //circle
-    let centerX = 20;
-    let centerY = 100;
-
 
     //Create an SVG
     let svg = d3.select('#container')
