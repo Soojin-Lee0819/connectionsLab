@@ -5,3 +5,9 @@
 **Date**: 13 April 2022 -17 April 2022 <br>
 **Group**: Soojin Lee <br>
 **Deliverable**: CSS/HTML/Javascript/D3 Data Visualization <br>
+
+
+
+
+## Reflection
+I feel like I am not using the library to its full potential. 
