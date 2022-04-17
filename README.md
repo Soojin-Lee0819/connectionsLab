@@ -37,3 +37,9 @@ Welcome to Soojin's Connection's Lab Project Portfolio. In this class, I design 
 [Play NYUAD Expo](https://nyuad-expo-final.glitch.me) | Node.js, Socket.IO Connected Game
 
 [NYUAD Pictionary Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project2)
+
+# Week 12
+
+[Starbucks ](https://nyuad-expo-final.glitch.me) | Node.js, Socket.IO Connected Game
+
+[NYUAD Pictionary Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Week12_StarbucksNutritionalLabel)
