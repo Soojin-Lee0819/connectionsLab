@@ -8,6 +8,8 @@
 
 [Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Week12/index.html)
 
+## Overview
+For this week, I have created a project that visualizes of Starbucks nutritional label using D3 library. The prompt was to use one of the library; D3, Three.js, Ml5, Aframe, Tone.js, Rivescript, Leaflet.I experimented with D3. 
 
 
 ## Reflection
