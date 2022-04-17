@@ -40,6 +40,4 @@ Welcome to Soojin's Connection's Lab Project Portfolio. In this class, I design 
 
 # Week 12
 
-[Starbucks ](https://nyuad-expo-final.glitch.me) | d3, Socket.IO, Data Visualization
-
 [Starbucks Nutritional Label Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Week12_StarbucksNutritionalLabel)
