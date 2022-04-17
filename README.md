@@ -42,5 +42,5 @@ Welcome to Soojin's Connection's Lab Project Portfolio. In this class, I design 
 
 [Starbucks Nutritional Label Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Week11) | Data Visualization Using D3 Library <br>
 
-[Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Week11/)
+[Access Project Here]
  
