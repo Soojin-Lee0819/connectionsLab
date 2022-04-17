@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>All the Places I have been</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://d3js.org/topojson.v1.min.js"></script>
-  </head>
-  <body>
-    <svg width="960" height="500"></svg>
-    <script src="index.js"></script>
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Starbucks Nutritional Label</title>
+</head>
+
+<body>
+    <div class="title">
+        <p id="title">Starbucks Nutritional Label</p>
+    </div>
+
+    <div id="container">
+        <div class="info">
+            <div class="coffee_info" id="coffee-name"></div> <br>
+            <div class="coffee_info"id="coffee-size"></div>
+            <div class="coffee_info"id="coffee-calories"></div>
+            <div class="coffee_info"id="coffee-caffeine"></div>
+            <div class="coffee_info"id="coffee-sugar"></div>
+            <div class="coffee_info"id="coffee-protein"></div>
+        </div>
+    </div>
+
+    <div id="wrapper">
+    </div>
+
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="app.js"></script>
+</body>
+
 </html>
