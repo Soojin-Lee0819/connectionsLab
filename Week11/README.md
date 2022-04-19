@@ -6,7 +6,7 @@
 **Group**: Soojin Lee <br>
 **Deliverable**: CSS/HTML/Javascript/D3 Data Visualization <br>
 
-[Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Week11/index.html)
+[Access Project Here](https://soojin-lee0819.github.io/connectionsLab/Week11)
 
 ## Overview
 For this week, I had to use one of the library;D3, Three.js, Ml5, Aframe, Tone.js, Rivescript, Leaflet. I created a project that visualizes Starbucks nutritional label using D3 library. Users can hover on the dots (each represents a menu available at NYUAD Library Cafe). On hover, users can view the nutritional values of the selected beverages, and according to the kcal of the beverage, the transition animation is determined. Check out the project to experience the immersive visualization of the nutritional value of your favorite drink at the library cafe!
