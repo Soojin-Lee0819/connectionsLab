@@ -262,3 +262,19 @@ function joinRoom() {
 Here, the comment 'left room okay' is logged and the player is located to mappage. However, socket.emit('userLeft', ''); is not passing through. Once this issue is solved, I want to make the accumulative score system where the player can collect the points from different mini-games and have them copmiled on the scoreboard that will be displayed on the map page. 
 
   <img src="images/score_ui.png" width="600"> 
+  
+  
+ 
+ **Plans for Project 3**
+ 
+ Before I start jumping into developing the project further, I have listed down things that I need to do
+ 
+* Fix Room issue
+* Add General helper functions 
+* Spilt the file into the helper functions, an the main gameplay functions if needed
+* Fix "addAnswer(this)" in the HTML to each of the images (do this in js with a loop)
+* Revamp the gameplay mechanics (How many players in each room? competitive? collaborative? how does this translate to big scoreboard)
+* Based on the decision, redesign each game's scoring system - especially C2 pictionary
+* Add Charades Game using web ML5
+* Add __ Game using web ML5
+  
