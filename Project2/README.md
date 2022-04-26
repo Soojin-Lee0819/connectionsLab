@@ -275,6 +275,12 @@ Here, the comment 'left room okay' is logged and the player is located to mappag
 * Fix "addAnswer(this)" in the HTML to each of the images (do this in js with a loop)
 * Revamp the gameplay mechanics (How many players in each room? competitive? collaborative? how does this translate to big scoreboard)
 * Based on the decision, redesign each game's scoring system - especially C2 pictionary
+* Add code that will connect scores across the minigames
 * Add Charades Game using web ML5
-* Add __ Game using web ML5
+* Add image recognition game using web ML5 (train the data)
+Potential items
+- NYU ID card
+- Pen
+- Switch
+- Chord
   
