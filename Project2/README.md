@@ -283,4 +283,26 @@ Potential items
 - Pen
 - Switch
 - Chord
+
+# PROJECT 3
+
+## Helper Function
+
+
+## Game Design 
+
+I created a card for this game on Figma 
+
+  <img src="images/carddeck.jpg" width="600"> 
+
+## Machine Learning 
+
+The models are 
+
+By default,
+
+## 
+
+
+
   
