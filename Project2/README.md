@@ -294,14 +294,24 @@ Potential items
 I created a card for this game on Figma 
 
   <img src="images/carddeck.jpg" width="600"> 
+  
 
+## Locating model.weight.bin File
+
+  <img src="images/weightbinlocation.png" width="400"> 
+  
 ## Machine Learning 
 
 The models are 
 
-By default,
+Accuracy is set to 0.99
 
-## 
+I have trainned the model at different backgrounds with different people to increase the 
+
+### Access to 
+
+## Challenges & 
+
 
 
 
