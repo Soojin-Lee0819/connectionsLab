@@ -8,8 +8,8 @@
 
 [Access Project Here](https://nyuad-expo-final.glitch.me)
 
-<a id="all-of-my-wifi-adapter-repos"></a>
-Project 3 Documentation
+[Project3 Documentation](#Project3)
+
 
 ### Project Brief 
 
@@ -267,9 +267,9 @@ Here, the comment 'left room okay' is logged and the player is located to mappag
   
   
  
+<a id="Project3"></a>
 
-
-[Project 3](#PROJECT3)
+# Project 3
 
 In continuation of the project 2, for project 3, we solved the unresolved socket room issues, and added two more games, incorporating ml5 libraries.  
 
