@@ -290,12 +290,22 @@ For project 3, we improved on the Project 2 by solving the unresolved socket roo
 * A2 seperate Bubble Class into another javascript file
 ````
 
-## Helper Function
-Mini-games share many lines of code including - connecting to socket.io, time count system, instruction, gameplay, and endgame pages and more. Instead of writing separate codes for each game 
+## Add Helper Function
 
+Mini-games share many lines of code including - connecting to socket.io, time count system, instruction, gameplay, and endgame pages and more. Instead of writing separate codes for each game. 
 
+This is how the files are currently structured:
 
-Before starting 
+  <img src="images/beforehelper.png" width="600"> 
+  
+  When there is one line of code that needs to be changed, for example, to add the animation to the transition, all four javasciprt files need to be altered. To edit the files easily, helper function was implemented to link the same functions across the files and manage them at once. Game-specific elements can be handled at original js file within each game folder. 
+  
+  <br><br>
+
+This is how the files are structured with Helper function:
+
+  <img src="images/afterhelper.png" width="600"> 
+  
 
 
 ## Game Design 
