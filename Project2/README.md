@@ -296,7 +296,7 @@ Mini-games share many lines of code including - connecting to socket.io, time co
 
 This is how the files are currently structured:
 
-  <img src="images/beforehelper.png" width="600"> 
+  <img src="images/beforehelper.jpg" width="600"> 
   
   When there is one line of code that needs to be changed, for example, to add the animation to the transition, all four javasciprt files need to be altered. To edit the files easily, helper function was implemented to link the same functions across the files and manage them at once. Game-specific elements can be handled at original js file within each game folder. 
   
@@ -304,8 +304,14 @@ This is how the files are currently structured:
 
 This is how the files are structured with Helper function:
 
-  <img src="images/afterhelper.png" width="600"> 
+  <img src="images/afterhelper.jpg" width="600"> 
   
+
+Although all four games could be, to add the helper function by backtracking the files were complicated. Since two individuals coded four games, how we structured the system was different that the classes, and the name of the functions we used were different. For example, for score function, one used the name score, and another used the class name points. The order of interactions were also dissimilar. Therefore, instead of making all files with helper function, we decided to add helper function for two new games we are adding. 
+
+**Lessons Learnt**
+Always plan ahead, and add helper function first. This will save a lot of time in the future to manage and iterate the project. 
+
 
 
 ## Game Design 
