@@ -268,3 +268,61 @@ Here, the comment 'left room okay' is logged and the player is located to mappag
   
  
 <a id="Project3"></a>
+
+
+# Project 3
+
+For project 3, we improved on the Project 2 by solving the unresolved socket room issues, adding two more games that uses ml5 libraries.  
+
+**Plans for Project 3**
+
+````
+ 
+ Before I start jumping into developing the project further, I have listed down things that I need to do
+ 
+* Fix Room issue
+* Add General helper functions (Spilt the file into the helper functions, an the main gameplay functions)
+* Fix "addAnswer(this)" in the HTML to each of the images (do this in js with a loop)
+* Revisit the gameplay mechanics (How many players in each room? Should Pictionary be competitive? collaborative? How does it affect Overall Scoring System?) 
+* Add function to store the scores from the each game and add a scoring board per player
+* Additional GAME1
+* Additional GAME2
+* A2 seperate Bubble Class into another javascript file
+````
+
+## Helper Function
+Mini-games share many lines of code including - connecting to socket.io, time count system, instruction, gameplay, and endgame pages and more. Instead of writing separate codes for each game 
+
+
+
+Before starting 
+
+
+## Game Design 
+
+I created a card for this game on Figma 
+
+  <img src="images/carddeck.jpg" width="600"> 
+  
+
+## Locating model.weight.bin File
+
+  <img src="images/weightbinlocation.png" width="400"> 
+  
+## Machine Learning 
+
+The models are 
+
+Accuracy is set to 0.99
+
+I have trainned the model at different backgrounds with different people to increase the 
+
+### User-Testing
+
+## Challenges & 
+
+
+
+
+  
+
