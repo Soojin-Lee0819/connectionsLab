@@ -1,7 +1,7 @@
 # NYUAD Expo
 
 **Title**:NYUAD Expo <br>
-**Category**: Project 2 <br>
+**Category**: Project 2-3 <br>
 **Date**: 1 April 2022 -11 April 2022 <br>
 **Group**: Soojin Lee | Alia Waleed <br>
 **Deliverable**: CSS/HTML/Javascript/p5.js/Socket.IO Multiplayer Web Game <br>
@@ -265,6 +265,14 @@ Here, the comment 'left room okay' is logged and the player is located to mappag
   
   
  
+
+
+# PROJECT 3
+
+In continuation of the project 2, for project 3, we solved the unresolved socket room issues, and added two more games, incorporating ml5 libraries.  
+
+````
+
  **Plans for Project 3**
  
  Before I start jumping into developing the project further, I have listed down things that I need to do
@@ -283,8 +291,7 @@ Potential items
 - Pen
 - Switch
 - Chord
-
-# PROJECT 3
+````
 
 ## Helper Function
 
