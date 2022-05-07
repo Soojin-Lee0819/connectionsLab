@@ -308,7 +308,7 @@ Accuracy is set to 0.99
 
 I have trainned the model at different backgrounds with different people to increase the 
 
-### Access to 
+### User-Testing
 
 ## Challenges & 
 
