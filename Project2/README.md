@@ -394,13 +394,69 @@ There are three possible scenarios:
   
  <img src="images/randomcards.jpg" width="600"> 
   
-To simulate this random picking card (throwing dice mechanic) I originally coded in a way that it picks 5 random cards everytime when the button is pressed. I have set an array for each color. Each array has 5 different shapes, and when the button is pressed, it picks the random number and the shape of that number is displayed. This part of the coding was successful. However, to code a line that checks the correct answer was really difficult. I was also curious to find out whether the players understand the complicated game mechanic. 
+To simulate this random picking card (throwing dice mechanic) I originally coded in a way that it picks 5 random cards everytime when the button is pressed. I have set an array for each color. Each array has 5 different shape images assigned with numbers between 1-5, and when the button is pressed, it picks the random number, and the shape of that number is displayed. This part was coded successfully. 
+
+However, the code for checking the correct answer was really complicated. As a solution, I decided to create a random set of clues in advance, and bring these set randomly as such: 
+  
+   <img src="images/clueExamples.png" width="600"> 
   
   
+ Preload image
   
+  ````
+  function preload(){
+  for (let i = 1; i < 6; i++) {
+    cards[i] = loadImage("images/"+ i + ".png");
+  }
+}
+                      
+  ````
+                        
+Randomly select the clue option                      
+                        
+````
+  if(allow_start == true) {
+    socket.emit('d1Start', ''); //start game for the rest of the users
+  index = int(random(1,5));
+  //dice throw
+  image(cards[index], windowWidth*0.425, windowWidth*0.025, windowWidth*0.35, windowWidth * 0.35);
+  socket.emit('index',index);
+}                  
+                     
+````                        
   
-  Instead, I decided to use a serveral deck of cards and assign the value. I have limited the option to scenario #3 where the players need to find the card that appears twice
+This way, I can predetermine the answer and directly assign the image to the correct value.
+                        
+````
+                       
+socket.on('indexFromServer', (index) => {
+  pick.style.opacity = "0";
+  pick.disabled = true;
+  rectangle.style.opacity = "0";
+
+  if (index == 1){
+    console.log("new deck palm");
+    thiscard = "palm"
+
+  } else if(index == 2){
+    console.log("new deck sun");
+    thiscard = "mosque"
+  } else if(index == 3){
+    console.log("new deck mosque");
+    thiscard = "palm"
+  } else if(index == 4){
+    console.log("new deck mosque");
+    thiscard = "mosque"
+  } else if(index == 5){
+    console.log("new deck dune");
+    thiscard = "dune"
+  } else if(index == 6){
+    console.log("new deck dune");
+    thiscard = "palm"
+  } 
+})
   
+````                        
 
  ## ML5 machine learning image classification
   
@@ -423,7 +479,7 @@ To simulate this random picking card (throwing dice mechanic) I originally coded
             ],
   ````
   
-  
+
   
 ## Machine Learning 
 
@@ -432,8 +488,21 @@ The models are
 Accuracy is set to 0.99
 
 I have trainned the model at different backgrounds with different people to increase the 
+  
+  
+### Add download PDF 
+  
+  
 
-### User-Testing
+### Play-Testing
+  
+  1. Adding instruction pop up box
+      
+    Some players start the game without reading the instruction carefully Once the game is started, players 
+  
+  2. Simplify the game
+  
+  3. 
 
 ## Challenges & 
 
