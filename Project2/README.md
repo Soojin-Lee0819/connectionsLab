@@ -373,7 +373,7 @@ The idea of this game originated from one of my favorite cardgame **Ghostblitz**
 - Five randomly selected cards are the clues. Player need to read the clue and identify the answer. 
 
   
-  <img src="images/scenarios.png" width="600"> 
+  <img src="images/scenarios.png" width="1000"> 
   
   
   
@@ -383,9 +383,35 @@ There are three possible scenarios:
 3. Two (or more) objects of the same type appears on the cards. Identify the object that appears the most (dune), then identify the color associated with this object from your deck(yellow). Then, pick up the object associated with this color from your deck(sun).
   
 
-## Locating model.weight.bin File
+  
+## Playtesting
+  
+  I conducted a playtesting to check if the players understand this game mechanic easily. To read all these instructions was too complicated for the players. 
+  
 
- <img src="images/weightbinlocation.png" width="400"> 
+## To simulate this random picking card, I originally coded in a way that it picks the random card everytime when the button is pressed. However, to code a line that checks the correct answer was really difficult. Instead, I decided to use a serveral deck of cards and assign the value. I have limited the option to scenario #3 where the players need to find the card that appears twice
+  
+
+ ## ML5 machine learning image classification
+  
+  
+
+### Locating model.weight.bin File
+ 
+  After training the data, the json file and the model.weight.bin file are added. The default location of model.weight.bin file was set to public that the file was not detected. There was an error message as such but I didn't know what was the issue. 
+    
+ <img src="images/weightbinlocation.png" width="300"> 
+  
+  
+  
+  The model.weight.bin file is brought in model.json file. After changing the file directory to  
+  
+  ````
+  
+   "paths": [
+                "./d1/model.weights.bin"
+            ],
+  ````
   
 ## Machine Learning 
 
