@@ -387,14 +387,14 @@ There are three possible scenarios:
   
 ## Playtesting
   
-  I conducted a playtesting to check if the players understand the instruction and game mechanic that is rather complicated. To read all these instructions was too complicated for the players. 
+I conducted a playtesting to check if the players understand the instruction and game mechanic that is rather complicated. To read all these instructions was too complicated for the players. 
 
 
-## Pick cards Randomly 
+## Pick cards (clues) Randomly 
   
  <img src="images/randomcards.jpg" width="600"> 
   
-To simulate this random picking card (throwing dice mechanic) I originally coded in a way that it picks 5 random cards everytime when the button is pressed. I have set an array for each color. Each array has 5 different shape images assigned with numbers between 1-5, and when the button is pressed, it picks the random number, and the shape of that number is displayed. This part was coded successfully. 
+To simulate this random picking card (throwing dice mechanic) I originally coded in a way that it picks 5 random cards everytime when the button is pressed. I have set an array for each color. Each array has 5 different shape images assigned with the numbers between 1-5, and when the button is pressed, it picks the random number, and the shape of that number is displayed. This part was coded successfully. 
 
 However, the code for checking the correct answer was really complicated. As a solution, I decided to create a random set of clues in advance, and bring these set randomly as such: 
   
@@ -460,11 +460,32 @@ socket.on('indexFromServer', (index) => {
 
  ## ML5 machine learning image classification
   
+  I have adapted Daniel Shiffman's Machine Learning with ml5.js example to train card images using p5.js
+  
+  [Train cards p5.js](https://editor.p5js.org/Soojin_lee/sketches/ZFcmHK5Tv)
+  
+ 
+   <img src="images/traindata.jpg" width="300"> 
+  
+  
+  ### Number of classifiers to train data
+  
+  ````
+    classifier = mobilenet.classification(video, videoReady);
+  ````
+
+  
+By default, it only trains 2 different classifiers. By adding { numLabels: 6 } I was able to set numLabels to the number of classifiers I want to train data for. 
+  
+  
+  ````
+  classifier = mobilenet.classification(video, { numLabels: 6 }, videoReady); 
+  ````
   
 
 ### Locating model.weight.bin File
  
-  After training the data, the json file and the model.weight.bin file are added. The default location of model.weight.bin file was set to public that the file was not detected. There was an error message as such but I didn't know what was the issue. 
+  After training the data, I download the json file and applied to the current project. the json file and the model.weight.bin file are added. The default location of model.weight.bin file was set to public that the file was not detected. There was an error message as such but I didn't know what was the issue. 
     
  <img src="images/weightbinlocation.png" width="300"> 
   
