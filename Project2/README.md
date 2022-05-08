@@ -611,30 +611,55 @@ socket.on('correctFromServer', () => {
   
   
 
-### One player in the room 
+## One player in the room 
     
-   <img src="images/oneplayer.jpg" width="600"> 
+   <img src="images/player1.jpg" width="600"> 
   
   If only one player is in the room, the pick card button is disabled and the player is notified to wait for another player to join. 
   
-  
-### Add download PDF 
-  
-  
-  
-  
+ 
 
-### Play-Testing
+## Play-Testing
   
-  1. Adding instruction pop up box
+  The main goal of this playtesting was to find out if the players understand how to play the game with the given instruction. 
+  
+ 
+    
+  1. Players find the game too difficult (especially with three different scenarios)
+  
+  Since the game was too complicated compared to the rest of the game, players find it a bit overwhelming to follow the instruction. One recommendation was to simplify the game by allowing only one scenario. The game will be still fun since they need to compete who finds the correct answer first. 
+  
+  
+  2. Players don't remember the instruction
       
-    Some players start the game without reading the instruction carefully Once the game is started, players 
-  
-  2. Simplify the game
-  
-  3. 
+    Some players start the game without reading the instruction carefully. Once the game is started, players can't read the instruction.  Some players remembered how to play the game but some players didn't. Therefore, I decided to add instruction pop up box.
 
-## Challenges & 
+  
+  3. Download and... What? 
+  
+  I was suggested to make the cue sign for downloading and printing out the card deck more obvious. Instead of the button "download" name it "download and print". This will be more direct instruction
+
+
+## Simplify Game 
+  
+       <img src="images/onescenario.png" width="600"> 
+  
+  Instead of giving possibilities of three scenarios, I only added clues that has two same cards and three different cards. This way, the instruction became much simplier. 
+  
+## Pop-up Instruction 
+  
+  I added a feature where player can revise the instruction by hover on __ while playing the game.  
+
+         <img src="images/popup.png" width="600"> 
+  
+## Add download PDF 
+  
+    
+For the players who are playing at home, they can downlad the card deck by themselves and enjoy the game. 
+  
+     <img src="images/download.jpg" width="600"> 
+  
+  
 
 
 
