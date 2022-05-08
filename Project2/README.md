@@ -312,7 +312,7 @@ Since we didn't start with the helper function, we had to backtrack the individu
 
 ### Lesson Learnt
 
-When building a complex project like this with mini components, always plan ahead and add helper function. This will save a lot of time in the future to manage and iterate if needed.
+When building a complex project like this with mini components, always plan ahead and add helper function. This will save a lot of time in the future to manage and iterate the project.
 
 
 
@@ -325,8 +325,28 @@ For week 11, and 12, we have experimented with different client-side libraries i
   - Physical-Digital Card Game (ML5 machine learning image classification)
 
 
-## Challenge 1: 
+## Charades
   
+ When building Charades game using p5 livemedia, I ran into an issue where p5livemedia opens its own socket and overrides the existing socket system. 
+  
+  
+  ````
+  
+  <script type="text/javascript" src="https://p5livemedia.itp.io/socket.io.js"></script>
+  
+  ````
+  
+A collegue of mine also faced this issue for another project. He was able to solve this issue by using p5 live media to send data instead of using sockets to send data. However, for my project, I send multiple datas from socket.io to manage rooms, track scoring systems, number of users in each room and more. Therefore, adopting this solution wasn't ideal. <br><br>
+  
+ Another proposed solutions were:
+  - using lower level webrtc library - peer JS or simplePeer JS
+  - Forcing multiple sockets from one page
+  
+  
+There were multiples solutions to explore but instead, I decided to work on the physical-digital card game! 
+
+
+## Physical-digital Card Game
 
 ## Locating model.weight.bin File
 
