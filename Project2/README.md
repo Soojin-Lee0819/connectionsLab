@@ -347,6 +347,40 @@ There were multiples solutions to explore but instead, I decided to work on the 
 
 
 ## Physical-digital Card Game
+  
+The idea of this game originated from one of my favorite cardgame **Ghostblitz** where the players pick the card with clues and grab the item that matches the answer from the clue. Whoever snatches the correct item quickest win the game. 
+  
+    <img src="images/ghostblitz.png" width="600"> 
+    
+ I decided to make a digital version of this game. To customize the game unique to this theme of the game NYUAD, I created cards with five items: 1. Palm Tree 2. Mosque 3. Cactus 4. Sun 5. Dune <br>
+  
+  This is a physical card-deck, which players can print and use:
+  
+    <img src="images/carddeck.jpg" width="600"> 
+  
+  This is a digital card-deck, which will be used for the players to receive the clue. 
+  
+   <img src="images/digitalcard.jpg" width="600"> 
+  
+
+ ### Gameplay Mechanics
+  
+<img src="images/randomlyselected.jpg" width="600"> 
+  
+- The game mechanic is that players will pick a card with a set of clue. Each card will have five items - one from each color set. An item from each color category is randomly selected. (Simply put, it's like throwing 6 different dices)
+
+
+- Five randomly selected cards are the clues. Player need to read the clue and identify the answer. 
+
+  
+  
+  
+  
+There are three possible scenarios:
+1. All objects appearing on cards are different. Identify the color in which the sun appears in. Then, pick up the card of the same color from your deck. 
+2. Two (or more) objects of the same type appears on the cards. Identify the object that appears the most, then identify the color associated with this object from your deck. Then, pick up the object associated with this color from your deck.
+3. If you have two pairs of the same objects appearing on the cards, identify the object that is singular (odd-one-out). Then, identify the color associated with that object. Then, pick up the card of the same color from your deck. 
+  
 
 ## Locating model.weight.bin File
 
@@ -366,7 +400,6 @@ I have trainned the model at different backgrounds with different people to incr
 
 
 
-  <img src="images/carddeck.jpg" width="600"> 
 
   
 
