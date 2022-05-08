@@ -316,7 +316,7 @@ When building a complex project like this with mini components, always plan ahea
 
 
 
-## Game Ideas
+## Extra Games
   
 For week 11, and 12, we have experimented with different client-side libraries including: D3, ML5, Three, and WebRTC. We brainstormed a few games that we could add incorporating these libraries. 
 
@@ -327,7 +327,7 @@ For week 11, and 12, we have experimented with different client-side libraries i
 
 ## Charades
   
- When building Charades game using p5 livemedia, I ran into an issue where p5livemedia opens its own socket and overrides the existing socket system. 
+ When building Charades game using p5 livemedia, I ran into an issue where p5livemedia opens its own socket and overrides the existing socket system, and disabling them. 
   
   
   ````
@@ -336,21 +336,171 @@ For week 11, and 12, we have experimented with different client-side libraries i
   
   ````
   
-A collegue of mine also faced this issue for another project. He was able to solve this issue by using p5 live media to send data instead of using sockets to send data. However, for my project, I send multiple datas from socket.io to manage rooms, track scoring systems, number of users in each room and more. Therefore, adopting this solution wasn't ideal. <br><br>
+A collegue of mine also faced this issue for another project. He was able to solve this issue by using p5 live media to send data, instead of using sockets to send data. However, for my project, I send multiple types of data to manage rooms, track scoring systems, track number of users in each room, and more. Therefore, adopting this solution wasn't ideal. <br><br>
   
  Another proposed solutions were:
   - using lower level webrtc library - peer JS or simplePeer JS
   - Forcing multiple sockets from one page
   
   
-There were multiples solutions to explore but instead, I decided to work on the physical-digital card game! 
+There were multiples solutions to be explored in the future. For now, I decided to work on the physical-digital card game! 
 
 
 ## Physical-digital Card Game
+  
+The idea of this game originated from one of my favorite cardgame **Ghostblitz** where the players pick the card with clues and grab the item that matches the answer from the clue. Whoever snatches the correct item quickest win the game. 
+  
+<img src="images/ghostblitz.jpg" width="600"> 
+    
+ I decided to make a digital version of this game. To customize the game unique to this theme of the game NYUAD, I created cards with five items: 1. Palm Tree 2. Mosque 3. Cactus 4. Sun 5. Dune <br>
+  
+  This is a physical card-deck, which players can print and use:
+  
+<img src="images/carddeck.jpg" width="600"> 
+  
+  This is a digital card-deck, which will be used for the players to receive the clue. 
+  
+   <img src="images/digitalcard.jpg" width="600"> 
+  
 
-## Locating model.weight.bin File
+ ### Gameplay Mechanics
+  
+<img src="images/randomlyselected.png" width="600"> 
+  
+- The game mechanic is that players will pick a card with a set of clue. Each card will have five items - one from each color set. An item from each color category is randomly selected. (Simply put, it's like throwing 6 different dices)
 
-  <img src="images/weightbinlocation.png" width="400"> 
+
+- Five randomly selected cards are the clues. Player need to read the clue and identify the answer. 
+
+  
+  <img src="images/scenarios.png" width="1000"> 
+  
+  
+  
+There are three possible scenarios:
+  
+1. All objects appearing on cards are different. Identify the color in which the sun appears in (Green). Then, pick up the card of the same color from your deck (cactus). 
+2. If you have two pairs of the same objects appearing on the cards, identify the object that is singular(mosque). Then, identify the color associated with that object (blue). Then, pick up the card of the same color from your deck(sun). 
+3. Two (or more) objects of the same type appears on the cards. Identify the object that appears the most (dune), then identify the color associated with this object from your deck(yellow). Then, pick up the object associated with this color from your deck(sun).
+  
+
+  
+## Playtesting
+  
+I conducted a playtesting to check if the players understand the instruction and game mechanic that is rather complicated. To read all these instructions was too complicated for the players. 
+
+
+## Pick cards (clues) Randomly 
+  
+ <img src="images/randomcards.jpg" width="600"> 
+  
+To simulate this random picking card (throwing dice mechanic) I originally coded in a way that it picks 5 random cards everytime when the button is pressed. I have set an array for each color. Each array has 5 different shape images assigned with the numbers between 1-5, and when the button is pressed, it picks the random number, and the shape of that number is displayed. This part was coded successfully. 
+
+However, the code for checking the correct answer was really complicated. As a solution, I decided to create a random set of clues in advance, and bring these set randomly as such: 
+  
+   <img src="images/clueExamples.png" width="600"> 
+  
+  
+ Preload image
+  
+  ````
+  function preload(){
+  for (let i = 1; i < 6; i++) {
+    cards[i] = loadImage("images/"+ i + ".png");
+  }
+}
+                      
+  ````
+                        
+Randomly select the clue option                      
+                        
+````
+  if(allow_start == true) {
+    socket.emit('d1Start', ''); //start game for the rest of the users
+  index = int(random(1,5));
+  //dice throw
+  image(cards[index], windowWidth*0.425, windowWidth*0.025, windowWidth*0.35, windowWidth * 0.35);
+  socket.emit('index',index);
+}                  
+                     
+````                        
+  
+This way, I can predetermine the answer and directly assign the image to the correct value.
+                        
+````
+                       
+socket.on('indexFromServer', (index) => {
+  pick.style.opacity = "0";
+  pick.disabled = true;
+  rectangle.style.opacity = "0";
+
+  if (index == 1){
+    console.log("new deck palm");
+    thiscard = "palm"
+
+  } else if(index == 2){
+    console.log("new deck sun");
+    thiscard = "mosque"
+  } else if(index == 3){
+    console.log("new deck mosque");
+    thiscard = "palm"
+  } else if(index == 4){
+    console.log("new deck mosque");
+    thiscard = "mosque"
+  } else if(index == 5){
+    console.log("new deck dune");
+    thiscard = "dune"
+  } else if(index == 6){
+    console.log("new deck dune");
+    thiscard = "palm"
+  } 
+})
+  
+````                        
+
+ ## ML5 machine learning image classification
+  
+  I have adapted Daniel Shiffman's Machine Learning with ml5.js example to train card images using p5.js
+  
+  [Train cards p5.js](https://editor.p5js.org/Soojin_lee/sketches/ZFcmHK5Tv)
+  
+ 
+   <img src="images/traindata.jpg" width="300"> 
+  
+  
+  ### Number of classifiers to train data
+  
+  ````
+    classifier = mobilenet.classification(video, videoReady);
+  ````
+
+  
+By default, it only trains 2 different classifiers. By adding { numLabels: 6 } I was able to set numLabels to the number of classifiers I want to train data for. 
+  
+  
+  ````
+  classifier = mobilenet.classification(video, { numLabels: 6 }, videoReady); 
+  ````
+  
+
+### Locating model.weight.bin File
+ 
+  After training the data, I download the json file and applied to the current project. the json file and the model.weight.bin file are added. The default location of model.weight.bin file was set to public that the file was not detected. There was an error message as such but I didn't know what was the issue. 
+    
+ <img src="images/weightbinlocation.png" width="300"> 
+  
+  
+  
+  The model.weight.bin file is brought in model.json file. After changing the file directory to  
+  
+  ````
+  
+   "paths": [
+                "./d1/model.weights.bin"
+            ],
+  ````
+  
+
   
 ## Machine Learning 
 
@@ -359,14 +509,26 @@ The models are
 Accuracy is set to 0.99
 
 I have trainned the model at different backgrounds with different people to increase the 
+  
+  
+### Add download PDF 
+  
+  
 
-### User-Testing
+### Play-Testing
+  
+  1. Adding instruction pop up box
+      
+    Some players start the game without reading the instruction carefully Once the game is started, players 
+  
+  2. Simplify the game
+  
+  3. 
 
 ## Challenges & 
 
 
 
-  <img src="images/carddeck.jpg" width="600"> 
 
   
 
