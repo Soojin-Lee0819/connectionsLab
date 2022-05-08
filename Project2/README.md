@@ -641,8 +641,8 @@ I was suggested to make the cue sign for downloading and printing out the card d
 
 
 ## Simplify Game 
-  
-       <img src="images/onescenario.png" width="600"> 
+
+<img src="images/onescenario.png" width="600"> 
   
   Instead of giving possibilities of three scenarios, I only added clues that has two same cards and three different cards. This way, the instruction became much simplier. 
   
@@ -650,14 +650,13 @@ I was suggested to make the cue sign for downloading and printing out the card d
   
   I added a feature where player can revise the instruction by hover on __ while playing the game.  
 
-         <img src="images/help.jpg" width="600"> 
+ <img src="images/help.jpg" width="600"> 
   
 ## Add download PDF 
   
     
 For the players who are playing at home, they can downlad the card deck by themselves and enjoy the game. 
-  
-     <img src="images/download.jpg" width="600"> 
+  <img src="images/download.jpg" width="600"> 
   
   
 
