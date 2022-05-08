@@ -632,12 +632,12 @@ socket.on('correctFromServer', () => {
   
   2. Players don't remember the instruction
       
-    Some players start the game without reading the instruction carefully. Once the game is started, players can't read the instruction.  Some players remembered how to play the game but some players didn't. Therefore, I decided to add instruction pop up box.
+Some players start the game without reading the instruction carefully. Once the game is started, players can't read the instruction.  Some players remembered how to play the game but some players didn't. Therefore, I decided to add instruction pop up box.
 
   
   3. Download and... What? 
   
-  I was suggested to make the cue sign for downloading and printing out the card deck more obvious. Instead of the button "download" name it "download and print". This will be more direct instruction
+I was suggested to make the cue sign for downloading and printing out the card deck more obvious. Instead of the button "download" name it "download and print". This will be more direct instruction
 
 
 ## Simplify Game 
@@ -650,7 +650,7 @@ socket.on('correctFromServer', () => {
   
   I added a feature where player can revise the instruction by hover on __ while playing the game.  
 
-         <img src="images/popup.png" width="600"> 
+         <img src="images/help.jpg" width="600"> 
   
 ## Add download PDF 
   
