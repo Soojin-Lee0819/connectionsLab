@@ -365,7 +365,7 @@ The idea of this game originated from one of my favorite cardgame **Ghostblitz**
 
  ### Gameplay Mechanics
   
-<img src="images/randomlyselected.jpg" width="600"> 
+<img src="images/randomlyselected.png" width="600"> 
   
 - The game mechanic is that players will pick a card with a set of clue. Each card will have five items - one from each color set. An item from each color category is randomly selected. (Simply put, it's like throwing 6 different dices)
 
@@ -373,13 +373,14 @@ The idea of this game originated from one of my favorite cardgame **Ghostblitz**
 - Five randomly selected cards are the clues. Player need to read the clue and identify the answer. 
 
   
+  <img src="images/scenarios.png" width="600"> 
   
   
   
 There are three possible scenarios:
-1. All objects appearing on cards are different. Identify the color in which the sun appears in. Then, pick up the card of the same color from your deck. 
-2. Two (or more) objects of the same type appears on the cards. Identify the object that appears the most, then identify the color associated with this object from your deck. Then, pick up the object associated with this color from your deck.
-3. If you have two pairs of the same objects appearing on the cards, identify the object that is singular (odd-one-out). Then, identify the color associated with that object. Then, pick up the card of the same color from your deck. 
+1. All objects appearing on cards are different. Identify the color in which the sun appears in (Green). Then, pick up the card of the same color from your deck (cactus). 
+2. If you have two pairs of the same objects appearing on the cards, identify the object that is singular(mosque). Then, identify the color associated with that object (blue). Then, pick up the card of the same color from your deck(sun). 
+3. Two (or more) objects of the same type appears on the cards. Identify the object that appears the most (dune), then identify the color associated with this object from your deck(yellow). Then, pick up the object associated with this color from your deck(sun).
   
 
 ## Locating model.weight.bin File
