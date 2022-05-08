@@ -350,13 +350,13 @@ There were multiples solutions to explore but instead, I decided to work on the 
   
 The idea of this game originated from one of my favorite cardgame **Ghostblitz** where the players pick the card with clues and grab the item that matches the answer from the clue. Whoever snatches the correct item quickest win the game. 
   
-    <img src="images/ghostblitz.png" width="600"> 
+<img src="images/ghostblitz.jpg" width="600"> 
     
  I decided to make a digital version of this game. To customize the game unique to this theme of the game NYUAD, I created cards with five items: 1. Palm Tree 2. Mosque 3. Cactus 4. Sun 5. Dune <br>
   
   This is a physical card-deck, which players can print and use:
   
-    <img src="images/carddeck.jpg" width="600"> 
+<img src="images/carddeck.jpg" width="600"> 
   
   This is a digital card-deck, which will be used for the players to receive the clue. 
   
@@ -384,7 +384,7 @@ There are three possible scenarios:
 
 ## Locating model.weight.bin File
 
-  <img src="images/weightbinlocation.png" width="400"> 
+ <img src="images/weightbinlocation.png" width="400"> 
   
 ## Machine Learning 
 
