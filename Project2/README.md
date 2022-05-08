@@ -316,7 +316,7 @@ When building a complex project like this with mini components, always plan ahea
 
 
 
-## Game Ideas
+## Extra Games
   
 For week 11, and 12, we have experimented with different client-side libraries including: D3, ML5, Three, and WebRTC. We brainstormed a few games that we could add incorporating these libraries. 
 
@@ -327,7 +327,7 @@ For week 11, and 12, we have experimented with different client-side libraries i
 
 ## Charades
   
- When building Charades game using p5 livemedia, I ran into an issue where p5livemedia opens its own socket and overrides the existing socket system. 
+ When building Charades game using p5 livemedia, I ran into an issue where p5livemedia opens its own socket and overrides the existing socket system, and disabling them. 
   
   
   ````
@@ -336,14 +336,14 @@ For week 11, and 12, we have experimented with different client-side libraries i
   
   ````
   
-A collegue of mine also faced this issue for another project. He was able to solve this issue by using p5 live media to send data instead of using sockets to send data. However, for my project, I send multiple datas from socket.io to manage rooms, track scoring systems, number of users in each room and more. Therefore, adopting this solution wasn't ideal. <br><br>
+A collegue of mine also faced this issue for another project. He was able to solve this issue by using p5 live media to send data, instead of using sockets to send data. However, for my project, I send multiple types of data to manage rooms, track scoring systems, track number of users in each room, and more. Therefore, adopting this solution wasn't ideal. <br><br>
   
  Another proposed solutions were:
   - using lower level webrtc library - peer JS or simplePeer JS
   - Forcing multiple sockets from one page
   
   
-There were multiples solutions to explore but instead, I decided to work on the physical-digital card game! 
+There were multiples solutions to be explored in the future. For now, I decided to work on the physical-digital card game! 
 
 
 ## Physical-digital Card Game
@@ -378,6 +378,7 @@ The idea of this game originated from one of my favorite cardgame **Ghostblitz**
   
   
 There are three possible scenarios:
+  
 1. All objects appearing on cards are different. Identify the color in which the sun appears in (Green). Then, pick up the card of the same color from your deck (cactus). 
 2. If you have two pairs of the same objects appearing on the cards, identify the object that is singular(mosque). Then, identify the color associated with that object (blue). Then, pick up the card of the same color from your deck(sun). 
 3. Two (or more) objects of the same type appears on the cards. Identify the object that appears the most (dune), then identify the color associated with this object from your deck(yellow). Then, pick up the object associated with this color from your deck(sun).
@@ -386,10 +387,19 @@ There are three possible scenarios:
   
 ## Playtesting
   
-  I conducted a playtesting to check if the players understand this game mechanic easily. To read all these instructions was too complicated for the players. 
-  
+  I conducted a playtesting to check if the players understand the instruction and game mechanic that is rather complicated. To read all these instructions was too complicated for the players. 
 
-## To simulate this random picking card, I originally coded in a way that it picks the random card everytime when the button is pressed. However, to code a line that checks the correct answer was really difficult. Instead, I decided to use a serveral deck of cards and assign the value. I have limited the option to scenario #3 where the players need to find the card that appears twice
+
+## Pick cards Randomly 
+  
+ <img src="images/randomcards.jpg" width="600"> 
+  
+To simulate this random picking card (throwing dice mechanic) I originally coded in a way that it picks 5 random cards everytime when the button is pressed. I have set an array for each color. Each array has 5 different shapes, and when the button is pressed, it picks the random number and the shape of that number is displayed. This part of the coding was successful. However, to code a line that checks the correct answer was really difficult. I was also curious to find out whether the players understand the complicated game mechanic. 
+  
+  
+  
+  
+  Instead, I decided to use a serveral deck of cards and assign the value. I have limited the option to scenario #3 where the players need to find the card that appears twice
   
 
  ## ML5 machine learning image classification
