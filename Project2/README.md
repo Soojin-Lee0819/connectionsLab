@@ -465,7 +465,7 @@ socket.on('indexFromServer', (index) => {
   [Train cards p5.js](https://editor.p5js.org/Soojin_lee/sketches/ZFcmHK5Tv)
   
  
-   <img src="images/traindata.jpg" width="300"> 
+   <img src="images/traindata.jpg" width="600"> 
   
   
   ### Number of classifiers to train data
@@ -483,15 +483,49 @@ By default, it only trains 2 different classifiers. By adding { numLabels: 6 } I
   ````
   
 
+## Machine Learning | Training data
+  
+   <img src="images/traindifferent.png" width="600"> 
+
+When trainning the card images, I hold the cards near to the camera, far away from the camera, and at different backgrounds to increase the accuracy and variables. In this way, later when classifying the results, I can set the confidence higher to make sure it only detects when the player shows the "correct" card, not when the background. 
+  
+````
+  
+function gotResults(error, result) {
+
+  classifier.classify(gotResults);
+  if(result[0].confidence > 0.98) {
+    label = result[0].label;
+    console.log[label];
+    thislabel = label;
+    checkMatch();
+
+  } 
+}
+
+
+````
+
+The accuracy is set to 0.99
+
+
 ### Locating model.weight.bin File
  
-  After training the data, I download the json file and applied to the current project. the json file and the model.weight.bin file are added. The default location of model.weight.bin file was set to public that the file was not detected. There was an error message as such but I didn't know what was the issue. 
+ After training the data, I download the model.json file and model.weight.bin file to apply to the current project. When the two files were added, I faced the error: 
     
  <img src="images/weightbinlocation.png" width="300"> 
   
+I struggled with finding out know why this error was appearing. I identified that the issue was at finding the location of the .weight.bin file. Originally, the model.weight.bin file is called from model.json file as such:
+  
+   ````
+  
+   "paths": [
+                "./model.weights.bin"
+            ],
+  ```` 
   
   
-  The model.weight.bin file is brought in model.json file. After changing the file directory to  
+ After changing the file directory to the d1 folder, the issue was solved
   
   ````
   
@@ -499,19 +533,94 @@ By default, it only trains 2 different classifiers. By adding { numLabels: 6 } I
                 "./d1/model.weights.bin"
             ],
   ````
+
+### Detecting Correct Answer 
+  
+  Once the json file was uploaded properly, I could test if the camera detects the correct answer. For example, for this specific clue, the answer is palm tree card. 
+  
+   <img src="images/correct.jpg" width="600"> 
+  
+When the correct card is shown to the camera, it identifies the classification and if the image classification is palm, and the confidence is higher than 0.99 it emits the "correct" signal to the server. The player who got it correct first will have added score, and the pick button is enabled to start the new round. 
+  
+  1. If the video detects the image with a confidence higher than 0.98, it starts the function checkMatch()
+  
+  ````
+  
+function gotResults(error, result) {
+
+  classifier.classify(gotResults);
+  if(result[0].confidence > 0.98) {
+    label = result[0].label;
+    console.log[label];
+    thislabel = label;
+    checkMatch();
+
+  } 
+}
+
+  ````
+  
+  2. If the detected classifier (thislabel) is equal to the answer (thiscard), then emit 'correct' to server
+  
+  ````
+  
+  
+  function checkMatch(){
+  if (thislabel == thiscard){
+    console.log('match');
+    thiscard = 'none';
+    console.log('match2');
+    socket.emit('correct', '');
+    pick.style.opacity = "1";
+    pick.disabled = false; 
+    rectangle.style.opacity = "1";
+  }
+}
+
+````
+  3. Alert correct to all players
+  
+````
+
+// permission to start the game
+socket.on('correctFromServer', () => {
+  console.log('correctforeveryone');
+  inst.textContent = "Correct!";
+
+})
+````
+   3. Add score and update
+  
+  ````
+
+   // permission to start the game
+   socket.on('scoreadd', () => {
+    console.log('addscore');
+    myScore++;
+    score.innerHTML = 'My score:' + myScore + '| Their score:' + theirScore;
+  }
+  
+   // permission to start the game
+   socket.on('theirscoreadd', () => {
+    console.log('theirscoreadd');
+    theirScore++;
+    score.innerHTML = 'My score:' + myScore + '| Their score:' + theirScore;
+  })
+  
+  ````
+  
   
 
+### One player in the room 
+    
+   <img src="images/oneplayer.jpg" width="600"> 
   
-## Machine Learning 
-
-The models are 
-
-Accuracy is set to 0.99
-
-I have trainned the model at different backgrounds with different people to increase the 
+  If only one player is in the room, the pick card button is disabled and the player is notified to wait for another player to join. 
   
   
 ### Add download PDF 
+  
+  
   
   
 
