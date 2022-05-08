@@ -13,7 +13,7 @@
 
 ### Project Brief 
 
-This game is inspired by Expo 2020 where the visitors go around different pavilions to experience the unique culture of countries around the world. Similarly, in this game, players would explore the campus of NYUAD while visiting different campus pavilions including D2, C2,  A2, and the Field. In each pavilion, the players would play a different 2-player game. 
+This game is inspired by Expo 2020 where the visitors go around different pavilions to experience the unique culture of countries around the world. Similarly, in this game, players would explore the campus of NYUAD while visiting different campus pavilions including D2, C2, A2, and the Field. In each pavilion, the players would play a different 2-player game. 
 
 On the landing page, there would be a map of campus with 4 clickable locations as well as the total number of players inside each pavilion. The players pick the pavilion of their choice and get redirected to a specific game page. At the Track & Field pavilion, players can play tug of war against each other. At the C2 admissions office, players can play a game where they need to collectively write down all majors on campus, and if they write the same major twice, they lose. The third pavilion is D2, where players are given an order and their goal is to complete as many orders as possible (the gameplay mechanism will be a click and pick). The last pavilion is a classroom in A2 where the players would play Pictionary. 
 
@@ -272,7 +272,7 @@ Here, the comment 'left room okay' is logged and the player is located to mappag
 
 # Project 3
 
-For project 3, we improved on the Project 2 by solving the unresolved socket room issues, adding two more games that uses ml5 libraries.  
+For project 3, we improved on the Project 2 by solving the unresolved socket.io Room issues and adding two more games that uses ml5 libraries.  
 
 **Plans for Project 3**
 
@@ -290,20 +290,63 @@ For project 3, we improved on the Project 2 by solving the unresolved socket roo
 * A2 seperate Bubble Class into another javascript file
 ````
 
-## Helper Function
-Mini-games share many lines of code including - connecting to socket.io, time count system, instruction, gameplay, and endgame pages and more. Instead of writing separate codes for each game 
+## Add Helper Function
 
+Mini-games share many lines of code including - connecting to socket.io, counting time, displaying (instruction | gameplay | endgame pages), and more. Instead of repeating the same structure of code for each game, we added helper function to manage multiple games at once. 
 
+This is how the files are currently structured:
 
-Before starting 
-
-
-## Game Design 
-
-I created a card for this game on Figma 
-
-  <img src="images/carddeck.jpg" width="600"> 
+  <img src="images/beforehelper.jpg" width="600"> 
   
+Under this structure, if there is one line of code that needs to be changed, for example, to block the display of the div rules, all four javasciprt files need to be changed. 
+  
+  <br><br>
+
+This is how the files are structured with the Helper function:
+
+  <img src="images/afterhelper.jpg" width="600"> 
+
+With the Helper function, all the games can be managed by one specific file. <Br><br>
+
+Since we didn't start with the helper function, we had to backtrack the individual files to edit and add the helper funciton. The issue was that Alia and I have structured the code and the room management slightly differently. Therefore, making a general Helper function could not be applied for all the games. Each element had to be compared and modified to build a helper function, which required us to restructure and recode the entire game we have already built. So instead, we decided to add a helper function for the two new games we are adding.
+
+### Lesson Learnt
+
+When building a complex project like this with mini components, always plan ahead and add helper function. This will save a lot of time in the future to manage and iterate the project.
+
+
+
+## Game Ideas
+  
+For week 11, and 12, we have experimented with different client-side libraries including: D3, ML5, Three, and WebRTC. We brainstormed a few games that we could add incorporating these libraries. 
+
+  - Charades with real-time video (p5LiveMedia Simple WebRTC)
+  - Find objects from the room (ML5 machine learning image classification)
+  - Physical-Digital Card Game (ML5 machine learning image classification)
+
+
+## Charades
+  
+ When building Charades game using p5 livemedia, I ran into an issue where p5livemedia opens its own socket and overrides the existing socket system. 
+  
+  
+  ````
+  
+  <script type="text/javascript" src="https://p5livemedia.itp.io/socket.io.js"></script>
+  
+  ````
+  
+A collegue of mine also faced this issue for another project. He was able to solve this issue by using p5 live media to send data instead of using sockets to send data. However, for my project, I send multiple datas from socket.io to manage rooms, track scoring systems, number of users in each room and more. Therefore, adopting this solution wasn't ideal. <br><br>
+  
+ Another proposed solutions were:
+  - using lower level webrtc library - peer JS or simplePeer JS
+  - Forcing multiple sockets from one page
+  
+  
+There were multiples solutions to explore but instead, I decided to work on the physical-digital card game! 
+
+
+## Physical-digital Card Game
 
 ## Locating model.weight.bin File
 
@@ -323,6 +366,7 @@ I have trainned the model at different backgrounds with different people to incr
 
 
 
+  <img src="images/carddeck.jpg" width="600"> 
 
   
 
