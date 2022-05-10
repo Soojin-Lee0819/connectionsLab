@@ -43,4 +43,12 @@ Welcome to Soojin's Connection's Lab Project Portfolio. In this class, I design 
 [Starbucks Nutritional Label Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Week11) | Data Visualization Using D3 Library <br>
 
 [Starbucks Nutritional Label Documentation](https://soojin-lee0819.github.io/connectionsLab/Week11)
+
+
+# Project 3
+# Project 2
+
+[Play NYUAD Expo](https://nyuad-expo-final.glitch.me) | Node.js, Socket.IO Connected Game
+
+[NYUAD EXPO Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project2)
  
