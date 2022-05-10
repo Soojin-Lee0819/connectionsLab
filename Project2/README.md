@@ -2,9 +2,9 @@
 
 **Title**:NYUAD Expo <br>
 **Category**: Project 2-3 <br>
-**Date**: 1 April 2022 -11 April 2022 <br>
+**Date**: 1 April 2022 -10 May 2022 <br>
 **Group**: Soojin Lee | Alia Waleed <br>
-**Deliverable**: CSS/HTML/Javascript/p5.js/Socket.IO Multiplayer Web Game <br>
+**Deliverable**: CSS/HTML/Javascript/p5.js/Socket.IO/ml5 Multiplayer Web Game <br>
 
 <img src="images/explorenyuad.png" width="600">
 
@@ -292,7 +292,9 @@ For project 3, we improved on the Project 2 by solving the unresolved socket.io 
 * A2 seperate Bubble Class into another javascript file
 ````
 
-## Fix Room Issue
+## Fixing Room Issue
+
+This socket management issue took us many days to test and figure out how to solve. To check if the socket is connected properly and to manage the room, we used https://admin.socket.io/#/ to view the status. 
 
 When the player goes to home, when the player goes to the map, and 
 
