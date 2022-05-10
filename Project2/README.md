@@ -278,7 +278,6 @@ Here, the comment 'left room okay' is logged and the player is located to mappag
 For project 3, we improved on the Project 2 by solving the unresolved socket.io Room issues and adding two more games that uses ml5 libraries.  
 
 **Plans for Project 3**
-
 ````
  
  Before I start jumping into developing the project further, I have listed down things that I need to do
@@ -292,6 +291,39 @@ For project 3, we improved on the Project 2 by solving the unresolved socket.io 
 * Additional GAME2
 * A2 seperate Bubble Class into another javascript file
 ````
+
+## Fix Room Issue
+
+When the player goes to home, when the player goes to the map, and 
+
+This was because the session storage was not saved. 
+
+We also set the map as another room. 
+
+````
+//Session Storage
+
+sessionStorage.setItem('room', "map"); //save to session storage
+````
+
+in index..js file
+
+````
+    //delete the user if they leave by clicking the home button
+    socket.on('userLeft', () => {
+        console.log("socket has been disconnected ", socket.id);
+        if (rooms[socket.roomName]) {
+            rooms[socket.roomName]--;
+        }
+        delete users[socket.name];
+        console.log("The users left in: ", socket.roomName, users);
+
+        socket.leave(socket.roomName);
+        socket.roomName = "map";
+        rooms["map"]++;
+    })
+    
+    ````
 
 ## Add Helper Function
 
@@ -313,7 +345,7 @@ With the Helper function, all the games can be managed by one specific file. <Br
 
 Since we didn't start with the helper function, we had to backtrack the individual files to edit and add the helper funciton. The issue was that Alia and I have structured the code and the room management slightly differently. Therefore, making a general Helper function could not be applied for all the games. Each element had to be compared and modified to build a helper function, which required us to restructure and recode the entire game we have already built. So instead, we decided to add a helper function for the two new games we are adding.
 
-### Lesson Learnt
+**Lesson Learnt**
 
 When building a complex project like this with mini components, always plan ahead and add helper function. This will save a lot of time in the future to manage and iterate the project.
 
@@ -640,7 +672,7 @@ Some players start the game without reading the instruction carefully. Once the 
   
   3. Download and... What? 
   
-I was suggested to make the cue sign for downloading and printing out the card deck more obvious. Instead of the button "download" name it "download and print". This will be more direct instruction
+I was suggested to make the cue sign for downloading and printing out the card deck more obvious. Instead of the button "download" name it "download and print". This is a more intuitive instruction. Originally I used different color for download button (a tone down than start button). The player thought the button was disabled. 
 
 
 ## Simplify Game 
@@ -660,6 +692,18 @@ I was suggested to make the cue sign for downloading and printing out the card d
     
 For the players who are playing at home, they can downlad the card deck by themselves and enjoy the game. 
   <img src="images/download.jpg" width="600"> 
+  
+  
+## Fix Pictionary Gameplay
+  
+  I received a feedback that for pictionary game, two players are often confused with how to play the game. Who is draing? and who is guessing? To make the game more intuitive to play, I added instruction texts that specifically tells the two players what to do. 
+  
+  When the first player joins, 
+  
+    <img src="images/download.jpg" width="600"> 
+  
+  
+  
   
   
 
