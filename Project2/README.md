@@ -449,7 +449,8 @@ However, the code for checking the correct answer was really complicated. As a s
                       
   ````
                         
-Randomly select the clue option                      
+Randomly select the clue option 
+
                         
 ````
   if(allow_start == true) {
@@ -463,7 +464,8 @@ Randomly select the clue option
 ````                        
   
 This way, I can predetermine the answer and directly assign the image to the correct value.
-                        
+  
+  
 ````
                        
 socket.on('indexFromServer', (index) => {
@@ -506,6 +508,7 @@ socket.on('indexFromServer', (index) => {
   
   
   ### Number of classifiers to train data
+  
   
   ````
     classifier = mobilenet.classification(video, videoReady);
