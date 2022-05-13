@@ -18,7 +18,7 @@
 
 This game is inspired by Expo 2020 where the visitors go around different pavilions to experience the unique culture of countries around the world. Similarly, in this game, players would explore the campus of NYUAD while visiting different places on campus. In each pavilion, the players would play fun 2-player game. 
 
-Here aret he six games: 
+Here are the six games: 
 
 On the landing page, there would be a map of campus with 6 clickable locations, which will direct players to a game.  as well as the total number of players inside each game. The players can enter the game by clicking the button. At the Track & Field pavilion, players can play tug of war against each other. At the C2 admissions office, players can play a game where they need to collectively write down all majors on campus, and if they write the same major twice, they lose. The third pavilion is D2, where players are given an order and their goal is to complete as many orders as possible (the gameplay mechanism will be a click and pick). The last pavilion is a classroom in A2 where the players would play Pictionary. 
 
@@ -296,7 +296,7 @@ For project 3, we improved on the Project 2 by solving the unresolved socket.io 
 
 ## Fixing Room Issue
 
-This socket management issue took us many days to test and figure out how to solve. To check if the socket is connected properly and to manage the room, we used https://admin.socket.io/#/ to view the status. 
+This socket management issue took us many days to test and figure out how to solve. To check if the socket is connected properly and to manage the room, we used https://admin.socket.io/#/ to view the status, while the npm start is activated. 
 
 When the player goes to home, when the player goes to the map, and 
 
@@ -327,7 +327,7 @@ in index..js file
         rooms["map"]++;
     })
     
-    ````
+ ````
 
 ## Add Helper Function
 
