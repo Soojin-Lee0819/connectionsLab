@@ -33,7 +33,7 @@ This is the initial wireframe I made focusing on the structure of the webpage an
 
 <br> <br>
 
-Using figma, I have designed the landing page. At first, I used the 3D modelling map of NYUAD. Here, I added location pin with the real-life images of the location in the shape of bubble. After discussing with Alia, we decided to use the 2D map of NYUAD with the part of the map highlighted. 
+
 
 <img src="images/landingpagewireframe.png" width="800"> <br> <br>
 
@@ -53,7 +53,7 @@ Following are the list of games available at NYUAD Expo:
 1) C2 | Pictionary
 2) D2 | One MealsSwipe
 3) Field | Tug of War
-4) Dorm | 
+4) Dorm | Scavenger Hunt
 5) D1 | Find the Card!
 
 
