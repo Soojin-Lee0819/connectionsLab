@@ -34,7 +34,7 @@ Welcome to Soojin's Connection's Lab Project Portfolio. In this class, I design 
 
 # Project 2
 
-[Play NYUAD Expo](https://nyuad-expo-final.glitch.me) | Node.js, Socket.IO Connected Game
+[Play NYUAD Expo](https://explore-nyuad.glitch.me) | Node.js, Socket.IO Connected Game
 
 [NYUAD EXPO Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project2)
 
@@ -47,7 +47,7 @@ Welcome to Soojin's Connection's Lab Project Portfolio. In this class, I design 
 
 # Project 3
 
-[Play NYUAD Expo](https://nyuad-expo-final.glitch.me) | Node.js, Socket.IO Connected Game
+[Play NYUAD Expo](https://explore-nyuad.glitch.me) | Node.js, Socket.IO Connected Game
 
 [NYUAD EXPO Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project2)
  
