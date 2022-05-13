@@ -53,6 +53,8 @@ Following are the list of games available at NYUAD Expo:
 1) C2 | Pictionary
 2) D2 | One MealsSwipe
 3) Field | Tug of War
+4) Dorm | 
+5) D1 | Find the Card!
 
 
 ### Coding & Challenges
@@ -298,11 +300,9 @@ For project 3, we improved on the Project 2 by solving the unresolved socket.io 
 
 This socket management issue took us many days to test and figure out how to solve. To check if the socket is connected properly and to manage the room, we used https://admin.socket.io/#/ to view the status, while the npm start is activated. 
 
-When the player goes to home, when the player goes to the map, and 
+Through this socket management, we found out that the issue where the user never join the map, and the information is not saved to session storage, when they click on the home button. 
 
-This was because the session storage was not saved. 
-
-We also set the map as another room. 
+So here, we also set the map as another room and save joining map room to the session storage.
 
 ````
 //Session Storage
@@ -310,7 +310,7 @@ We also set the map as another room.
 sessionStorage.setItem('room', "map"); //save to session storage
 ````
 
-in index..js file
+in index..js file, we also made sure we delete the user from they room if they click the home button and have them join to the room[map]
 
 ````
     //delete the user if they leave by clicking the home button
@@ -347,9 +347,9 @@ This is how the files are structured with the Helper function:
 
 With the Helper function, all the games can be managed by one specific file. <Br><br>
 
-Since we didn't start with the helper function, we had to backtrack the individual files to edit and add the helper funciton. The issue was that Alia and I have structured the code and the room management slightly differently. Therefore, making a general Helper function could not be applied for all the games. Each element had to be compared and modified to build a helper function, which required us to restructure and recode the entire game we have already built. So instead, we decided to add a helper function for the two new games we are adding.
+Since we didn't start with the helper function, we had to back-track the individual files to edit and add the helper funciton. The issue was that Alia and I have structured the code and the room management slightly differently. Therefore, making a general Helper function could not be applied for all the games. Each element had to be compared and modified to build a helper function, which required us to restructure and recode the entire game. Lesson was learnt, so instead of adding helper function for the existing games, we decided to add a helper function for the two new games we are adding.
 
-**Lesson Learnt**
+**Lesson**
 
 When building a complex project like this with mini components, always plan ahead and add helper function. This will save a lot of time in the future to manage and iterate the project.
 
@@ -378,14 +378,16 @@ For week 11, and 12, we have experimented with different client-side libraries i
 A collegue of mine also faced this issue for another project. He was able to solve this issue by using p5 live media to send data, instead of using sockets to send data. However, for my project, I send multiple types of data to manage rooms, track scoring systems, track number of users in each room, and more. Therefore, adopting this solution wasn't ideal. <br><br>
   
  Another proposed solutions were:
+  
   - using lower level webrtc library - peer JS or simplePeer JS
+  
   - Forcing multiple sockets from one page
   
   
-There were multiples solutions to be explored in the future. For now, I decided to work on the physical-digital card game! 
+There were multiples solutions to be explored. For now, I decided to work on the physical-digital card game! 
 
 
-## Physical-digital Card Game
+## D1 | Find the Card [Physical-digital Card Game]
   
 The idea of this game originated from one of my favorite cardgame **Ghostblitz** where the players pick the card with clues and grab the item that matches the answer from the clue. Whoever snatches the correct item quickest win the game. 
   
@@ -423,21 +425,17 @@ There are three possible scenarios:
 3. Two (or more) objects of the same type appears on the cards. Identify the object that appears the most (dune), then identify the color associated with this object from your deck(yellow). Then, pick up the object associated with this color from your deck(sun).
   
 
-  
-## Playtesting
-  
-I conducted a playtesting to check if the players understand the instruction and game mechanic that is rather complicated. To read all these instructions was too complicated for the players. 
 
 
-## Pick cards (clues) Randomly 
+## Implementing Throwing Dice Mechanics: Pick cards (clues) Randomly 
   
  <img src="images/randomcards.jpg" width="600"> 
   
-To simulate this random picking card (throwing dice mechanic) I originally coded in a way that it picks 5 random cards everytime when the button is pressed. I have set an array for each color. Each array has 5 different shape images assigned with the numbers between 1-5, and when the button is pressed, it picks the random number, and the shape of that number is displayed. This part was coded successfully. 
+To simulate this random picking card (throwing dice mechanic) I originally coded in a way that it picks 5 random cards everytime when the button is pressed. I have set an array for each color of cards. Each array has 5 different shape images assigned with the numbers between 1-5, and when the button is pressed, it picks the random number, and the shape of that number is displayed. This part was coded successfully. 
 
-However, the code for checking the correct answer was really complicated. As a solution, I decided to create a random set of clues in advance, and bring these set randomly as such: 
+However, to develop a code that chcecks the correct answer was rather complicated. As a solution, I decided to create a random set of clues in advance, and bring these set randomly as such: 
   
-   <img src="images/clueExamples.png" width="600"> 
+   <img src="images/randomlyselected.png" width="600"> 
   
   
  Preload image
@@ -465,7 +463,7 @@ Randomly select the clue option
                      
 ````                        
   
-This way, I can predetermine the answer and directly assign the image to the correct value.
+This way, I can predetermine the answer and simply assign the image to the correct value.
   
   
 ````
@@ -511,19 +509,21 @@ socket.on('indexFromServer', (index) => {
   
   ### Number of classifiers to train data
   
+  ** Default **
   
   ````
     classifier = mobilenet.classification(video, videoReady);
   ````
 
   
-By default, it only trains 2 different classifiers. By adding { numLabels: 6 } I was able to set numLabels to the number of classifiers I want to train data for. 
+By default, it only trains 2 different classifiers. By adding { numLabels: 6 } I was able to set numLabels to the number of classifiers I want to train the data for. 
   
   
   ````
   classifier = mobilenet.classification(video, { numLabels: 6 }, videoReady); 
   ````
   
+  Although this seems to be a simple solution, without knowing why, I was really confused why some classifiers are not being trained, nor the solution to this problem. 
 
 ## Machine Learning | Training data
   
@@ -578,11 +578,11 @@ I struggled with finding out know why this error was appearing. I identified tha
 
 ### Detecting Correct Answer 
   
-  Once the json file was uploaded properly, I could test if the camera detects the correct answer. For example, for this specific clue, the answer is palm tree card. 
+  Once the json file was uploaded properly, I could test if the camera detects the correct answer. For example, for this specific clue, the answer is a palm tree card. 
   
    <img src="images/correct.jpg" width="600"> 
   
-When the correct card is shown to the camera, it identifies the classification and if the image classification is palm, and the confidence is higher than 0.99 it emits the "correct" signal to the server. The player who got it correct first will have added score, and the pick button is enabled to start the new round. 
+When the correct card is shown to the camera, it identifies the classification and if the image classification is palm, and the confidence is higher than 0.98 it emits the "correct" signal to the server. The player who got it correct first will have added score, and the pick button is enabled to start the new round. 
   
   1. If the video detects the image with a confidence higher than 0.98, it starts the function checkMatch()
   
@@ -660,10 +660,15 @@ socket.on('correctFromServer', () => {
   If only one player is in the room, the pick card button is disabled and the player is notified to wait for another player to join. 
   
  
-
-## Play-Testing
   
-  The main goal of this playtesting was to find out if the players understand how to play the game with the given instruction. 
+ 
+## Playtesting
+  
+   <img src="images/playtest.jpg" width="600"> 
+  <img src="images/playtest2.jpg" width="600"> 
+  
+  
+Once the game was developed. we conducted a playtesting to check if the players understand the instruction and the game mechanic that is rather complicated. The main goal of this playtesting was to find out if the players understand how to play the game with the given instruction. 
   
  
     
@@ -674,7 +679,7 @@ socket.on('correctFromServer', () => {
   
   2. Players don't remember the instruction
       
-Some players start the game without reading the instruction carefully. Once the game is started, players can't read the instruction.  Some players remembered how to play the game but some players didn't. Therefore, I decided to add instruction pop up box.
+Some players start the game without reading the instruction carefully. Once the game is started, players can't read the instruction again.  Some players remembered how to play the game but some players didn't. Therefore, I decided to add instruction pop up box.
 
   
   3. Download and... What? 
@@ -707,12 +712,34 @@ For the players who are playing at home, they can downlad the card deck by thems
   
   When the first player joins, 
   
-    <img src="images/download.jpg" width="600"> 
+    <img src="images/1playerjoin.png" width="600"> 
+  
+  
+  
+    When the 2nd player joins, 
+  
+    <img src="images/2playerjoin.png" width="600"> 
   
   
   
   
+    If you click Drawing, it instructs you to draw, and disable guessing word input section
   
+    <img src="images/draw.png" width="600"> 
+  
+  
+    
+    If the other player clicked drawing, you are instructed to Guesss and drawing function is disabled:
+  
+    <img src="images/guess.png" width="600"> 
+  
+  
+  
+      
+    If the player guess correct, it notifies all players "Coorect", and instruct to click draw button again:
+  
+    <img src="images/notify correct.png" width="600"> 
+
 
 
 
