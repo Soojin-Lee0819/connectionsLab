@@ -435,9 +435,6 @@ To simulate this random picking card (throwing dice mechanic) I originally coded
 
 However, to develop a code that chcecks the correct answer was rather complicated. As a solution, I decided to create a random set of clues in advance, and bring these set randomly as such: 
   
-   <img src="images/randomlyselected.png" width="600"> 
-  
-  
  Preload image
   
   ````
@@ -509,7 +506,7 @@ socket.on('indexFromServer', (index) => {
   
   ### Number of classifiers to train data
   
-  ** Default **
+  ** Default**
   
   ````
     classifier = mobilenet.classification(video, videoReady);
@@ -518,6 +515,7 @@ socket.on('indexFromServer', (index) => {
   
 By default, it only trains 2 different classifiers. By adding { numLabels: 6 } I was able to set numLabels to the number of classifiers I want to train the data for. 
   
+  ** Add **
   
   ````
   classifier = mobilenet.classification(video, { numLabels: 6 }, videoReady); 
@@ -548,16 +546,16 @@ function gotResults(error, result) {
 
 ````
 
-The accuracy is set to 0.99
+The accuracy is set to 0.98
 
 
 ### Locating model.weight.bin File
  
- After training the data, I download the model.json file and model.weight.bin file to apply to the current project. When the two files were added, I faced the error: 
+ After training the data, I downloaded the model.json file and model.weight.bin file from p5.js editor to apply to the current project. When the two files were added, I faced the error: 
     
  <img src="images/weightbinlocation.png" width="300"> 
   
-I struggled with finding out know why this error was appearing. I identified that the issue was at finding the location of the .weight.bin file. Originally, the model.weight.bin file is called from model.json file as such:
+I struggled with finding out why this error was appearing. I identified that the issue was at finding the location of the .weight.bin file. Originally, the model.weight.bin file is called from model.json file as such:
   
    ````
   
@@ -664,17 +662,17 @@ socket.on('correctFromServer', () => {
  
 ## Playtesting
   
-   <img src="images/playtest.jpg" width="600"> 
-  <img src="images/playtest2.jpg" width="600"> 
+   <img src="images/playtest.png" width="600"> 
+  <img src="images/playtest2.png" width="600"> 
   
   
-Once the game was developed. we conducted a playtesting to check if the players understand the instruction and the game mechanic that is rather complicated. The main goal of this playtesting was to find out if the players understand how to play the game with the given instruction. 
+Once the game was developed. we conducted a playtesting to check if the players understand the instructions and the game mechanics. The main goal of this playtesting was to find out if the players understand how to play the game with the given instruction. 
   
  
     
   1. Players find the game too difficult (especially with three different scenarios)
   
-  Since the game was too complicated compared to the rest of the game, players find it a bit overwhelming to follow the instruction. One recommendation was to simplify the game by allowing only one scenario. The game will be still fun since they need to compete who finds the correct answer first. 
+  Since the game was too complicated compared to the rest of the game, players find it a bit overwhelming to follow the instruction. One feedback we got was to simplify the game to one scenario only. The game will be still fun since they need to compete about who finds the correct answer first. 
   
   
   2. Players don't remember the instruction
@@ -687,61 +685,65 @@ Some players start the game without reading the instruction carefully. Once the 
 I was suggested to make the cue sign for downloading and printing out the card deck more obvious. Instead of the button "download" name it "download and print". This is a more intuitive instruction. Originally I used different color for download button (a tone down than start button). The player thought the button was disabled. 
 
 
-## Simplify Game 
+## Simplify the Game 
 
 <img src="images/onescenario.png" width="600"> 
   
   Instead of giving possibilities of three scenarios, I only added clues that has two same cards and three different cards. This way, the instruction became much simplier. 
+  
   
 ## Pop-up Instruction 
   
   I added a feature where player can revise the instruction by hover on __ while playing the game.  
 
  <img src="images/help.jpg" width="600"> 
+ 
+  
   
 ## Add download PDF 
   
     
 For the players who are playing at home, they can downlad the card deck by themselves and enjoy the game. 
+  
+  
   <img src="images/download.jpg" width="600"> 
   
   
 ## Fix Pictionary Gameplay
   
-  I received a feedback that for pictionary game, two players are often confused with how to play the game. Who is draing? and who is guessing? To make the game more intuitive to play, I added instruction texts that specifically tells the two players what to do. 
+  I received a feedback that for pictionary game, two players are often confused with who's drawing and who is guessing. To make the game more intuitive to play, I added instruction texts that specifically tells the two players what to do. 
   
-  When the first player joins, 
+When the first player joins, 
   
-    <img src="images/1playerjoin.png" width="600"> 
-  
-  
-  
-    When the 2nd player joins, 
-  
-    <img src="images/2playerjoin.png" width="600"> 
+<img src="images/1playerjoin.png" width="600"> 
   
   
   
+When the 2nd player joins, 
+
+<img src="images/2playerjoin.png" width="600"> 
   
-    If you click Drawing, it instructs you to draw, and disable guessing word input section
   
-    <img src="images/draw.png" width="600"> 
+  
+  
+If you click Drawing, it instructs you to draw, and disable guessing word input section
+  
+<img src="images/draw.png" width="600"> 
   
   
     
-    If the other player clicked drawing, you are instructed to Guesss and drawing function is disabled:
+If the other player clicked drawing, you are instructed to Guesss and drawing function is disabled:
   
-    <img src="images/guess.png" width="600"> 
+<img src="images/guess.png" width="600"> 
   
   
   
-      
-    If the player guess correct, it notifies all players "Coorect", and instruct to click draw button again:
+If the player guess correct, it notifies all players "Coorect", and instruct to click draw button again:
   
-    <img src="images/notify correct.png" width="600"> 
+<img src="images/notify correct.png" width="600"> 
 
 
-
+## Fixing Helper Function 
 
 
   
