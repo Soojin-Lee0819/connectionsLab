@@ -1,53 +1,85 @@
 # connectionsLab
 
-Welcome to Soojin's Connection's Lab Project Portfolio. In this class, I design and develop web applications that include both client-side (front-end) and server-side(back-end). Exploring THE tools and technologies, i create meaningful connected applications like website, data visualizations, and multi-player games. Hope you enjoy reading my learning documentation and the projects!
+Welcome to Soojin's ConnectionLab Project Portfolio. In Fall 2022, I designed and developed diverse connected web applications from data visualizations to multi-player games. Working with both the cleint-side and the serverside, I learned how to build a project end-t-end, learned how to manage and work with data, gained comfort working with Javascript languages and the ecosystem of open source Javascript libraries, and leveraging real-time communication through purposeful design. 
 
 
-
-
-
-# Week 1
+## Week 1 | Intro to HTML CSS
 
 [Application Critique](https://github.com/Soojin-Lee0819/connectionsLab/blob/main/Week1/Application-Review.md)
 
 ### Assignment: Citation Portfolio
 
-[Github Repository](https://github.com/Soojin-Lee0819/Connections-Lab-Week-1-Portfolio-Page)
+Static webpage documenting Citation, a game production project
 
-[Citation Page](https://soojin-lee0819.github.io/Connections-Lab-Week-1-Portfolio-Page/)
+<img src="images/week1.png" width="600">
 
-# Week 2
-[Weekly To-Do List](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Week2)
+[Project Documentation](https://github.com/Soojin-Lee0819/Connections-Lab-Week-1-Portfolio-Page)
 
-# Project 1
+[Citation Portfolio Page](https://soojin-lee0819.github.io/Connections-Lab-Week-1-Portfolio-Page/)
+
+## Week 2 | JS Interaction
+
+To-do list page with a motivational quote slideshow
+
+<img src="images/week2.png" width="600">
+
+[Weekly To-Do List Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Week2)
+
+[Weekly To-Do List](https://soojin-lee0819.github.io/connectionsLab/Week2/)
+
+
+## Project 1 | Web Application that utilizes the data set and the p5.js library
+
+<img src="images/project1.png" width="600">
+
 [Names Around The World Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project1) | Data Visualization, API, Game
 
 [Names Around the World](https://soojin-lee0819.github.io/connectionsLab/Project1)
 
-# Week 6
+## Week 6 | Node.js and Express
+
+Building Starbucks nutritional label API and reimagining NYUAD Library cafe menu website
+
+<img src="images/week6.png" width="600">
+
 [Starbucks Nutritional Label Node.js](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/week6_Starbucks_node_express)
 
-# Week 8
-[Play NYUAD Pictionary Here](https://bustling-tortoiseshell-citrine.glitch.me)
+## Week 8 | Introduction to Sockets
+
+NYUAD themed pictionary game
+
+<img src="images/week8.png" width="600">
 
 [NYUAD Pictionary Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/week8_NYUAD_Pictionary)
 
-# Project 2
+[Play NYUAD Pictionary Here](https://bustling-tortoiseshell-citrine.glitch.me)
+
+
+# Project 2 | Application that sends and receives data!
+
+Multiplayer creative game arcade featuring NYUAD themed pictionary, Guessing major, Making Meals, and online tug of war.
+
+<img src="images/project2.png" width="600">
 
 [Play NYUAD Expo](https://explore-nyuad.glitch.me) | Node.js, Socket.IO Connected Game
 
 [NYUAD EXPO Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project2)
 
-# Week 11
+# Week 11 | Client-Side Libraries
+
+Starbucks Nutritional Label Data Visualization using D3
+
+<img src="images/week11.png" width="600">
 
 [Starbucks Nutritional Label Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Week11) | Data Visualization Using D3 Library <br>
 
-[Starbucks Nutritional Label Documentation](https://soojin-lee0819.github.io/connectionsLab/Week11)
 
+# Final Project | Web Applicaitno with Client-Side & Server-Side + Communication via Sockets
 
-# Project 3
+Multiplayer creative game arcade featuring NYUAD themed pictionary, Guessing major, Making Meals, and online tug of war.
 
-[Play NYUAD Expo](https://explore-nyuad.glitch.me) | Node.js, Socket.IO Connected Game
+<img src="images/finalproject.png" width="600">
 
+[Play NYUAD Expo](https://explore-nyuad.glitch.me) | Node.js, Socket.IO, Express.js Connected Game
 [NYUAD EXPO Documentation](https://github.com/Soojin-Lee0819/connectionsLab/tree/main/Project2)
  

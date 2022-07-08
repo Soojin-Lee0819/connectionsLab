@@ -662,7 +662,7 @@ socket.on('correctFromServer', () => {
  
 ## Playtesting
   
-   <img src="images/playtest.png" width="600"> 
+  <img src="images/playtest1.png" width="600"> 
   <img src="images/playtest2.png" width="600"> 
   
   
@@ -738,13 +738,59 @@ If the other player clicked drawing, you are instructed to Guesss and drawing fu
   
   
   
-If the player guess correct, it notifies all players "Coorect", and instruct to click draw button again:
+If the player guess correct, it notifies all players "Corect", and instruct to click draw button again:
   
-<img src="images/notify correct.png" width="600"> 
-
-
-## Fixing Helper Function 
-
+<img src="images/notifycorrect.png" width="600"> 
 
   
+## Don't pick the previous card
+  
+The quesetions are selected randomly from the index array from 0-5. However, oftentimes, the same number were selected. To prevent this, we have added the while() function that prevents selecting same number as the previous one. 
+  
+  
+````
+    pick.addEventListener('click', function() {
+    //dice throw
+    index = Math.floor(Math.random() * 5) + 1;
+    while (index == current) {
+      index = Math.floor(Math.random() * 5) + 1;
+    }
+    current = index;
+    socket.emit('index', index);
+  });
+  
+````
 
+  
+## 2 Players In V.S 2 players Ready to Play
+  
+While adding the helper function, we faced the issue that when the other person is still reading the instruction, the person who finished reading the instruciton first, can start the game for the both players. 
+  
+The issue was that the player2allowbutton is detected when the 2 players are in the room, not when both have clicked "start" button. While we have earlier developed a system to solve this issue, because our code was inconsistent acrocss the games, when helper function was implemented, some games weren't working properly. To solve this function, we added a check counter that counts number of users clicking start button
+  
+  
+ ````
+  
+let usersIn = 0;
+
+socket.on('gameUsersInFromServer', () => {
+    usersIn++;
+    console.log("users in", usersIn);
+    if (usersIn == 2) {
+      // inst.textContent = Player2Instruction;
+      socket.emit('gameCanStart', sessionStorage.getItem('room')); //start game for the rest of the users
+    }
+})
+````
+  
+and if 2 usersIn (2 users click start button) then, start the game. 
+  
+  
+# Reflection & What's Next?
+  
+  I am especially proud of this project. Working on this project, I have explored the endless possibility of buildling a connected application that can truley engage people in both physical and the digital world. During final presentaiton, the people described our project as "mini-games are almost a new project by itself". Although they share similarities, as they mentioned, each game is unique and we have faced unique problems & issues. However, working as a team and effectively debugging together through live-coding sessions and transfering file using github desktop, we were able to fix the problems and help each other find bugs. From this project, I have truly experienced the benefits or team-play and how a big coding project can be compartmentalized into sections for individuals with smaller tasks. However, to achieve this, we had to build a strong communication system and everyone had to be responsive throughout the time we are working on this project. 
+  
+ One thing that we haven't implemented is the general scoring board. We decided not to implement this since some games by nature are collaborative, like 2-player pictionary game, and some games like tug-of-war, is not a point-based-competition. Therefore, we decided not to implement the scoring board. 
+  
+One thing I want to explore more is implementing NeDB data management system so that players can log-in and continue from the previous sessions if they had to leave and come back. Another feature that I want to improve on is the explore the options of integrating p5.livemedia socket connection alongside the socket.io connection that is already established. 
+  
