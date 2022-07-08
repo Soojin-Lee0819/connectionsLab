@@ -1,9 +1,6 @@
 # connectionsLab
 
-Welcome to Soojin's Connection's Lab Project Portfolio. In this class, I design and develop web applications that include both client-side (front-end) and server-side(back-end). Exploring the tools and technologies, I create meaningful connected applications and websites like data visualizations, and multi-player games. 
-
-Hope you enjoy reading my learning documentation and the projects!
-
+Welcome to Soojin's ConnectionLab Project Portfolio. Here, exploring the online experiences that bring people tegother in playful yet meaningful ways, I designed and developed diverse connected web applications from data visualizations to multi-player games. Working with both the cleint-side and the serverside, I learned how to build a project end-t-end from ideation, development to user-testing. I also learned how to manage and work with data, gained comfort working with Javascript languages and the ecosystem of open source Javascript libraries, and leveraging real-time communication through purposeful design. 
 
 
 # Week 1
