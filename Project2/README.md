@@ -662,7 +662,7 @@ socket.on('correctFromServer', () => {
  
 ## Playtesting
   
-   <img src="images/playtest.png" width="600"> 
+  <img src="images/playtest1.png" width="600"> 
   <img src="images/playtest2.png" width="600"> 
   
   
