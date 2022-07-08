@@ -6,7 +6,7 @@
 **Group**: Soojin Lee | Alia Waleed <br>
 **Deliverable**: CSS | HTML | Javascript | p5.js | Socket.IO | express | node.js | ml5 Multiplayer Web Game <br>
 
-<img src="images/explorenyuad.png" width="600">
+<img src="images/mainpage.png" width="600">
 
 
 [Access Project Here](https://nyuad-expo-final.glitch.me)
