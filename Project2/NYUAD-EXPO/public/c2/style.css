@@ -1,0 +1,297 @@
+html, body {
+    margin:0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+    color:white;
+}
+
+/* Background image */
+.background-container {
+    width:100vw;
+
+}
+
+.background-container img {
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index: -3;
+}
+
+#mainHome {
+    cursor: pointer;
+    position:absolute;
+    top: 2vw;
+    left: 7vw;
+    width: 3%;
+    height: 5%;
+    z-index: 10;
+}
+
+/* Instruction Page */
+.rules ,.finished{
+    width: 45%;
+    height: 60%;
+    background-color:rgb(192, 161, 161, 0.79);
+    position:absolute;
+    display:relative;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    box-sizing: border-box;
+    padding-right: 4%;
+    padding-left: 4%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: 1.5vw;
+    z-index: 1;
+}
+
+h1{
+    color: #471010;
+}
+
+#finalScore{
+    padding-top: 3%;
+    font-size: 3.2vw;
+    font-style: oblique;
+}
+
+
+.specific-instructions{
+    text-align: justify;
+}
+
+button{
+    /* remove default behavior */
+    appearance:none;
+    -webkit-appearance:none;
+
+    /* add styling */
+    cursor: pointer;
+    border:none;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+    font-size: 20px;
+    border-radius:5px;
+    background-color: #471010;
+    cursor: pointer;
+}
+
+#start-button{
+    width: 25%;
+    height: 15%;
+    font-size: 1.5vw;
+    margin-top: 5%;
+}
+
+
+/* GamePage */
+#gamePage{
+    width:90vw;
+    height:90vh;
+    padding: 2vh 5vw;
+    position:relative;
+}
+
+/* title-Container */
+
+#title{
+    font-size: 1.5vw;
+    color:white;
+    z-index:10;
+    height:10vh;
+    padding: 0vh 6vw;
+}
+
+
+.title{
+    float: left;
+    width:20%;
+}
+
+.completed-words{
+    float: right;
+}
+
+/* timer */
+#timer{
+  float:left;
+}
+
+/* Game-Container */
+
+.canvasChat{
+    display: flex;
+}
+
+/* sketch */
+#sketch-container {
+    padding:5vh 0vw;
+    display: relative;
+    width:70%;
+    margin:0;
+    flex-direction: column;
+    align-items: center;
+    float:left;
+}
+
+#player-instructions{
+    position:absolute;
+    width:30vw;
+    text-align: center;
+    color: #471010;
+    top: 45%;
+    left: 30%;
+    font-size: 2vw;
+    transform: translate(-50%, -50%);
+}
+
+.getwordbutton{
+    width:50vw;
+    display: flex;
+
+}
+
+.drawword-text{
+    padding:1vw;
+    margin-top:2vw;
+       width:60%;
+       margin-left:10%;;
+       font-weight:600;
+       border-radius:5px;
+       font-size: 1.5vw;
+}
+
+#getword-button{
+       /* remove default behavior */
+       appearance:none;
+       -webkit-appearance:none;
+     
+       /* usual styles */
+       cursor: pointer;
+       width:30%;
+       padding:1vw;
+       margin-top:2vw;
+       border:none;
+       color:#fff;
+       font-weight:600;
+       border-radius:5px;
+       font-size: 1.5vw;
+       border-radius:5px;
+       background-color: #471010;
+}
+
+#draw_this{
+    color:#fff;
+   
+}
+
+/* customize when getword button is disabled */
+#getword-button:disabled,
+#getword-button[disabled]{
+   background-color: #471010;
+    opacity:0.1;
+
+}
+
+/* chat */
+#chat-container {
+    float:left;
+    display:flex;
+    padding:5vh 0vw;
+    width:30%;
+    margin:0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub-container {
+    display: flex;
+    width: 70%;
+}
+
+.chat-input{
+    flex-direction: row;
+    align-items: left;
+}
+
+.chat-input-opacity{
+    display: flex;
+    opacity:0.2;
+    width: 70%;
+}
+
+.chat-feed{
+    flex-direction: column;  
+    align-items: left;
+}
+
+input{
+    appearance:none;
+    margin-top:2vh;
+    -webkit-appearance:none;
+    border:none;
+    padding: 1vh 1vw;
+    font-size: 1.5vw;
+    width:70%;
+    margin-right:5%;
+    border-radius:5px;
+}
+
+.chat-input-msg{
+    width: 85%;
+}
+
+#send-button{
+      /* remove default behavior */
+      appearance:none;
+      -webkit-appearance:none;
+    
+      /* usual styles */
+      cursor: pointer;
+      position:relative;
+      padding:1vh 1vw;
+      margin-top: 2vh;
+      border:none;
+      color:#fff;
+      font-weight:600;
+      border-radius:5px;
+      font-size: 1.5vw;
+      border-radius:5px;
+      background-color: #471010;
+}
+
+.chat-box{
+    height: 60vh;
+    background-color: white;
+    overflow: auto;
+}
+
+.chat-feed p{
+    margin-left:10%;
+    color:black;
+    overflow-wrap: break-word;
+}
+
+#Home {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #471010;
+}
+
+#players{
+    margin-left:6vw;
+    padding:0;
+    position:absolute;
+    text-align: center;
+    color: yellow;
+    font-size: 1.5vw;
+    bottom:-5vh;
+}
+

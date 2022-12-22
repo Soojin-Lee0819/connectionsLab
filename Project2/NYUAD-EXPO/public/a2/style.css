@@ -1,0 +1,194 @@
+html, body {
+    margin:0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+    color:white;
+}
+
+/* Background image */
+.background-container {
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    display: relative;
+
+}
+
+.background-container img {
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index: -3;
+}
+
+#mainHome {
+    cursor: pointer;
+    position:absolute;
+    top: 4vh;
+    left: 9vw;
+    width: 3%;
+    height: 5%;
+    z-index: 10;
+}
+
+/* Instruction Page */
+.rules ,.finished{
+    width: 45%;
+    height: 60%;
+    background-color:rgb(192, 161, 161, 0.79);
+    position:absolute;
+    display:relative;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    box-sizing: border-box;
+    padding-right: 6%;
+    padding-left: 6%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: 1.5vw;
+    z-index: 1;
+}
+
+#players{
+    margin-left:13vw;
+    padding:0;
+    position:absolute;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 1.5vw;
+    bottom:1%;
+}
+
+
+
+
+.rules h1{
+    color: #471010;
+}
+
+.specific-instructions{
+    text-align: justify;
+}
+
+button{
+    /* remove default behavior */
+    appearance:none;
+    -webkit-appearance:none;
+
+    /* add styling */
+    cursor: pointer;
+    border:none;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+    font-size: 1.5vw;
+    border-radius:5px;
+    background-color: #471010;
+    cursor: pointer;
+}
+
+#start-button{
+    width: 25%;
+    height: 15%;
+    font-size: 1.5vw;
+}
+
+
+/* GamePage */
+#gamePage{
+    width:90vw;
+    height:90vh;
+    padding: 2vh 5vw;
+    position:relative;
+}
+
+/* title-Container */
+
+#title{
+    font-size: 1.5vw;
+    color:white;
+    z-index:10;
+    height:10vh;
+    padding: 0vh 9vw;
+}
+
+
+.title{
+    float: left;
+    width:20%;
+}
+
+
+.completed-orders{
+    float: right;
+}
+
+/* timer */
+#timer{
+  float:left;
+}
+
+#p1score {
+    display:relative;
+    padding:0;
+}
+  /*User Input*/
+  #userInput {
+    margin:0;
+  }
+  
+  #game p{
+    margin:auto;
+    width:50%;
+    padding:2vw;
+    border-width: 2px;
+    color:#ffffff;
+    font-size: 1.8vw;
+  }
+
+  #sketch-canvas{
+    margin:auto;
+    margin-left: 25%;
+}
+  
+  #name{
+    appearance:none;
+    -webkit-appearance:none;
+    border:none;
+    margin-left: 25%;
+    padding:1vw;
+    font-size: 1.5vw;
+    border-radius:5px;
+    width:28%;
+    margin-right:5%;
+  }
+  
+  #submit {
+      /* remove default behavior */
+      appearance:none;
+      -webkit-appearance:none;
+      /* usual styles */
+      position:relative;
+      width:15%;
+      cursor: pointer;
+      padding:1vw;
+      margin-top:3vw;
+      border:none;
+      color:#fff;
+      font-weight:600;
+      border-radius:5px;
+      font-size: 1.5vw;
+      background-color: #2E1F59;
+  }
+  
+  #Home {
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        background-color: #471010;
+}

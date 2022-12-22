@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+    color: white;
+}
+
+/* background-img*/
+.background-container {
+    width: 100vw;
+}
+
+.background-container img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -3;
+}
+
+.location {
+    cursor: pointer;
+}
+
+/*Field overlay*/
+#Field {
+    width: 32vw;
+    height: 22vh;
+    position: absolute;
+    left: 34%;
+    top: 2%;
+}
+
+#FieldName {
+    position: absolute;
+    left: 49%;
+    top: 26%;
+
+}
+
+/*A2 overlay*/
+#A2 {
+    width: 17vw;
+    height: 18.2vh;
+    position: absolute;
+    left: 22%;
+    bottom: 2.8%;
+}
+
+#A2Name {
+    position: absolute;
+    left: 23%;
+    bottom: 22%;
+}
+
+/*dorm overlay*/
+#dorm{
+    width: 20.4vw;
+    height: 23.3vh;
+    position: absolute;
+    left: 50%;
+    bottom: 2.8%;
+}
+
+#dormName {
+    position: absolute;
+    left: 52%;
+    bottom: 27%;
+}
+
+/*C2 overlay*/
+#C2 {
+    width: 14vw;
+    height: 14vh;
+    position: absolute;
+    left: 38.3%;
+    bottom: 32.7%;
+}
+
+#C2Name {
+    position: absolute;
+    left: 38.3%;
+    bottom: 47.7%;
+}
+
+/*D2 overlay*/
+#D2 {
+    width: 2.9vw;
+    height: 10.6vh;
+    position: absolute;
+    left: 77.3%;
+    top: 67.1%;
+}
+
+#D2Name {
+    position: absolute;
+    right: 17.3%;
+    top: 63%;
+}
+
+#D1 {
+    width: 5.7vw;
+    height: 14vh;
+    position: absolute;
+    left: 12.1%;
+    top: 72%;
+}
+
+#D1Name {
+    position: absolute;
+    left: 6%;
+    top: 68%;
+}
+
+#title{
+    font-size: 5vw;
+    font-family: 'Gugi', cursive;
+    position: absolute;
+    left: 9%;
+    top: 25%;
+}
+
+/* #all-scores{
+    position: absolute;
+    list-style: none;
+    top: 2%;
+    right: 2%;
+} */

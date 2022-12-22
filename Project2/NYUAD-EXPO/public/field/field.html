@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script> <!-- add sockets library -->
+    <!-- Two below for p5.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="field.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Tug of War</title>
+</head>
+
+<body>
+
+    <!--Background Container -->
+    <div class="background-container">
+        <img src="/field/tugOfWarImages/tugOfWarBG.png" alt="field-img">
+
+        <!-- Home Button -->
+        <div><img src="/images/home.png" alt="home button" id="mainHome" onclick="home(this)"></div>
+    </div>
+
+    <!-- Title -->
+    <div id="title">
+        <p id="moveTitle"> <span style="font-weight:bold"> The Field </span> | Tug of War </p>
+    </div>
+
+    <!-- To show instructions and rules at the beginning of the game -->
+    <div class="rules" id="rules">
+        <h1 class="rules-instructions">Instructions</h1>
+        <p class="specific-instructions"> Welcome to Tug of War! </br> </br> <span style="font-weight:bold"> Goal:
+            </span> Get the center of your rope to your side to win! </p>
+        <p id="player-instructions"> </p>
+        <button id="start-button" onclick="startGame()"> START </button>
+    </div>
+
+    <!-- To show winner and end results -->
+    <div class="end" id="end">
+        <h1 class="game-over"> Game Over! </h1>
+        <p class="winner" id="winner"></p>
+        <button id="Home" onclick="home(this)"> Home </button>
+    </div>
+
+    <!-- instructions -->
+    <div id="container">
+        <!-- P5 container for the game -->
+        <div class="p5" id="p5"></div>
+        <p id="instructions"> </p>
+    </div>
+        <p id="players"> Please wait for another player to join! </p>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+/* fix relative positions */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+    color: white;
+}
+
+/* background-img*/
+.background-container {
+    width: 100vw;
+    display: relative;
+}
+
+.background-container img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -3;
+}
+
+#mainHome {
+    cursor: pointer;
+    position: absolute;
+    top: 4vh;
+    left: 9vw;
+    width: 3%;
+    height: 5%;
+    z-index: 10;
+}
+
+/* Instruction Page */
+.rules,
+.end {
+    width: 45vw;
+    height: 60vh;
+    background-color: rgb(193, 153, 153, 0.79);
+    position: absolute;
+    display: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding-right: 4%;
+    padding-left: 4%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: 1.5vw;
+    z-index: 100;
+}
+
+.specific-instructions {
+    text-align: justify;
+    color: white;
+}
+
+.rules h1 {
+    color: #471010;
+}
+
+#titles {
+    color: black;
+}
+
+#title p {
+    margin: 0;
+    margin-top: 5vh;
+}
+
+#title {
+    font-size: 1.5vw;
+    color: white;
+    margin-left: 13vw;
+    margin-right: 13vw;
+}
+
+.title {
+    float: left;
+}
+
+button {
+    /* remove default behavior */
+    appearance: none;
+    -webkit-appearance: none;
+
+    /* add styling */
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 1.5vw;
+    background-color: #471010;
+}
+
+.container {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+}
+
+/* CSS for dorm game */
+.game-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#order {
+    padding-top: 3%;
+    text-align: center;
+    color: white;
+}
+
+#generated {
+    font-size: 22px;
+    font-style: italic;
+}
+
+#timer {
+    padding: 0;
+}
+
+#generate-button {
+    width: 7%;
+    padding: 0.5%;
+}
+
+#item {
+    padding-top: 3%;
+    text-align: center;
+    color: white;
+}
+
+#generated {
+    font-size: 22px;
+    font-style: italic;
+}
+
+.game-over {
+    color: #471010;
+}
+
+#winner {
+    padding-top: 3%;
+    font-size: 3.5vw;
+    font-style: oblique;
+}
+
+#timer {
+    padding: 0;
+}
+
+#generate-button {
+    width: 7%;
+    padding: 0.5%;
+}
+
+#Home {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #471010;
+}
+
+#player-instructions {
+    color: #471010;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 3%;
+}
+
+#players {
+    top: 100%;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+
+#start-button {
+    width: 25%;
+    height: 15%;
+    font-size: 1.5vw;
+    margin-top: 15%;
+}
+
+.score {
+    float: right;
+}
